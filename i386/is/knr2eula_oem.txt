@@ -1,0 +1,945 @@
+MICROSOFT SOFTWARE LICENSE TERMS
+
+MICROSOFT WINDOWS SERVER 2003 R2 STANDARD 
+EDITION KN WITH SERVICE PACK 2
+
+MICROSOFT WINDOWS SERVER 2003 R2 ENTERPRISE 
+EDITION KN WITH SERVICE PACK 2
+
+These license terms are an agreement between 
+you and
+
+· the server manufacturer that distributes 
+the software with the server; or
+
+· the software installer that distributes 
+the software with the server.
+
+Please read them. They apply to the software 
+named above, which includes the media on 
+which you received it, if any. The terms also 
+apply to any Microsoft
+
+· updates, 
+
+· supplements, 
+
+· Internet-based services, and
+
+· support services
+
+for this software, unless other terms 
+accompany those items. If so, those terms 
+apply. If you obtain updates or supplements 
+directly from Microsoft, Microsoft, and not 
+the manufacturer or installer, licenses those 
+to you.
+
+By using the software, you accept these 
+terms. If you do not accept them, do not use 
+the software. Instead, contact the 
+manufacturer or installer to determine its 
+return policy for a refund or credit.
+
+NOTICE ABOUT THE LACK OF WINDOWS MEDIA 
+SERVICES. The software does not include 
+Windows Media Services as defined by the 
+Korean Fair Trade Commission. In order to 
+stream live or on-demand audio and video 
+content over the Internet or an intranet, you 
+must install media server software, either 
+from Microsoft or a third party. You may find 
+more information at <http://go.microsoft.
+com/fwlink/?linkid=68149>. Microsoft does not 
+provide any warranty for functionality 
+related to Windows Media Services. 
+
+As described below, using some features also 
+operates as your consent to the transmission 
+of certain standard computer information for 
+Internet-based services.
+
+If you comply with these license terms, you 
+have the rights below for each software 
+license you acquire.
+
+1. OVERVIEW.
+
+a. Software. The software includes 
+
+· server software; and
+
+· additional software that may only be used 
+with the server software directly, or 
+indirectly through other additional software.
+
+b. License Models. The software is licensed 
+based on
+
+· the number of instances of server software 
+that you run; and 
+
+· the number of devices and users that 
+access instances of the server software.
+
+c. Definitions.
+
+· Instance. You create an 'instance' of 
+software by executing the software's setup or 
+install procedure. You also create an 
+instance of software by duplicating an 
+existing instance. References to software in 
+this agreement include 'instances' of the 
+software.
+
+· Run an Instance. You 'run an instance' of 
+software by loading it into memory and 
+executing one or more of its instructions. 
+Once running, an instance is considered to be 
+running (whether or not its instructions 
+continue to execute) until it is removed from 
+memory.
+
+· Operating System Environment. An 
+'operating system environment' is
+
+o all or part of an operating system 
+instance, or all or part of a virtual (or 
+otherwise emulated) operating system instance 
+which enables separate machine identity 
+(primary computer name or similar unique 
+identifier) or separate administrative rights,
+and
+
+o instances of applications, if any, 
+configured to run on the operating system 
+instances or parts identified above.
+
+There are two types of operating system 
+environments, physical and virtual. A 
+physical operating system environment is 
+configured to run directly on a physical 
+hardware system. A virtual operating system 
+environment is configured to run on a virtual 
+(or otherwise emulated) hardware system. A 
+physical hardware system can have either or 
+both of the following:
+
+o one physical operating system environment
+
+o one or more virtual operating system 
+environments.
+
+· Server. A server is a physical hardware 
+system capable of running server software. A 
+hardware partition or blade is considered to 
+be a separate physical hardware system.
+
+· Assigning a License. To assign a license 
+means simply to designate that license to one 
+device or user.
+
+2. USE RIGHTS. 
+
+a. Assignment of the License to the Server. 
+
+The software license is permanently assigned 
+to the server with which the software was 
+distributed. If you run the software on a 
+hardware partition, that partition is the 
+server to which the license must be assigned. 
+That server is the licensed server for that 
+particular license. You may assign other 
+software licenses to the same server, but you 
+may not assign the same license to more than 
+one server. 
+
+b. Running Instances of the Server Software. 
+You have the rights below for each software 
+license assigned (corresponding to the 
+edition of the software you have licensed).
+
+i. Standard Edition. You may run, at any one 
+time, one instance of the server software in 
+one physical or virtual operating system 
+environment on the licensed server.
+
+ii. Enterprise Edition.
+
+A. You may run on the licensed server, at 
+any one time: 
+
+I. one instance of the server software in 
+one physical operating system environment, 
+and 
+
+II. up to four instances of the server 
+software in virtual operating system 
+environments (only one instance per virtual 
+operating system environment). If you have 
+separately licensed Standard Edition, you may 
+run an instance of Standard Edition in place 
+of Enterprise Edition in any of these virtual 
+operating system environments. This agreement 
+applies to your use of Standard Edition in 
+this manner.
+
+B. If you run all five permitted instances 
+at the same time, the instance of the server 
+software running in the physical operating 
+system environment may be used only to run 
+hardware virtualization software and to 
+manage and service operating system 
+environments on the licensed server. 
+
+C. If the licensed server is a fault 
+tolerant server, you may exercise your 
+Enterprise Edition use rights on each of up 
+to four servers that make up the fault 
+tolerant licensed server. The licensed server 
+is 'fault tolerant' if 
+
+I. it contains redundant or doubly redundant 
+hardware that runs in exact (or near exact) 
+synchronization, and 
+
+II. it does not use fail-over clustering. 
+
+Redundant hardware does not need to be 
+synchronized during server software updates 
+(i.e., hotfixes, security patches, service 
+packs, supplements), as long as the instance 
+receiving the update is running for no other 
+purpose.
+
+c. Running Instances of the Additional 
+Software. You may run or otherwise use any 
+number of instances of additional software 
+listed below in physical or virtual operating 
+system environments on any number of devices. 
+You may use additional software only with the 
+server software directly, or indirectly 
+through other additional software.
+
+· DFS Namespaces and Replication Console 
+
+· Print Management 
+
+· File Server Management 
+
+· Identity Management for Unix Admin Pack 
+
+· File Server Resource Manager 
+
+· Server Administration Tools
+
+· Remote Desktop Connection
+
+· Windows System Resource Manager
+
+d. Creating and Storing Instances on Your 
+Servers or Storage Media. You have the 
+additional rights below for each software 
+license you acquire.
+
+i. You may create one instance of the server 
+software solely to exercise your right to run 
+one instance in a physical operating system 
+environment as described above.
+
+ii. You may create any number of instances 
+of the server software solely to exercise 
+your right to run instances in virtual 
+operating system environments as described 
+above.
+
+iii. You may create any number of instances 
+of the additional software solely to exercise 
+your rights to run or use instances in 
+physical and virtual operating system 
+environments as described above.
+
+iv. You may store instances created under 
+(ii) and (iii) above on any of your servers 
+or storage media.
+
+v. You may create and store instances to 
+exercise your rights described above under 
+any of your software licenses. You may not 
+use the instances for any other purpose (e.g.,
+you may not distribute instances to third 
+parties).
+
+3. ADDITIONAL LICENSING REQUIREMENTS AND/OR 
+USE RIGHTS.
+
+a. Client Access Licenses (CALs).
+
+i. You must acquire and assign the 
+appropriate CAL to each device or user that 
+accesses your instances of the server 
+software directly or indirectly. A hardware 
+partition or blade is considered to be a 
+separate device.
+
+· You do not need CALs for any user or 
+device that accesses your instances of the 
+server software only through the Internet 
+without being authenticated or otherwise 
+individually identified by the server 
+software. 
+
+· You do not need CALs for any of your 
+servers licensed to run your instances of the 
+server software.
+
+· You do not need CALs for up to two devices 
+or users to access your instances of the 
+server software only to administer those 
+instances. 
+
+· Your CALs permit access to your instances 
+of earlier versions, but not later versions, 
+of the server software. As an exception, you 
+may use Windows Server 2003 CALs, Windows 
+Server 2003 Terminal Services CALs and 
+Windows Server 2003 Rights Management 
+Services CALs to satisfy your CAL 
+requirements described in more detail below.
+
+ii. Types of CALs. There are two types of 
+CALs: one for devices and one for users. Each 
+device CAL permits one device, used by any 
+user, to access instances of the server 
+software on your licensed servers. Each user 
+CAL permits one user, using any device, to 
+access instances of the server software on 
+your licensed servers. You may use a 
+combination of device and user CALs.
+
+iii. Reassignment of CALs. You may
+
+· permanently reassign your device CAL from 
+one device to another, or your user CAL from 
+one user to another; or
+
+· temporarily reassign your device CAL to a 
+loaner device while the first device is out 
+of service, or your user CAL to a temporary 
+worker while the user is absent.
+
+iv. Windows Server 2003 CALs.
+
+· The server software can be used in either 
+'per device or per user' mode or 'per server' 
+mode. In 'per device or per user' mode, you 
+need a Windows Server 2003 CAL for each 
+device or user that directly or indirectly 
+accesses instances of the server software on 
+your licensed servers. In 'per server' mode, 
+you need and must dedicate exclusively to an 
+instance of the server software as many 
+Windows Server 2003 CALs as the greatest 
+number of devices and users that may directly 
+or indirectly access that instance at the 
+same time. You may change the mode only one 
+time, from 'per server' to 'per device or per 
+user.' If you do, you will retain the same 
+number Windows Server 2003 CALs. 
+
+· You may use Windows Small Business Server 
+2003 CALs instead of Windows Server 2003 CALs 
+to access instances of the server software as 
+described above when those instances of 
+server software are within an SBS domain. 
+
+v. Windows Server 2003 Terminal Services 
+CALs. Regardless of the mode in which you use 
+the server software, the following apply.
+
+· In addition to needing a Windows Server 
+2003 CAL, you need a Windows Server 2003 
+Terminal Services CAL for each user or device 
+that directly or indirectly accesses the 
+server software to host a graphical user 
+interface (using the Windows Server 2003 R2 
+Terminal Services functionality or other 
+technology). 
+
+· You do not need a Windows Server 2003 
+Terminal Services CAL to attach to or mirror 
+the console session. The console session is 
+the session that takes place through the 
+server's primary keyboard and display device 
+(or similar devices).
+
+vi. Windows Server 2003 Rights Management 
+Services CALs. Regardless of the mode in 
+which you use the server software, the 
+following applies.
+
+· In addition to needing a Windows Server 
+2003 CAL, you need a Windows Server 2003 
+Rights Management Services CAL for each user 
+or device that directly or indirectly 
+accesses the Windows Server 2003 R2 Rights 
+Management Services functionality.
+
+b. Multiplexing. Hardware or software you 
+use to:
+
+· pool connections,
+
+· reroute information,
+
+· reduce the number of devices or users that 
+directly access or use the software, or
+
+· reduce the number of devices or users the 
+software directly manages, 
+
+(sometimes referred to as 'multiplexing' or 
+'pooling'), does not reduce the number of 
+licenses of any type that you need.
+
+c. No Separation of Server Software. You may 
+not separate the server software for use in 
+more than one operating system environment 
+under a single license, unless expressly 
+permitted. This applies even if the operating 
+system environments are on the same physical 
+hardware system.
+
+d. Additional Functionality. Microsoft may 
+provide additional functionality for the 
+software. Other license terms and fees may 
+apply.
+
+4. MANDATORY ACTIVATION. To prevent its 
+unlicensed use, you will not be able to use 
+the software if you do not activate it as 
+described during installation or setup. You 
+can activate the software by Internet or 
+telephone; Internet and telephone service 
+charges may apply. Some changes to your 
+computer components or the software may 
+require you to reactivate the software. The 
+software will remind you to activate until 
+you do.
+
+5. INTERNET-BASED SERVICES. Microsoft 
+provides Internet-based services with the 
+software. It may change or cancel them at any 
+time.
+
+a. Consent for Internet-Based Services. The 
+software features described below connect to 
+Microsoft or service provider computer 
+systems over the Internet. In some cases, you 
+will not receive a separate notice when they 
+connect. You may switch off these features or 
+not use them. For more information about 
+these features, see <http://go.microsoft.
+com/fwlink/?linkid=38670>. By using these 
+features, you consent to the transmission of 
+this information. Microsoft does not use the 
+information to identify or contact you.
+
+Computer Information. The following features 
+use Internet protocols, which send to the 
+appropriate systems computer information, 
+such as your Internet protocol address, the 
+type of operating system, browser and name 
+and version of the software you are using, 
+and the language code of the device where you 
+run the software. Microsoft uses this 
+information to make the Internet-based 
+services available to you.
+
+· Windows Update Feature. You may connect 
+new hardware to the device where you run the 
+software. Your device may not have the 
+drivers needed to communicate with that 
+hardware. If so, the update feature of the 
+software can obtain the correct driver from 
+Microsoft and install and run it on your 
+device. You can switch off this update 
+feature.
+
+· Web Content Features. Features in the 
+software can retrieve related content from 
+Microsoft and provide it to you. To provide 
+the content, these features send to Microsoft 
+the type of operating system, name and 
+version of the software you are using, type 
+of browser and language code of the device 
+where you run the software. Examples of these 
+features are clip art, templates, online 
+training, online assistance and Appshelp. You 
+may choose not to use these web content 
+features.
+
+· Digital Certificates. The software uses 
+digital certificates. These digital 
+certificates confirm the identity of Internet 
+users sending X.509 standard encrypted 
+information. The software retrieves 
+certificates and updates certificate 
+revocation lists. These security features 
+operate only when you use the Internet.
+
+· Auto Root Update. The Auto Root Update 
+feature updates the list of trusted 
+certificate authorities. You can switch off 
+the Auto Root Update feature.
+
+· Windows Media Digital Rights Management. 
+Content owners use Windows Media digital 
+rights management technology (WMDRM) to 
+protect their intellectual property, 
+including copyrights. The software and third 
+party software use WMDRM to play and copy 
+WMDRM-protected content. If the software 
+fails to protect the content, content owners 
+may ask Microsoft to revoke the software's 
+ability to use WMDRM to play or copy 
+protected content. Revocation does not affect 
+other content. When you download licenses for 
+protected content, you agree that Microsoft 
+may include a revocation list with the 
+licenses. Content owners may require you to 
+upgrade WMDRM to access their content. 
+Microsoft software that includes WMDRM will 
+ask for your consent prior to the upgrade. If 
+you decline an upgrade, you will not be able 
+to access content that requires the upgrade. 
+You may switch off WMDRM features that access 
+the Internet. When these features are off, 
+you can still play content for which you have 
+a valid license.
+
+· Windows Media Player. When you use Windows 
+Media Player, it checks with Microsoft for
+
+· compatible online music services in your 
+region;
+
+· new versions of the player; and
+
+· codecs if your device does not have the 
+correct ones for playing content.
+
+You can switch off this last feature. For 
+more information, go to <http://go.microsoft.
+com/fwlink/?LinkId=51331>.
+
+· Windows Rights Management Services. The 
+software contains a feature that allows you 
+to create content that cannot be printed, 
+copied or sent to others without your 
+permission. You must connect to Microsoft to 
+use this feature for the first time. Once a 
+year, you must re-connect to Microsoft to 
+update it. For more information, go to 
+<http://go.microsoft.com/fwlink/?
+LinkId=52646>. You may choose not to use this 
+feature.
+
+b. Misuse of Internet-based Services. You 
+may not use these services in any way that 
+could harm them or impair anyone else's use 
+of them. You may not use the services to try 
+to gain unauthorized access to any service, 
+data, account or network by any means.
+
+6. DATA STORAGE TECHNOLOGY. The server 
+software includes data storage technology 
+called Microsoft SQL Server Desktop Engine 
+for Windows. Components of the server 
+software use this technology to store data. 
+You may not otherwise use or access this 
+technology under this agreement.
+
+7. MICROSOFT .NET FRAMEWORK BENCHMARK 
+TESTING. The software includes the .NET 
+Framework component ('.NET Component'). You 
+may conduct internal benchmark testing of the 
+.NET Component. You may disclose the results 
+of any benchmark test of the .NET Component, 
+provided that you comply with the following 
+terms: (1) you must disclose all the 
+information necessary for replication of the 
+tests, including complete and accurate 
+details of your benchmark testing methodology,
+the test scripts/cases, tuning parameters 
+applied, hardware and software platforms 
+tested, the name and version number of any 
+third party testing tool used to conduct the 
+testing, and complete source code for the 
+benchmark suite/harness that is developed by 
+or for you and used to test both the .NET 
+Component and the competing 
+implementation(s); (2) you must disclose the 
+date (s) that you conducted the benchmark 
+tests, along with specific version 
+information for all Microsoft software 
+products tested, including the .NET 
+Component; (3) your benchmark testing was 
+performed using all performance tuning and 
+best practice guidance set forth in the 
+product documentation and/or on Microsoft's 
+support web sites, and uses the latest 
+updates, patches and fixes available for the .
+NET Component and the relevant Microsoft 
+operating system; (4) it shall be sufficient 
+if you make the disclosures provided for 
+above at a publicly available location such 
+as a website, so long as every public 
+disclosure of the results of your benchmark 
+test expressly identifies the public site 
+containing all required disclosures; and (5) 
+nothing in this provision shall be deemed to 
+waive any other right that you may have to 
+conduct benchmark testing. The foregoing 
+obligations shall not apply to your 
+disclosure of the results of any customized 
+benchmark test of the .NET Component, whereby 
+such disclosure is made under confidentiality 
+in conjunction with a bid request by a 
+prospective customer, such customer's 
+application(s) are specifically tested and 
+the results are only disclosed to such 
+specific customer. Notwithstanding any other 
+agreement you may have with Microsoft, if you 
+disclose such benchmark test results, 
+Microsoft shall have the right to disclose 
+the results of benchmark tests it conducts of 
+your products that compete with the .NET 
+Component, provided it complies with the same 
+conditions above.
+
+8. SCOPE OF LICENSE. The software is 
+licensed, not sold. This agreement only gives 
+you some rights to use the software. The 
+manufacturer or installer and Microsoft 
+reserve all other rights. Unless applicable 
+law gives you more rights despite this 
+limitation, you may use the software only as 
+expressly permitted in this agreement. In 
+doing so, you must comply with any technical 
+limitations in the software that only allow 
+you to use it in certain ways. For more 
+information, see the software documentation. 
+You may not
+
+· work around any technical limitations in 
+the software;
+
+· reverse engineer, decompile or disassemble 
+the software, except and only to the extent 
+that applicable law expressly permits, 
+despite this limitation;
+
+· make more copies of the software than 
+specified in this agreement or allowed by 
+applicable law, despite this limitation;
+
+· publish the software for others to copy;
+
+· rent, lease or lend the software; or
+
+· use the software for commercial software 
+hosting services.
+
+Rights to access the software on any device 
+do not give you any right to implement 
+Microsoft patents or other Microsoft 
+intellectual property in software or devices 
+that access that server or device.
+
+9. BACKUP COPY. You may make one backup copy 
+of the software media. You may use it only to 
+create instances of the software.
+
+10. DOCUMENTATION. Any person that has valid 
+access to your computer or internal network 
+may copy and use the documentation for your 
+internal, reference purposes.
+
+11. NOT FOR RESALE SOFTWARE. You may not 
+sell software marked as 'NFR' or 'Not for 
+Resale.'
+
+12. ACADEMIC EDITION SOFTWARE. You must be a 
+'Qualified Educational User' to use software 
+marked as 'Academic Edition' or 'AE.' If you 
+do not know whether you are a Qualified 
+Educational User, visit www.microsoft.
+com/education or contact the Microsoft 
+affiliate serving your country.
+
+13. DOWNGRADE. Instead of using the software,
+you may use an earlier version. This 
+agreement applies to your use of the earlier 
+version. If the earlier version includes 
+different components, any terms for those 
+components in the agreement that comes with 
+the earlier version apply to your use of them.
+Neither the manufacturer or installer, nor 
+Microsoft is obligated to supply earlier 
+versions to you. At any time, you may replace 
+an earlier version with this version of the 
+software.
+
+14. Using Software Designed for Other 
+Platforms. A license for a platform-specific 
+version of standard edition (e.g. Windows 
+Server 2003 R2 with Service Pack 2) permits 
+you to use, in place of what you have 
+licensed, the standard edition software for 
+the other platform under that license. A 
+license for a platform-specific version of 
+enterprise edition permits you to use, in 
+place of what you have licensed, the 
+enterprise edition software for the other 
+platform under that license. For example, 
+under a license for Windows Server 2003 R2 
+Standard x64 Edition with Service Pack 2 you 
+may run Windows Server 2003 R2 Standard 
+Edition with Service Pack 2. You may create 
+and run only as many instances of software 
+under a license as that license permits. You 
+may not run enterprise edition software under 
+a standard edition license. The software may 
+not work on all platforms (e.g., software for 
+x64 may not work on the 32-bit x86 platform). 
+Neither the manufacturer or installer, nor 
+Microsoft is obligated to provide you 
+software for platforms you have not licensed.
+
+15. PROOF OF LICENSE. If you acquired the 
+software on the server, or on a disc or other 
+media, a genuine Certificate of Authenticity 
+label with a genuine copy of the software 
+identifies licensed software. To be valid, 
+this label must be affixed to the server or 
+appear on the manufacturer's or installer's 
+software packaging. If you receive the label 
+separately, it is invalid. You should keep 
+the label on the server or packaging to prove 
+that you are licensed to use the software. To 
+identify genuine Microsoft software, see www.
+howtotell.com.
+
+16. TRANSFER TO A THIRD PARTY. The first 
+user of the software may transfer it only 
+with the licensed server, the Certificate of 
+Authenticity label, this agreement, and CALs, 
+directly to a third party. Before the 
+transfer, that party must agree that this 
+agreement applies to the transfer and use of 
+the software. The first user may not retain 
+any instances of the software unless that 
+user also retains another license for the 
+software.
+
+17. NOTICE ABOUT THE MPEG-4 VISUAL STANDARD. 
+This software includes MPEG-4 visual decoding 
+technology. This technology is a format for 
+data compression of video information. MPEG 
+LA, L.L.C. requires this notice:
+
+USE OF THIS PRODUCT IN ANY MANNER THAT 
+COMPLIES WITH THE MPEG 4 VISUAL STANDARD IS 
+PROHIBITED, EXCEPT FOR USE DIRECTLY RELATED 
+TO (A) DATA OR INFORMATION (i) GENERATED BY 
+AND OBTAINED WITHOUT CHARGE FROM A CONSUMER 
+NOT THEREBY ENGAGED IN A BUSINESS ENTERPRISE, 
+AND (ii) FOR PERSONAL USE ONLY; AND (B) OTHER 
+USES SPECIFICALLY AND SEPARATELY LICENSED BY 
+MPEG LA, L.L.C.
+
+If you have questions about the MPEG-4 
+visual standard, please contact MPEG LA, L.L.
+C., 250 Steele Street, Suite 300, Denver, 
+Colorado 80206; www.mpegla.com.
+
+18. EXPORT RESTRICTIONS. The software is 
+subject to United States export laws and 
+regulations. You must comply with all 
+domestic and international export laws and 
+regulations that apply to the software. These 
+laws include restrictions on destinations, 
+end users and end use. For additional 
+information, see www.microsoft.com/exporting.
+
+19. SUPPORT SERVICES. Contact the 
+manufacturer or installer for support options.
+Refer to the support number provided with the 
+software.
+
+20. ENTIRE AGREEMENT. This agreement 
+(including the warranty below), and the terms 
+for supplements, updates, Internet-based 
+services and support services that you use, 
+are the entire agreement for the software and 
+support services.
+
+21. APPLICABLE LAW.
+
+a. United States. If you acquired the 
+software in the United States, Washington 
+state law governs the interpretation of this 
+agreement and applies to claims for breach of 
+it, regardless of conflict of laws principles.
+The laws of the state where you live govern 
+all other claims, including claims under 
+state consumer protection laws, unfair 
+competition laws, and in tort.
+
+b. Outside the United States. If you 
+acquired the software in any other country, 
+the laws of that country apply.
+
+22. LEGAL EFFECT. This agreement describes 
+certain legal rights. You may have other 
+rights under the laws of your state or 
+country. You may also have rights with 
+respect to the party from whom you acquired 
+the software. This agreement does not change 
+your rights under the laws of your state or 
+country if the laws of your state or country 
+do not permit it to do so.
+
+23. LIMITATION ON AND EXCLUSION OF DAMAGES. 
+Except for any refund the manufacturer or 
+installer may provide, you cannot recover any 
+other damages, including consequential, lost 
+profits, special, indirect or incidental 
+damages.
+
+This limitation applies to
+
+· anything related to the software, services,
+content (including code) on third party 
+Internet sites, or third party programs; and
+
+· claims for breach of contract, breach of 
+warranty, guarantee or condition, strict 
+liability, negligence, or other tort to the 
+extent permitted by applicable law.
+
+It also applies even if
+
+· repair, replacement or a refund for the 
+software does not fully compensate you for 
+any losses; or
+
+· the manufacturer or installer, or 
+Microsoft knew or should have known about the 
+possibility of the damages.
+
+Some states do not allow the exclusion or 
+limitation of incidental or consequential 
+damages, so the above limitation or exclusion 
+may not apply to you. They also may not apply 
+to you because your country may not allow the 
+exclusion or limitation of incidental, 
+consequential or other damages. 
+
+**************************************************************************************
+
+LIMITED WARRANTY
+
+A. LIMITED WARRANTY. If you follow the 
+instructions, the software will perform 
+substantially as described in the Microsoft 
+materials that you receive in or with the 
+software.
+
+B. TERM OF WARRANTY; WARRANTY RECIPIENT; 
+LENGTH OF ANY IMPLIED WARRANTIES. The limited 
+warranty covers the software for 90 days 
+after acquired by the first user. If you 
+receive supplements, updates, or replacement 
+software during those 90 days, they will be 
+covered for the remainder of the warranty or 
+30 days, whichever is longer. If the first 
+user transfers the software, the remainder of 
+the warranty will apply to the recipient.
+
+To the extent permitted by law, any implied 
+warranties, guarantees or conditions last 
+only during the term of the limited warranty. 
+Some states do not allow limitations on how 
+long an implied warranty lasts, so these 
+limitations may not apply to you. They also 
+might not apply to you because some countries 
+may not allow limitations on how long an 
+implied warranty, guarantee or condition 
+lasts.
+
+C. EXCLUSIONS FROM WARRANTY. This warranty 
+does not cover problems caused by your acts 
+(or failures to act), the acts of others, or 
+events beyond the reasonable control of the 
+manufacturer or installer, or Microsoft.
+
+D. REMEDY FOR BREACH OF WARRANTY. The 
+manufacturer or installer will, at its 
+election, either (i) repair or replace the 
+software at no charge, or (ii) accept return 
+of the software together with the server for 
+a refund of the amount shown on your receipt 
+for the software and the server. The 
+manufacturer or installer may also repair or 
+replace supplements, updates and replacement 
+software or provide a refund of the amount 
+you paid for them, if any; contact the 
+manufacturer or installer about its policy. 
+These are your only remedies for breach of 
+the limited warranty.
+
+E. CONSUMER RIGHTS NOT AFFECTED. You may 
+have additional consumer rights under your 
+local laws, which this agreement cannot 
+change.
+
+F. WARRANTY PROCEDURES. Contact the 
+manufacturer or installer to find out how to 
+obtain warranty service for the software. For 
+a refund, you must provide a copy of your 
+receipt, the original Certificate of 
+Authenticity label must be on the server or 
+the software packaging, and you must comply 
+with the manufacturer's or installer's return 
+policies.
+
+G. NO OTHER WARRANTIES. The limited warranty 
+is the only direct warranty from the 
+manufacturer or installer, or Microsoft. The 
+manufacturer or installer and Microsoft give 
+no other express warranties, guarantees or 
+conditions. Where allowed by your local laws, 
+the manufacturer or installer and Microsoft 
+exclude implied warranties of merchantability,
+fitness for a particular purpose and non-
+infringement. If your local laws give you any 
+implied warranties, guarantees or conditions, 
+despite this exclusion, your remedies are 
+described in the Remedy for Breach of 
+Warranty clause above, to the extent 
+permitted by your local laws.
+
+H. LIMITATION ON AND EXCLUSION OF DAMAGES 
+FOR BREACH OF WARRANTY. The Limitation on and 
+Exclusion of Damages clause above applies to 
+breaches of this limited warranty.
+
+This warranty gives you specific legal 
+rights, and you may also have other rights 
+which vary from state to state. You may also 
+have other rights which vary from country to 
+country. 
+
+EULAID:WS03SP2_RM.0_KN_OEM_EN

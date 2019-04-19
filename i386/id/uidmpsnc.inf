@@ -1,0 +1,85 @@
+
+
+
+
+
+[version]
+signature   =   "$Windows NT$"
+layoutfile  =   layout.inf
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+PswdSync   
+
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+
+[PswdSync]
+OptionDesc   		= %PswdSync_Desc%
+Tip          		= %PswdSync_Tip%
+Parent       		= UnixIDManagement 	
+needs			= IdmuMgmt
+IconIndex    		= 0
+CopyFiles    		= pswdsync.dllfiles,pswdsync.wbemfiles
+AddReg 			= PasswdSyncCommon.Registry,PasswdSync.Registry
+Uninstall    		= PswdSync.Remove
+
+[PswdSync.Remove]
+DelFiles 		= pswdsync.dllfiles,pswdsync.wbemfiles
+DelReg 			= PasswdSync.Registry
+
+[SourceDisksFiles]
+Psync.mof 	=1,,2352
+pswdsync.dll 	=1,,70144
+
+[DestinationDirs]
+pswdsync.dllfiles 	= 11
+pswdsync.wbemfiles 	= 11, \wbem
+
+[pswdsync.dllfiles]
+pswdsync.dll,,,0x00010004
+
+[pswdsync.wbemfiles]
+Psync.mof,,,0x00000040
+
+[PasswdSync.Registry]
+HKLM,"Software\Microsoft\PswdSync"
+HKLM,"System\CurrentControlSet\Services\EventLog\Application\NT to Unix Password Sync service"
+HKLM,"System\CurrentControlSet\Services\EventLog\Application\NT to Unix Password Sync service","EventMessageFile",%REG_EXPAND_SZ%,%systemroot%\system32\pswdsync.dll
+HKLM,"System\CurrentControlSet\Services\EventLog\Application\NT to Unix Password Sync service","typesSupported",%REG_DWORD%,7
+HKLM,"Software\Microsoft\PswdSync","DaemonEncryptionKey",%REG_SZ%,ABCDZ#efgh$12345
+HKLM,"Software\Microsoft\PswdSync","DaemonPortNumber",%REG_DWORD%,6677
+HKLM,"Software\Microsoft\PswdSync","EncryptionKey",%REG_SZ%,ABCDZ#efgh$12345
+HKLM,"Software\Microsoft\PswdSync","Logging",%REG_DWORD%,0
+HKLM,"Software\Microsoft\PswdSync","Max Retries",%REG_DWORD%,3
+HKLM,"Software\Microsoft\PswdSync","Port Number",%REG_DWORD%,6677
+HKLM,"Software\Microsoft\PswdSync","SyncDirection",%REG_DWORD%,1
+HKLM,"Software\Microsoft\PswdSync","Update Retry Interval",%REG_DWORD%,120
+HKLM,"Software\Microsoft\PswdSync","SNISPasswordSyncEnable",%REG_DWORD%,0
+HKLM,"Software\Microsoft\PswdSync\Domains"
+HKLM,"Software\Microsoft\PswdSync\ReadConfig"
+HKLM,"%KEY_IDM%\AppsInstalled\Password Synchronization"
+HKLM,"%KEY_IDM%\AppsInstalled\Password Synchronization","InstallPath",%REG_EXPAND_SZ%,"%systemroot%\system32\"
+
+[PasswdSyncCommon.Registry]
+HKLM,"SYSTEM\CurrentControlSet\Control\LSA","Notification Packages",%REG_MULTI_SZ_APPEND%,"pswdsync"
+
+
+
+[Strings]
+PswdSync_Desc		="Password Synchronization"
+PswdSync_Tip 		="Installs Password Synchronization component"
+REG_SZ_OVERWRITE        =0x00000    
+REG_SZ                  =0x00002    
+REG_BINARY_OVERWRITE    =0x00001    
+REG_BINARY              =0x00003    
+REG_SZ_EXPAND_OVERWRITE =0x20000    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD_OVERWRITE     =0x10001    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008    
+R2CDNAME 		= "Windows Server 2003 R2 Disc 2"
+KEY_IDM			="SOFTWARE\Microsoft\Identity Management for UNIX"

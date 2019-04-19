@@ -1,0 +1,120 @@
+
+
+
+
+
+[Version]
+Signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+NfsAdminUI
+
+[NfsAdminUI]
+OptionDesc              = %str_MSNFS_admin_desc%
+Tip	                = %str_MSNFS_admin_tip%
+IconIndex               = 0
+Parent                  = MSNFS
+CopyFiles               = NfsAdminUIOtherFiles
+ProfileItems            = NfsAdminUI.install.MMCSnapin
+Uninstall               = NfsAdminUI.uninstall
+
+RegisterDlls            = NfsAdminUIDllFiles.RegSrv
+AddReg                  = NfsAdminUI.AddRegistry
+
+
+[NfsAdminUI.uninstall]
+DelFiles                = NfsAdminUIOtherFiles
+ProfileItems            = NfsAdminUI.uninstall.MMCSnapin
+
+DelReg                  = NfsAdminUI.AddRegistry
+
+UnregisterDlls          = NfsAdminUIDllFiles.RegSrv
+
+[DestinationDirs]
+NfsAdminUIOtherFiles      = 10, %MSNFSDIR%
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+clusnfs.exe         = 1
+mapadmin.exe        = 1
+mapper.dll          = 1
+nfsadmin.exe        = 1
+nfscligrps.dll      = 1
+nfsclilocks.dll     = 1
+nfscom.dll          = 1
+nfscommgmt.dll      = 1
+nfsmgmt.msc         = 1
+nfsrc.dll           = 1
+rpcinfo.exe         = 1
+showmount.exe       = 1
+
+[NfsAdminUIOtherFiles]
+clusnfs.exe
+mapadmin.exe
+mapper.dll
+nfsadmin.exe
+nfscligrps.dll
+nfsclilocks.dll
+nfscom.dll
+nfscommgmt.dll
+nfsmgmt.msc
+nfsrc.dll
+rpcinfo.exe
+showmount.exe
+
+[NfsAdminUI.install.MMCSnapin]
+Name            = %str_MSNFSMMC%
+CmdLine         = 10, %MSNFSDIR%, nfsmgmt.msc
+IconIndex       = 0
+WorkingDir      = 10, %MSNFSDIR%
+InfoTip         = "@%10%%MSNFSDIR%nfsrc.dll,-4001"
+DisplayResource = "%10%%MSNFSDIR%nfsrc.dll",4002
+SubDir          = %str_MSNFSGROUP%
+
+[NfsAdminUI.uninstall.MMCSnapin]
+Name        = %str_MSNFSMMC%, 2    
+SubDir      = %str_MSNFSGROUP%
+
+[NfsAdminUI.AddRegistry]
+HKLM, "SOFTWARE\MICROSOFT\MSNFS"
+HKLM, "SOFTWARE\MICROSOFT\MSNFS", "MappingServers", %REG_MULTI_SZ%, "localhost"
+HKLM, "SOFTWARE\MICROSOFT\MSNFS", "Rfc2307", %REG_DWORD%, 0
+HKLM, "SOFTWARE\MICROSOFT\MSNFS", "Rfc2307Domain", %REG_SZ%
+
+
+HKLM, "SOFTWARE\MICROSOFT\MSNFS\AppsInstalled\Help Files and Documentation", "InstallPath", %REG_SZ%, %10%%MSNFSDIR%
+
+
+HKLM,"SOFTWARE\MICROSOFT\MSNFS", "InstallPath", %REG_SZ%, %10%%MSNFSDIR%
+HKLM,"SOFTWARE\MICROSOFT\MSNFS\AppsInstalled\Common Files", "InstallPath", %REG_SZ%, %10%%MSNFSDIR% 
+HKLM,"SOFTWARE\Policies\Microsoft\Windows\Installer", "Logging", %REG_SZ%, "vicewarmup"
+HKLM,"SOFTWARE\MICROSOFT\MSNFS\UpgradeStatus"
+
+
+[NfsAdminUIDllFiles.RegSrv]
+10, %MSNFSDIR%, mapper.dll, 1
+10, %MSNFSDIR%, nfscligrps.dll, 1
+10, %MSNFSDIR%, nfsclilocks.dll, 1
+10, %MSNFSDIR%, nfscom.dll, 1
+10, %MSNFSDIR%, nfscommgmt.dll, 1
+
+[Strings]
+str_MSNFS_admin_desc    = "Microsoft Services for NFS Administration"
+str_MSNFS_admin_tip     = "Allows configuration of the Client for NFS, Server for NFS, and User Name Mapping subcomponents on both local and remote computers."
+str_MSNFSMMC            = "Microsoft Services for NFS Administration"
+str_MSNFSGROUP          = "Administrative Tools"
+
+MSNFSDIR                = "\msnfs\"
+
+
+R2CDNAME                = "Windows Server 2003 R2 Disc 2"
+
+REG_SZ                  =0x00002    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008
+

@@ -1,0 +1,730 @@
+;
+;  AppHelp Message INF for NTCOMPAT-style upgrades
+;
+;  This file is generated from XML via ShimDBC
+;
+
+
+[Version]
+signature="$windows nt$"
+
+[idh_w2_21387.htm]
+"Application Center 2000 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_100030.htm]
+"Application Center 2000 has a known compatibility issue with this version of Windows. For more information, refer to http://go.microsoft.com/fwlink/?LinkId=40019."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_20669.htm]
+"Approach 9.x has a known compatibility issue with this version of Windows and might not run as expected. Printing from a crosstable might not work as expected. For more information, contact Lotus."
+""
+"Lotus Web site:  http://www.lotus.com"
+"Telephone: (800) 343-5414 (North America only)"
+
+[idh_w2_21294.htm]
+"AtGuard has a known compatibility issue with this version of Windows."
+""
+"WRQ has discontinued and no longer supports this product on any platform."
+""
+"WRQ Web site:  http://www.WRQ.com/"
+
+[idh_w2_21313.htm]
+"BackOffice 2000 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21298.htm]
+"This version of Backup Exec relies on drivers that might not be compatible with this version of Windows. Updated drivers are available from http://seer.support.veritas.com/docs/242074.htm . Contact VERITAS for more details."
+""
+"VERITAS Web site:  http://support.veritas.com"
+
+[idh_w2_21385.htm]
+"BizTalk Server 2000 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21216.htm]
+"Cisco System VPN 3000 has a known compatibility issue with this version of Windows. For an update that is compatible with this version of Windows, contact Cisco."
+""
+"Cisco Web site:  http://www.cisco.com"
+
+[idh_w2_21217.htm]
+"Cisco System VPN 5000 has a known compatibility issue with this version of Windows and might not run as expected. For more information, contact Cisco."
+""
+"Cisco Web site:  http://www.cisco.com"
+
+[idh_w2_21310.htm]
+"Cold Fusion 5 is incompatible with this version of Windows. For more information, contact Macromedia."
+""
+"Macromedia Web site:  http://www.macromedia.com/support"
+
+[idh_w2_21248.htm]
+"To function properly, Command & Conquer: Red Alert 2 must be reinstalled after you upgrade Windows."
+""
+"Westwood Studios Web site:  http://westwood.ea.com"
+"Telephone: (650) 628-4319 (North America only)"
+
+[idh_w2_21354.htm]
+"Commerce Server 2000 has a known compatibility issue with this version of Windows and might not run as expected. For more information, contact Microsoft."
+""
+"http://www.microsoft.com/commerceserver/support"
+
+[idh_w2_21187.htm]
+"ConfigSafe is incompatible with this version of Windows. For more information, contact Imagine Lan."
+""
+"Imagine Lan Web site:  http://www.imagine-lan.com"
+
+[idh_w2_21149.htm]
+"ControlIT 5.0 is incompatible with this version of Windows. For more information, contact Computer Associates."
+""
+"Computer Associates Web site:  http://support.cai.com"
+"Telephone: (516) 342-5224 (North America only)"
+
+[idh_w2_21359.htm]
+"Dell OpenManage Version Assistant - Managed Node is incompatible with this version of Windows. For more information, contact Dell Computer Corporation Support."
+""
+"Dell Web site:  http://www.support.dell.com"
+
+[idh_w2_21360.htm]
+"Dell OpenManage Version Assistant - Server is incompatible with this version of Windows. For more information, contact Dell Computer Corporation Support."
+""
+"Dell Web site:  http://www.support.dell.com"
+
+[idh_w2_21356.htm]
+"Dell PERC 2 is incompatible with this version of Windows. For more information, contact Dell Computer Corporation Support."
+""
+"Dell Web site:  http://www.support.dell.com"
+
+[idh_w2_21330.htm]
+"DirectCD 5 must be removed before you upgrade Windows. You can reinstall the program after the upgrade is complete."
+""
+"Roxio Support Web site (English):  http://www.roxio.com/support"
+"Roxio Support Web site (Japan):  http://www.roxio.co.jp/support"
+"Telephone: (408) 945-8600 (North America only)"
+
+[idh_w2_21320.htm]
+"To function properly, Diskeeper 7.0 must be reinstalled after you upgrade Windows."
+""
+"Executive Software Web site:  http://www.ExecutiveSoftware.com"
+"Telephone: (818) 771-1600 (North America only)"
+
+[idh_w2_21377.htm]
+"Dr. Eye 2002 is incompatible with the upgraded version of Windows. It is recommended that you remove this program before continuing."
+""
+"Inventec Web site:  http://www.dreye.com"
+
+[idh_w2_21203.htm]
+"To function properly, Easy CD Creator 4 must be reinstalled after you upgrade Windows."
+""
+"Roxio Support Web site (English):  http://www.roxio.com/support"
+"Roxio Support Web site (Japan):  http://www.roxio.co.jp/support"
+"Telephone: (408) 945-8600 (North America only)"
+
+[idh_w2_21214.htm]
+"EnterNet 300 is incompatible with this version of Windows and must be removed before continuing."
+""
+"Efficient Networks Web site:  http://www.efficient.com/"
+
+[idh_w2_21437.htm]
+"Exchange Server 5.5 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21368.htm]
+"Exchange Server 2000 is incompatible with this version of Windows. For more information, contact Microsoft."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_100027.htm]
+"Exchange Server 2003 has a known compatibility issue with this version of Windows. For more information, refer to http://go.microsoft.com/fwlink/?LinkId=37488."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21293.htm]
+"FTP NetDrive 1.0 - 4.1.x / Internet Neighborhood 1.0 - 4.1.x is incompatible with this version of Windows. For more information, contact Knoware."
+""
+"Knoware Web site:  http://www.knoware.com"
+
+[idh_w2_21202.htm]
+"GoBack must be uninstalled prior to upgrading to this version of Windows."
+""
+"Additionally, GoBack versions 3.0.2 and earlier are incompatible with this version of Windows and must be upgraded. A compatible version is available from Roxio at  http://www.goback.com  and can be installed after the upgrade has completed."
+""
+"Roxio Support Web site (English):  http://www.roxio.com/support"
+"Roxio Support Web site (Japan):  http://www.roxio.co.jp/support"
+"Telephone: (408) 945-8600 (North America only)"
+
+[idh_w2_21178.htm]
+"HP Smart Card Security System is incompatible with this version of Windows and must be removed before continuing."
+""
+"Hewlett-Packard Web site:  http://www.hp.com"
+
+[idh_w2_21108.htm]
+"HP Soft Power Down is incompatible with this version of Windows. For more information, contact Hewlett-Packard."
+""
+"Hewlett-Packard Web site:  http://www.hp.com"
+
+[idh_w2_21325.htm]
+"IBM Director is incompatible with this version of Windows and must be removed before continuing."
+""
+"IBM Web site:  http://www.ibm.com"
+"Telephone: (919) 517-0225 (North America only)"
+
+[idh_w2_21461.htm]
+"Instant CD/DVD 7.0 has a known compatibility issue with this version of Windows. For an update that is compatible with this version of Windows, contact Pinnacle Systems."
+""
+"Pinnacle Systems Web site:  http://www.pinnaclesys.com"
+
+[idh_w2_21185.htm]
+"L2TP/IPSec VPN client is incompatible with this version of Windows. All of its features are currently part of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21250.htm]
+"Mobile Information Server 2001 is incompatible with this version of Windows. For more information, contact Microsoft."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21315.htm]
+"Mobile Information Server 2002 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21220.htm]
+"Nortel Extranet Access Client has a known compatibility issue with this version of Windows. For an update that is compatible with this version of Windows, contact Nortel."
+""
+"Nortel Web site:  http://www.nortelnetworks.com/index.html"
+
+[idh_w2_20886.htm]
+"Norton Ghost 6.5 is incompatible with this version of Windows. For more information, contact Symantec."
+""
+"Symantec Web site:  http://service.symantec.com"
+"Telephone: (800) 441-7234 (North America only)"
+
+[idh_w2_21386.htm]
+"NovaDisk 2000 is incompatible with this version of Windows. For more information, contact Novastor."
+""
+"Novastor Web site:  http://www.novastor.com"
+
+[idh_w2_21205.htm]
+"Novell Client 32 has a known compatibility issue with this version of Windows and might not run as expected. For more information, contact Novell."
+""
+"Novell Web site:  http://www.novell.com"
+"Telephone: (800) 858-4000 (North America only)"
+
+[idh_w2_100031.htm]
+"Novell Client 32 has one or more drivers with known incompatibilities with this version of Windows. Please contact your software vendor Novell to obtain a compatible version of the drivers prior to installing this software."
+""
+"Novell Web site:  http://www.novell.com"
+"Telephone: (800) 858-4000 (North America only)"
+
+[idh_w2_21226.htm]
+"This version of Novell NetWare Client32 is incompatible with this version of Windows."
+""
+"Contact the program vendor regarding upgrades that are compatible with this version of Windows."
+""
+"Novell Web site:  http://www.novell.com/"
+"Telephone: (800) 858-4000 (North America only)"
+
+[idh_w2_21350.htm]
+"Perc Console Package is incompatible with this version of Windows. For more information, contact Dell Computer Corporation Support."
+""
+"Dell Web site:  http://www.support.dell.com"
+
+[idh_w2_21151.htm]
+"PGP Desktop Security 7.x is incompatible with this version of Windows. For more information, contact Network Associates, Inc.."
+""
+"Network Associates Web site:  http://www.nai.com/"
+"Telephone: (408) 988-3832 (North America only)"
+
+[idh_w2_21299.htm]
+"Pivotal Relationship 2000 is incompatible with this version of Windows. For more information, contact Pivotal Software."
+""
+"Pivotal Web Site:  http://www.pivotal.com"
+
+[idh_w2_21438.htm]
+"Proxy Server 2.0 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21311.htm]
+"Quota Advisor 4.1 has a known compatibility issue with this version of Windows. For an update that is compatible with this version of Windows, contact W.Quinn Associates."
+""
+"Precise SRM Web site:  http://www.precise.com"
+
+[idh_w2_20004.htm]
+"Lotus ScreenCam NT requires a specific video driver that is compatible with most video hardware/software configurations. However, if your configuration is not supported the program will not function properly."
+""
+"Check http://www.lotus.com/home.nsf/welcome/screencam for the list of supported video hardware/software configurations. If you have installed ScreenCam NT without checking the requirements and are experiencing problems, you can restore your video drivers by running restore.exe from the \Lotus\Scrcamnt folder. For more information about compatible versions, contact the program vendor."
+""
+"Lotus Web site:  http://www.lotus.com"
+"Telephone: (800) 343-5414 (North America only)"
+
+[idh_w2_21366.htm]
+"SecureIIS 1.x is incompatible with this version of Windows. For more information, contact eEye Digital Security."
+""
+"eEye Web site:  http://www.eeye.com/html"
+
+[idh_w2_21306.htm]
+"Services for Unix 2.0 Telnet Client and Telnet Server are not supported by this version of Windows. They will be replaced when you upgrade Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21307.htm]
+"Services for Unix 2.0 is incompatible with this version of Windows. For more information, contact Microsoft."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21328.htm]
+"Services for Unix 2.0 is incompatible with this version of Windows. For more information, contact Microsoft."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21314.htm]
+"SharePoint Portal Server 2001 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21439.htm]
+"Site Server 3.0 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21440.htm]
+"System Management Server 2.0 (SP3 and below) is incompatible with this version of Windows. For more information, contact Microsoft."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21379.htm]
+"SNA Server 4.0 and below is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21169.htm]
+"Soft-PK Client is incompatible with this version of Windows. For more information, contact SafeNet."
+""
+"SafeNet Web site:  http://www.safenet-inc.com"
+
+[idh_w2_100016.htm]
+"SQL Server 2000 sp2 and below is not supported by this version of Windows. Please apply sp3 after installation of SQL Server 2000."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_100017.htm]
+"SQL Server 2000 Analysis Services sp2 and below is not supported by this version of Windows. Please apply sp3 after installation of SQL Server 2000 Analysis Services."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_100019.htm]
+"SQL Server 2000 English Query sp2 and below is not supported by this version of Windows. Please apply sp3 after installation of SQL Server 2000 English Query."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21381.htm]
+"SQL Server 6.5 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21318.htm]
+"SQL Server 7.0 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21319.htm]
+"SQL Server OLAP Services 7.0 is not supported by this version of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21339.htm]
+"SuperSpeed 2000 is incompatible with this version of Windows. For more information, contact SuperSpeed."
+""
+"SuperSpeed Web site:  http://www.SuperSpeed.com/"
+
+[idh_w2_21186.htm]
+"UDP/IPSec VPN client is incompatible with this version of Windows. All of its features are currently part of Windows."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21383.htm]
+"VirusScan 7.0 Home or Professional Edition is incompatible with this version of Windows and must be removed before continuing."
+""
+"McAfee Web site:  http://www.mcafee-at-home.com"
+"Telephone: (972) 855-7044 (North America only)"
+
+[idh_w2_21154.htm]
+"Microsoft Visual J++ has a known compatibility issue described in Microsoft Knowledge Base article number Q299764. Microsoft Visual J++ customers must correct this issue before using Visual J++."
+""
+"To view the Microsoft Knowledge Base article number Q299764 see:"
+""
+"http://support.microsoft.com/support/kb/articles/q299/7/64.asp"
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_21428.htm]
+"This version of vsdatant.sys relies on drivers that might not be compatible with this version of Windows. Updated drivers are available from http://www.zonelabs.com/2003server/ . Contact Zone Labs, Inc. for more details."
+""
+"Zone Labs Web site:  http://www.zonelabs.com/"
+
+[idh_w2_21152.htm]
+"You have a more recent Windows Compatibility Update than what is available on your Windows XP installation media. To avoid compatibility problems, download the latest updates from the Microsoft Windows Update Web site after upgrading."
+""
+"Microsoft Windows Update Web site:  http://windowsupdate.microsoft.com"
+
+[idh_w2_21118.htm]
+"WinFax Lite/Pro 3.x is incompatible with this version of Windows. For more information, contact Symantec."
+""
+"Symantec Web site:  http://service.symantec.com"
+"Telephone: (800) 441-7234 (North America only)"
+
+[idh_w2_21103.htm]
+"To function properly, WinFax Pro 10 must be reinstalled after you upgrade Windows."
+""
+"Symantec Web site:  http://service.symantec.com"
+"Telephone: (800) 441-7234 (North America only)"
+
+[idh_w2_21212.htm]
+"WinPoet v2.0 is incompatible with this version of Windows and must be removed before continuing."
+""
+"WindRiver Web site:  http://www.windriver.com"
+
+[idh_w2_21297.htm]
+"WinZip 6.3-8.0 has a known compatibility issue with this version of Windows. For an update that is compatible with this version of Windows, contact Nico Mak Computing."
+""
+"WinZip Computing, Inc. Web site:  http://www.winzip.com"
+
+[idh_w2_20667.htm]
+"The currently shipping versions of ZoneAlarm and ZoneAlarm Pro (version 2.6.231 or higher) are compatible with Microsoft Windows XP. Click here  http://www.zonelabs.com/xpupdate/  to get the latest version of ZoneAlarm or ZoneAlarm Pro."
+""
+"Zone Labs Web site:  http://www.zonelabs.com/xpupdate/"
+
+[idh_w2_21146.htm]
+"To function properly, ZoomText Xtra must be reinstalled after you upgrade Windows."
+""
+"Ai Squared Web site:  http://www.aisquared.com/"
+"Telephone: (802) 362-3612 (North America only)"
+
+[idh_w2_21179.htm]
+"??????2000 must be removed before you upgrade Windows. You can reinstall the program after the upgrade is complete."
+""
+"HeroSoft Web site:  http://www.herosoftus.com/"
+
+[idh_w2_50009.htm]
+"The current version of the Alps full functionality PS2 Touchpad Device Driver is incompatible with Windows XP. Your Touchpad functions under Windows XP with basic functionality. The full functionality driver is not loaded to preserve system stability."
+""
+"To obtain full functionality, download the latest Windows XP-compatible input device driver from the OEM's Web site."
+""
+"For additional details on driver availability, see the Alps Web site."
+""
+"Alps Electric Co. Web site:  http://www.alps.com"
+
+[idh_w2_50004.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"VCOM Web site:  http://www.v-com.com/"
+"Telephone: (408) 965-4018 (North America only)"
+
+[idh_w2_50005.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"AVM Berlin Web site:  http://www.avm.de"
+
+[idh_w2_50028.htm]
+"The otman5.sys driver you are installing is incompatible with this version of Windows. Please contact your backup software vendor for support information."
+""
+"VERITAS Software - VERITAS Backup Exec"
+"VERITAS Software - VERITAS NetBackup"
+"VERITAS Software - VERITAS NetBackup Professional"
+"Web site:  http://support.veritas.com"
+""
+"Cristie Data Products Ltd – PC-BaX"
+"Web site:  http://www.cristie.co.uk/uk/uk_html/uk_frm_home.html"
+""
+"DuoCor - XactCopy"
+"Web site:  http://www.duocor.com/support/"
+""
+"EVault - Network Data Protection"
+"Web site:  http://www.evault.com/contact/contact.asp"
+""
+"Teradactyl - TiBS (True incremental Backup System)"
+"Web site:  http://www.teradactyl.com/Support/Support.html"
+
+[idh_w2_50105.htm]
+"This version of Backup Utility Driver relies on drivers that might not be compatible with this version of Windows. Updated drivers are available from http://seer.support.veritas.com/docs/242074.htm . Contact Backup Software Vendors for more details."
+""
+"VERITAS Software - VERITAS Backup Exec"
+"VERITAS Software - VERITAS NetBackup"
+"VERITAS Software - VERITAS NetBackup Professional"
+"Web site:  http://support.veritas.com"
+""
+"Cristie Data Products Ltd – PC-BaX"
+"Web site:  http://www.cristie.co.uk/uk/uk_html/uk_frm_home.html"
+""
+"DuoCor - XactCopy"
+"Web site:  http://www.duocor.com/support/"
+""
+"EVault - Network Data Protection"
+"Web site:  http://www.evault.com/contact/contact.asp"
+""
+"Teradactyl - TiBS (True incremental Backup System)"
+"Web site:  http://www.teradactyl.com/Support/Support.html"
+
+[idh_w2_50045.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Network Ice Corporation Web site:  http://www.networkice.com/"
+
+[idh_w2_50108.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Roxio, Inc. Web site:  http://support.roxio.com/microsoft"
+
+[idh_w2_50038.htm]
+"A CD-recording driver is installed that might cause stability problems, including problems shutting down and problems using a CD/DVD drive. This driver will be disabled."
+""
+"This driver might have been installed by  Easy CD Creator  ,  Windows Media Player  or  RealJukebox  . You might not be able to record CDs until you obtain compatible drivers."
+""
+"Roxio, Inc. provides an update for Easy CD Creator users at the  Easy CD Creator Updates  Web site."
+""
+"For Windows Media Player users, see the Microsoft Web site at  http://www.microsoft.com/windows/windowsmedia/windowsxp/roxio.asp  ."
+""
+"For RealJukebox users, see the RealNetworks Web site at  http://switchboard.real.com/rj2/?cd=xpfix  ."
+""
+"Roxio Support Web site (English):  http://www.roxio.com/support"
+"Roxio Support Web site (Japan):  http://www.roxio.co.jp/support"
+"Telephone: (408) 945-8600 (North America only)"
+
+[idh_w2_50019.htm]
+"Cisco VPN has a known compatibility issue with this version of Windows and might not run as expected. For more information, contact Cisco."
+""
+"Cisco Web site:  http://www.cisco.com"
+
+[idh_w2_50106.htm]
+"The installed device driver Cpqfcftr.sys does not support this version of Windows and needs to be disabled for the upgrade to continue. This driver is used by the Compaq Insight Manager for system management of the Compaq StorageWorks RA4x000 and MSA1000 and provides support for fibre channel attached tape libraries. Please download and install the Compaq StorageWorks Fibre Channel Support component from www.hp.com after the installation is complete."
+""
+"Hewlett-Packard Web site:  http://www.hp.com  Telephone: (800) 652-6672"
+
+[idh_w2_50007.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Conexant Web site:  http://www.conexant.com"
+
+[idh_w2_50008.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Conexant Web site:  http://www.conexant.com"
+
+[idh_w2_50013.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Artisoft Inc. Web site:  http://www.artisoft.com"
+
+[idh_w2_50024.htm]
+"CoSession Remote 32 is incompatible with this version of Windows. For more information, contact Artisoft Inc.."
+""
+"Artisoft Inc. Web site:  http://www.artisoft.com"
+
+[idh_w2_50020.htm]
+"The software for the Deterministic Networks driver is not compatible with this version of Windows and the upgrade cannot continue. It is recommended that you uninstall this software before attempting this upgrade again. Deterministic Networks provides a driver that is used by several other vendors who supply network software products such as firewalls, VPN clients, or PPPoE clients. One of these programs on your computer is using a version of this driver that is incompatible with Windows XP. To upgrade to Windows XP, you need to uninstall this program. For an upgrade to this program that will work with Windows XP, contact the program vendor."
+""
+"Deterministic Networks Web site:  http://www.deterministicnetworks.com/"
+"Telephone: (831) 421-0388 (North America only)"
+
+[idh_w2_50033.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Available Patch:  http://www.roxio.com/en/jhtml/xpupdate.jhtml?location=update"
+
+[idh_w2_50023.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Ontrack Web site:  http://www.ontrack.com"
+"Telephone: (800) 645-3649 (North America only)"
+
+[idh_w2_50046.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Epson Web site:  http://www.epson.com"
+
+[idh_w2_50100.htm]
+"Exchange 2000 Server is not supported on this version of Windows."
+""
+"http://www.microsoft.com/exchange"
+
+[idh_w2_50104.htm]
+"Microsoft File and Print Services for Netware is not compatible with this version of Windows."
+""
+"Microsoft Corporation"
+
+[idh_w2_50042.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Hewlett-Packard Web site:  http://www.hp.com"
+
+[idh_w2_50022.htm]
+"The detected filter driver might cause stability problems with this version of Windows. Real-time virus protection will be disabled until you install an updated driver."
+""
+"Resolution:"
+""
+"Ask your system administrator for an updated driver. If your system administrator does not have a compatible driver, download the latest drivers from the  Computer Associates support Web site  ."
+""
+"Affected products:"
+""
+"InoculateIT 6.0 Advanced Edition  InoculateIT 6.0 Workgroup Edition  InoculateIT 4.53 Advanced Edition  InoculateIT 4.53 Workgroup Edition  InoculateIT 4.53 Enterprise Edition  Advanced Antivirus Option 4.53  Advanced Antivirus Option 4.0  Inoculan 4.0 for Windows NT"
+""
+"Computer Associates Web site:  http://support.ca.com/Download/ildrvupdate.html"
+
+[idh_w2_50103.htm]
+"This version of Iomega Software relies on drivers that might not be compatible with this version of Windows. Updated drivers are available from http://www.iomega.com/software/iowarexp_ms.html . Contact Iomega Corporation for more details."
+""
+"Iomega Web site:  http://www.iomega.com/support  Telephone: (888) 446-6342"
+
+[idh_w2_50102.htm]
+"ISA 2000 requires Service Pack 1 to function correctly on this version of Windows. During the installation, error messages and error event logs regarding compatibility might appear. These messages may be ignored during the installation. Install Service Pack 1 after this installation is complete. Service Pack 1 can be downloaded from http://go.microsoft.com/fwlink/?linkid=4833. For more information, contact Microsoft."
+""
+"Microsoft Web site:  http://www.microsoft.com"
+"Telephone: (425) 635-7172 (U.S.) or (905) 568-3503 (Canada)"
+
+[idh_w2_50003.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Liquid Audio Web site:  http://www.liquidaudio.com"
+
+[idh_w2_50029.htm]
+"The currently installed IEEE1394 Network Driver is incompatible with this version of Windows and will be disabled. For more information about this driver, see the manufacturer's Web site. Uninstall the current IEEE 1394 network drivers by using Add/Remove Programs in Control Panel."
+""
+"NEC Web site (English):  http://www.nec.com"
+"NEC Web site (Japan):  http://121ware.com/support/winxp/"
+
+[idh_w2_110002.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Kerio Technologies Inc. Web site:  http://www.kerio.com/kerio.html"
+
+[idh_w2_50047.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Symantec Web site:  http://service.symantec.com"
+"Telephone: (800) 441-7234 (North America only)"
+
+[idh_w2_50012.htm]
+"The driver for One-touch Start Buttons currently installed on this computer is incompatible with this version of Windows. The basic keys on your keyboard will still be functional. For additional details on driver availability, refer to the vendor's Web site."
+""
+"NEC Windows XP Support Information Web site:  http://121ware.com/support/winxp/"
+
+[idh_w2_50048.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Panda Software Web site:  http://www.pandasoftware.com"
+
+[idh_w2_50043.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Sony Website:  http://www.sony.com"
+
+[idh_w2_50010.htm]
+"The installed version of the Promise filter driver is incompatible with Windows XP. Your disk drives will function under Windows XP with basic functionality. To preserve system stability, the full functionality filter driver is not loaded. Download the latest Windows XP-compatible filter device driver from the Technical Support section of the Promise Technology Web site."
+""
+"Promise Technology Web site:  http://www.promise.com"
+
+[idh_w2_50044.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"SanDisk Web site:  http://www.sandisk.com/"
+
+[idh_w2_52004.htm]
+"Security Services & AV Driver has a known compatibility issue with this version of Windows. For an update that is compatible with this version of Windows, contact Command Software."
+""
+"Command Software web site:  http://www.antiviruspatch.com/MSGEN/avxpsp2.htm"
+
+[idh_w2_50006.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Sony Website:  http://www.sony.com"
+
+[idh_w2_50002.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Updated driver:  http://www.symantec.com/techsupp/files/symevnt/symevnt.html"
+
+[idh_w2_50041.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Umax Web site:  http://www.umax.com/"
+"Telephone: (510) 651-4000 (North America only)"
+
+[idh_w2_50015.htm]
+"For more information about this driver, see the manufacturer's Web site at:  http://www.teldevice.co.jp/  . Web addresses can change, so you may be unable to connect to this Web site."
+""
+"Tokyo Electron Device Web site:  http://www.teldevice.co.jp/"
+
+[idh_w2_50016.htm]
+"For more information about this driver, see the manufacturer's Web site at:  http://music.sanyo.co.jp/index.html  . Web addresses can change, so you may be unable to connect to this Web site."
+""
+"Sanyo Music Device Web site:  http://music.sanyo.co.jp/index.html"
+
+[idh_w2_50017.htm]
+"For more information about this driver, see the manufacturer's Web site at:  http://www.panasonic.co.jp/avc/audio/sd/index.html  . Web addresses can change, so you may be unable to connect to this Web site."
+""
+"Panasonic Web site:  http://www.panasonic.com"
+
+[idh_w2_50018.htm]
+"For more information about this driver, see the manufacturer's Web site at:  http://www2.toshiba.co.jp/mobileav/products/audio/index.html  . Web addresses can change, so you may be unable to connect to this Web site."
+""
+"Toshiba Web site:  http://www.toshiba.com/"
+
+[idh_w2_50021.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Available Patch:  http://www.virtualcd-online.com/vcd/apps/download/spack.cfm?lg=0"
+
+[idh_w2_110001.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Web Site:  http://go.microsoft.com/fwlink/?LinkId=26320"
+"Telephone: 1-800-936-5800"
+
+[idh_w2_50037.htm]
+"A driver is installed that causes stability problems with your system. This driver will be disabled. Please contact the driver manufacturer for an update that is compatible with this version of Windows."
+""
+"Xircom Web site:  http://www.xircom.com/"
+
+[idh_w2_50049.htm]
+"YAMAHA AC-XG WDM Audio Device installs drivers that are incompatible with this version of Windows. For more information, contact Yamaha Corporation."
+""
+"Yamaha Web site (Japan):  http://www.yamaha.co.jp/info/lsi.html"
+"Yamaha Web site (North America):  http://www.yamaha.co.jp/english/lsie.html  (North America only)"
+
+[idh_w2_50112.htm]
+"This version of vsdatant.sys relies on drivers that might not be compatible with this version of Windows. Updated drivers are available from http://www.zonelabs.com/2003server/ . Contact Zone Labs, Inc. for more details."
+""
+"Zone Labs Web site:  http://www.zonelabs.com/"
+

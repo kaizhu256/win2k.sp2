@@ -1,0 +1,45 @@
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+DfsRHelper
+
+[DfsRHelper]
+Parent             = DFS
+OptionDesc         = %DfsRHelperDescription%
+Tip                = %DfsRHelperTip%
+IconIndex          = 22
+CopyFiles    = DfsRHelper.Files
+Uninstall          = DfsRHelper.Uninstall
+RegisterDlls = DfsRHelper.RegSvr
+
+
+[DfsRHelper.Uninstall]
+DelFiles       = DfsRHelper.Files
+UnregisterDlls = DfsRHelper.RegSvr
+
+[DestinationDirs]
+DfsRHelper.Files                = 11
+
+[SourceDisksNames]
+1 = %R2CDNAME%,,,\cmpnents\r2
+
+[SourceDisksFiles]
+dfsrdiag.exe                   = 1 
+dfsrhelper.dll                 = 1
+interop.dfsrhelper.dll         = 1
+
+[DfsRHelper.Files]
+dfsrdiag.exe
+dfsrhelper.dll
+interop.dfsrhelper.dll
+
+
+[DfsRHelper.RegSvr]
+11,,dfsrhelper.dll,0x00000001,,       
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+DfsRHelperDescription = "DFS Replication Diagnostic and Configuration Tools"
+DfsRHelperTip = "Installs diagnostic and configuration tools for DFS Replication."

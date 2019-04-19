@@ -1,0 +1,754 @@
+﻿<html DIR="LTR" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Preinstallation Notes for Microsoft Windows Server 2003 and Microsoft Windows XP Professional x64 Edition</title>
+    
+  <STYLE TYPE="text/css">
+/* RelNote */
+
+table#columnTable
+{
+    table-layout: fixed;
+    background:    #FFFFFF;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+td#EdgeBorderColumn
+{
+    width: 10px;
+    border: 0px;
+    margin: 0;    
+    height: 100%;
+    background-color:  #666666;
+}
+  
+td#ToCColumn
+{
+    background:    #FFFFFF;
+    width: 300px;
+    border: 0;
+    margin: 0;
+    vertical-align: top;
+    padding-left:    14px;
+    padding-right:   10px;
+    padding-top: 7px;
+    text-decoration: none;
+}
+
+td#contentColumn
+{
+    background:    #FFFFFF;	
+    border: 0;
+    margin: 0;
+    padding: 14px 5% 22px 10px;             		
+    vertical-align: top;
+    max-width: 590;	
+}
+
+.ToCLevel1
+{
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.ToCLevel2
+{
+    margin-left: 8px;
+}
+	
+a
+{
+    color: #000000;
+}
+
+@media print
+{
+    P.TopOfPage
+    {
+    	margin: 5 0 18 0;		
+    }
+}
+
+@media screen
+{
+    P.TopOfPage
+    {
+    	margin: 0 0 18 0;		
+    }
+}
+
+#contentColumn A.TopOfPageLink
+{
+	text-decoration: none;	
+}
+
+#contentColumn A.TopOfPageLink:hover
+{
+    text-decoration: underline;
+}
+
+#ToCColumn A
+{
+    text-decoration: none;
+}
+
+#ToCColumn A:hover
+{
+    text-decoration: underline;
+}
+
+/* WSUA CHM presentation */
+
+
+/********/
+/* BODY */
+body
+{
+    background:#FFFFFF;
+    color:#000000;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:70%;
+    font-style:normal;
+    font-weight:normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    width:100%;
+    height: 100%;
+    border-style:none;
+    border-width:0;
+}
+
+
+/*********/
+/* LINKS */
+a
+{
+	color:#0000FF;
+}
+
+a:visited
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:link
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:hover
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+a:active
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+
+/************/
+/* SECTIONS */
+
+/* running header*/
+.runningHeader
+{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+div#techCenterLink
+{
+	background-color:#5F5F5F;
+	color:#FFFFFF;
+	padding:5pt 12px 5pt 12px;
+	margin:0 0 0 0;
+	border-bottom:solid 1pt #919193;
+	width:100%;
+}
+
+div#techCenterLink a
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+div#techCenterLink a:active
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+/* title */
+div#header
+{
+	background-color:#666666;
+	padding:15 13 15 20;	
+	margin:0 0 0 0;
+	width:100%;
+	border-style: solid;
+	border-width: 1 0 0 0;
+	border-color: #333333;
+	vertical-align: middle;
+}
+
+div#header h1
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	color:#FFFFFF;
+	font-size:160%;
+}
+
+
+/* main section */
+div#mainSection
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-width:0;
+}
+
+div#mainBody
+{
+	padding:0 9 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-style:none;
+	border-width:0;
+}
+
+
+/* footer */
+div#footer
+{
+	font-size:90%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	border:0;
+}
+
+
+/************/
+/* HEADINGS */
+div.section
+{
+	width:	100%;
+}
+
+.heading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h1.heading
+{
+	font-size:155%;
+}
+
+.subHeading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h3.subHeading
+{
+	font-size:130%;
+}
+
+td#ToCColumn h4.subHeading
+{
+	font-size:120%;
+}
+
+h4.subHeading
+{
+	font-size:110%;
+}
+
+h5.subHeading
+{
+	font-size:100%;
+}
+
+h6
+{
+	font-weight:normal;
+	font-size:100%;
+}
+
+img.procedure
+{
+	border: 0;
+	margin-right:8;
+}
+
+.howToHeadingTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	width:100%;
+}
+
+.howToHeadingImgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding-bottom:0;
+	padding-top:3px;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:top;
+	width:24px;
+}
+
+.howToHeadingTextCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:middle;
+}
+
+
+/**********/
+/* TABLES */
+table
+{
+	border:0;
+	font-size:100%;
+	margin:3 0 9 0;
+	width:100%;
+}
+
+th
+{
+	background-color:#DDDDDD;
+	vertical-align:bottom;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+td
+{
+	background-color:#EEEEEE;
+	vertical-align:top;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+
+/**********/
+/* ALERTS */
+img.note
+{
+	border: 0;
+	margin-right:5;
+}
+
+span.alertTitle
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	vertical-align:text-bottom;
+	height:100px;
+	display:block;
+}
+
+.alertTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	margin:3 0 0 0;
+	width:85%;
+}
+
+.alertTable tr
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.imgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:top;
+	width:21px;
+}
+
+.txtCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.procHeadingCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:1px 0 0 0;
+	vertical-align:middle;
+}
+
+.alertCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+p.alertImg
+{
+	border:0;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	height:100%;
+	width:100%;
+}
+
+div.alert
+{
+	border:0;
+	/*padding-left:21px;*/
+	margin-right:15%;
+	width:100%;
+}
+
+div.alert ul
+{
+	margin:3px 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+
+/********/
+/* CODE */
+div.code
+{
+	padding:0;
+	margin:0;
+}
+
+div.code pre
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+	padding:0;
+	margin:3 0 9 0;	
+	word-wrap: break-word;
+}
+
+code
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+}
+
+
+/*********/
+/* LISTS */
+
+/* Definitions */
+dl
+{
+	margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dt
+{
+    margin:3px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dd
+{
+	margin-bottom:9px;
+    padding:0px 0px 0px 0px;
+}
+
+/* Lists */
+ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ul ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+ol ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:lower-alpha;
+}
+
+ul ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+li
+{
+	clear:both;
+	margin-bottom: 3;
+}
+
+
+/**************/
+/* PARAGRAPHS */
+p
+{
+    margin:3px 0px 9px 0px;
+}
+
+
+/*****************/
+/* MISCELLANEOUS */
+img.embedded
+{
+	padding:0;
+	margin:0;
+}
+
+img.selfstanding
+{
+	margin-top:3;
+	margin-bottom:9;
+}
+
+img.toggle
+{
+	border: 0;
+	margin-right: 5;
+}
+
+img#toggleAllImage
+{
+	margin-left: 4;
+	vertical-align: middle;
+}
+
+.tip
+{
+	font-style:italic;
+}
+
+.math
+{
+	font-family: Times New Roman;
+	font-size: 125%
+}
+
+.sourceCodeList
+{
+	font-family: Verdana;
+	font-size: 90%;	
+}
+
+pre.viewCode
+{
+	width: 100%;
+	overflow: auto;
+}
+
+/* * * End of file. * * */
+
+</STYLE>
+</head>
+  <body>
+    <a name="pagetop">
+    </a>
+    <div id="header">
+      <h1>Preinstallation Notes for Microsoft Windows Server 2003 and Microsoft Windows XP Professional x64 Edition</h1>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <p class="runningHeader">
+          
+        </p>
+        <table cellspacing="0" id="columnTable">
+          <tr>
+            <td id="EdgeBorderColumn" valign="top">
+            </td>
+            <td id="ToCColumn" valign="top">
+              <h4 class="subHeading">Contents</h4>
+              <P class="ToCLevel1">
+                <A href="#EFHBHA">Preinstallation Notes for the 32-bit versions of Windows Server&#160;2003</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDFBHBHA">Check minimum system requirements</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDDBHBHA">Internet Information Services (IIS)&#160;6.0</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDBBHBHA">Security restrictions on viewing Web pages and running executable files</A>
+              </P>
+              <P class="ToCLevel1">
+                <A href="#EFFBHA">Preinstallation Notes for the x64-based versions of the Microsoft Windows Server&#160;2003 and Microsoft Windows XP Professional operating systems</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDDBFBHA">Unisys server hardware</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDBBFBHA">Additional information</A>
+              </P>
+              <P class="ToCLevel1">
+                <A href="#EDDBHA">Copyright</A>
+              </P>
+            </td>
+            <td id="contentColumn" valign="top">
+              
+    <p>This document provides late-breaking content and information you need for installation. It supplements the documentation for the Microsoft&#174; Windows Server&#8482;&#160;2003 operating systems.</p>
+    <p>Before you install the Windows Server&#160;2003 operating system, read this document for critical preinstallation information concerning this product. For the most up-to-date list of supported hardware, see the hardware compatibility information in the <a href="http://go.microsoft.com/fwlink/?LinkID=16906" target="_blank" alt="" target="_blank">Windows Catalog</a>. In addition, you should read the setup instructions and release notes (relnotes.htm) in the root of your product CD.</p>
+    <p>New features are described in detail in Help and Support Center. To view Help and Support Center in the Windows Server&#160;2003 operating systems, after completing Setup, click <b>Start</b>, and then click <b>Help and Support</b>.</p>
+  <a name="BKMK32"></a><h1 class="heading"><A name="EFHBHA"></A>Preinstallation Notes for the 32-bit versions of Windows Server&#160;2003</h1><div id="sectionSection0" class="section">
+      <p>This preinstallation information applies to the following operating systems:</p>
+      <ul><li>
+          The Itanium-based versions of Windows Server&#160;2003<br></br>
+        </li><li>
+          Windows Server&#160;2003, Standard Edition <br></br>
+        </li><li>
+          Windows Server&#160;2003, Enterprise Edition <br></br>
+        </li><li>
+          Windows Server&#160;2003, Datacenter Edition <br></br>
+        </li><li>
+          Windows Server&#160;2003, Web Edition <br></br>
+        </li></ul>
+    
+      <A name="EDFBHBHA"></A><h3 class="subHeading">Check minimum system requirements</h3><div class="subSection">
+          <p>Review the minimum and recommended system requirements for Windows Server&#160;2003 at the <a href="http://go.microsoft.com/fwlink/?LinkID=17281" target="_blank" alt="" target="_blank">Microsoft Knowledge Base</a>.</p>
+        </div>
+      <A name="EDDBHBHA"></A><h3 class="subHeading">Internet Information Services (IIS)&#160;6.0</h3><div class="subSection">
+          <p>If you upgrade from an operating system in the Windows&#174;&#160;2000 Server family with IIS&#160;5.0 to one of the following operating systems:</p>
+          <ul><li>
+              Windows Server&#160;2003 operating system, Standard Edition <br></br>
+            </li><li>
+              Windows Server&#160;2003 operating system, Enterprise Edition <br></br>
+            </li><li>
+              Windows Server&#160;2003 operating system, Datacenter Edition <br></br>
+            </li></ul>
+          <p>The World Wide Web Publishing Service (WWW service) is not enabled by default due to increased security measures. If you have already upgraded, you can start the WWW service by using the Services snap-in as described in the Release Notes (relnotes.htm), on this product CD.</p>
+          <p>If you have not yet upgraded and you want the WWW service to be enabled by default after you upgrade, you must perform one of the following steps before you start the upgrade:</p>
+          <ul><li>
+              If you have not already done so, run the IIS Lockdown Tool on the computer that you want to upgrade. <br></br>
+              The IIS Lockdown Tool reduces the server's exposure to attack by disabling unnecessary features and giving you the choice to enable and customize features for your site. This tool is available from the <a href="http://go.microsoft.com/fwlink/?LinkID=8599" target="_blank" alt="" target="_blank">Microsoft Web site</a>.<br></br>
+            </li><li>
+              Create the registry key RetainW3SVCStatus under the node, <b>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC</b>, and then add a DWORD value of any name equal to 1. <br></br>
+              For example, create the key, <b>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC \RetainW3SVCStatus\do_not_disable</b>, with the DWORD value of 1. <br></br>
+              <table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Caution </td></tr><tr><td class="alertCell">
+                <p>Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.</p>
+              </td></tr></table>
+            </li><li>
+              Add the entry "DisableWebServiceOnUpgrade = false" to the script that you will use to perform an unattended installation. After the upgrade is complete, ensure that all unnecessary IIS features have been removed or disabled and that the enabled features are configured with the highest security settings that your organization can support. <br></br>
+            </li></ul>
+          <p>For more information, see the topics "What's Changed" and "Security Best Practices" in IIS&#160;6.0 Help.</p>
+        </div>
+      <A name="EDBBHBHA"></A><h3 class="subHeading">Security restrictions on viewing Web pages and running executable files</h3><div class="subSection">
+          <p>The default security settings in Internet Explorer are more restrictive in the Windows Server&#160;2003 operating systems than in earlier versions of Windows. When you upgrade, any settings that do not match the new default settings are overwritten. These changes decrease the exposure of your servers to attacks that are launched through Web content. However, users will not be able to view many Web pages correctly with the default security settings. To allow users to see these Web pages correctly and maintain the default security settings, you must manually grant access to each particular Web site. In addition, users will not be able to run executable files from Universal Naming Convention (UNC) shared folders until you or another user has added the shared computer to the Local intranet security zone in Internet Explorer. </p>
+          <p>For more information about security settings and how to change them, see the Release Notes (Relnotes.htm), on the operating system DVD.</p>
+        </div>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_x64"></a><h1 class="heading"><A name="EFFBHA"></A>Preinstallation Notes for the x64-based versions of the Microsoft Windows Server&#160;2003 and Microsoft Windows XP Professional operating systems</h1><div id="sectionSection1" class="section">
+      <p>This preinstallation information pertains to the following operating systems: </p>
+      <ul><li>
+          Windows Server&#160;2003, Standard x64 Edition<br></br>
+        </li><li>
+          Windows Server&#160;2003, Enterprise x64 Edition<br></br>
+        </li><li>
+          Windows Server&#160;2003, Datacenter x64 Edition<br></br>
+        </li><li>
+          Windows&#174;&#160;XP Professional x64 Edition <br></br>
+        </li></ul>
+    
+      <A name="EDDBFBHA"></A><h3 class="subHeading">Unisys server hardware</h3><div class="subSection">
+          <p>If you acquired your server hardware from Unisys Corporation, before you install any of the x64-based versions of Windows Server&#160;2003, it is very important that you contact Unisys to obtain information that is critical to your installation. For contact information, see the <a href="http://go.microsoft.com/fwlink/?LinkID=43958" target="_blank" alt="" target="_blank">Unisys Product Support Web site</a>. </p>
+        </div>
+      <A name="EDBBFBHA"></A><h3 class="subHeading">Additional information</h3><div class="subSection">
+          <ul><li>
+              For information about late-breaking issues and ways to address them, see the <a href="http://go.microsoft.com/fwlink/?LinkID=37924" target="_blank" alt="" target="_blank">Microsoft Knowledge Base</a>.<br></br>
+            </li><li>
+              For more information about the x64-based versions of Windows Server&#160;2003 operating systems, see the <a href="http://go.microsoft.com/fwlink/?LinkID=43889" target="_blank" alt="" target="_blank">Windows&#160;Server System Web site</a>. <br></br>
+            </li><li>
+              For more information about Windows&#160;XP Professional x64 Edition, see the <a href="http://go.microsoft.com/fwlink/?LinkID=43895" target="_blank" alt="" target="_blank">Windows&#160;XP Professional x64 Edition Web site</a>. <br></br>
+            </li></ul>
+        </div>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="EDDBHA"></A>Copyright</h1><div id="sectionSection2" class="section">
+      <p>Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.</p>
+      <p>Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.</p>
+      <p>&#169;&#160;2006 Microsoft Corporation. All rights reserved.</p>
+      <p>Microsoft, MS-DOS, Windows, and Windows&#160;NT<sup>&#174;</sup>, Windows Server, are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</p>
+      <p>The names of actual companies and products mentioned herein may be the trademarks of their respective owners.</p>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+
+
+
+
+
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+AdServOC
+
+[AdServOC]
+OptionDesc      = %AdServOC_desc%
+Tip             = %AdServOC_tip%
+
+
+[strings]
+AdServOC_desc = "Active Directory Services"
+AdServOC_tip  = "Active Directory Services"
+
+

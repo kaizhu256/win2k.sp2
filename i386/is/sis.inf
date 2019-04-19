@@ -1,0 +1,159 @@
+[version]
+signature   =   "$Windows NT$"
+layoutfile  =   layout.inf
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+SISInst
+
+[SISInst]
+AddReg              = SISInst.AddReg
+OptionDesc          = %SISInst_Desc%
+Tip                 = %SISInst_Tip%
+IconIndex           = 17
+CopyFiles           = SISInst.SystemFiles,SISInst.DriverFiles
+AddService          = SIS,,Service.SIS
+AddService          = Groveler,0x10,Service.SISGroveler
+Uninstall           = SISInst.Remove
+Parent              = FileAndPrint
+
+
+
+[SISInst.Remove]
+DelFiles   = SISInst.SystemFiles
+DelService = Groveler,0x200
+
+[SISInst.AddReg]
+HKLM,"system\currentcontrolset\control\backuprestore\FilesNotToBackup","Single Instance Storage",%REG_MULTI_SZ%,"\SIS Common Store\*.* /s"
+
+[Service.SIS]
+DisplayName      = %SIS_SERVICE_NAME%
+Description      = %SIS_SERVICE_DESC%
+ServiceType      = %SERVICE_FILE_SYSTEM_DRIVER%
+StartType        = %SERVICE_BOOT_START%
+ErrorControl     = %SERVICE_ERROR_NORMAL%
+ServiceBinary    = %12%\sis.sys
+LoadOrderGroup   = "FSFilter System"
+
+
+[Service.SISGroveler]
+DisplayName      = %GROVEL_SERVICE_NAME%
+Description      = %GROVEL_SERVICE_DESC%
+ServiceType      = %SERVICE_WIN32_OWN_PROCESS%
+StartType        = %SERVICE_DISABLED%
+ErrorControl     = %SERVICE_ERROR_NORMAL%
+ServiceBinary    = %11%\grovel.exe
+Dependencies     = SIS
+
+
+[DestinationDirs]
+SISInst.SystemFiles         = 11           
+SISInst.DriverFiles         = 11,Drivers   
+
+[SISInst.SystemFiles]
+grovmsg.dll                 
+grovel.exe                  
+
+
+
+
+
+
+
+
+
+[SISInst.DriverFiles]
+sis.sys
+
+[SourceDisksNames]
+1 = "%cdname%",,,\i386
+4 = "%spcdname%",,,\i386,1
+
+
+[SourceDisksFiles]
+grovmsg.dll = 4
+grovel.exe  = 4
+sis.sys     = 4
+
+
+
+
+
+[Strings]
+SISInst_Desc = "Single Instance Storage"
+SISInst_Tip = "Installs Single Instance Storage"
+AdminTools_GROUP = "Administrative Tools"
+
+
+SIS_SERVICE_NAME    = "Single Instance Storage"
+SIS_SERVICE_DESC    = "A File System Filter that manages duplicate copies of files on hard-disk volumes.  It copies one instance of the duplicate file into a central directory, and the duplicates are replaced with a link to the central copy in order to improve disk usage.  This service can not be stopped.  If this service is disabled, all linked files will no longer be accessible.  If the central directory is deleted, all linked files will become permanently inaccessible."
+GROVEL_SERVICE_NAME = "Single Instance Storage Groveler"
+GROVEL_SERVICE_DESC = "Scans the hard-disk volumes on a Remote Installation Services (RIS) server for duplicate copies of files.  If found, one instance of the duplicate file is stored in a central directory, and the duplicates are replaced with a link to the central copy in order to improve disk usage. If this service is stopped, files will no longer be automatically linked in this manner, but the existing linked files will still be accessible."
+
+
+REG_DWORD       =0x10001
+REG_EXPAND_SZ   =0x20000
+REG_BINARY      =0x00001
+REG_SZ          =0x00000
+REG_MULTI_SZ    =0x10000
+REG_NONE        =0x20001
+
+SERVICE_DISABLED = 4
+SERVICE_DEMAND_START = 3
+SERVICE_AUTO_START = 2
+SERVICE_WIN32_SHARE_PROCESS = 32
+SERVICE_FILE_SYSTEM_DRIVER = 2
+SERVICE_WIN32_OWN_PROCESS = 16
+SERVICE_BOOT_START = 0
+SERVICE_ERROR_NORMAL = 1
+
+
+
+cdname      = "Windows Server 2003, Standard Edition CD-ROM"
+productname = "Windows Server 2003, Standard"
+
+
+
+
+
+
+
+bootname1  = "Windows Server 2003, Standard Edition Setup Boot Disk"
+bootname2  = "Windows Server 2003, Standard Edition Setup Disk #2"
+bootname3  = "Windows Server 2003, Standard Edition Setup Disk #3"
+bootname4  = "Windows Server 2003, Standard Edition Setup Disk #4"
+bootname5  = "Windows Server 2003, Standard Edition Setup Disk #5"
+bootname6  = "Windows Server 2003, Standard Edition Setup Disk #6"
+bootname7  = "Windows Server 2003, Standard Edition Setup Disk #7"
+
+cdtagfile = "\win51is"
+
+
+
+cdtagfilei = "\win51is"
+
+cdtagfilem = "\win51ms"
+
+cdtagfilea = "\win51as"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile = "\win51is.sp2"
+
+
+
+spcdtagfilei = "\win51is.sp2"
+
+spcdtagfilem = "\win51ms.sp2"
+
+spcdtagfilea = "\win51as.sp2"
+
+

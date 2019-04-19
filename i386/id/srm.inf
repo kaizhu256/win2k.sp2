@@ -1,0 +1,425 @@
+
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+SRM
+
+[SRM]
+OptionDesc = %SrmDescription%
+Tip = %SrmTip%
+IconIndex = *,..\r2icons.dll,100
+CopyFiles = Srm.DriverFiles, Srm.ServiceFiles, Srm.MofFiles, Srm.DefaultsFiles, Srm.XsltFiles, Srm.ManagedResources
+RegisterDlls = Srm.RegSrv, Srm.InstallMofs
+AddService = Quota,,Quota.Service, Quota.EventLog
+AddService = Datascrn,,Datascrn.Service, Datascrn.EventLog
+AddService = SrmSvc,,SrmSvc.Service, SrmSvc.EventLog, Application
+AddService = SrmReports,,SrmReportsSvc.Service, SrmReports.EventLog, Application
+AddReg = SrmUI.AddReg, SrmReports.AddReg
+Uninstall = Srm.Uninstall
+
+Include = cfscommonuifx.inf, netfx20.inf, dfsext.inf
+
+Needs=CfsCommonUIFx, NetFx20, DfsExt
+
+
+
+Parent = NetOC
+ProfileItems = Srm.StartMenu.Install
+
+[Srm.Uninstall]
+DelService = Quota, 0x204
+DelService = Datascrn, 0x204
+DelService = SrmSvc, 0x204, Application
+DelService = SrmReports, 0x204, Application
+UnregisterDlls = Srm.RegSrv, Srm.InstallMofs
+DelFiles = Srm.DriverFiles, Srm.ServiceFiles, Srm.MofFiles, Srm.DefaultsFiles, Srm.XsltFiles, Srm.ManagedResources
+DelReg = SrmSvc.DelReg, SrmUI.DelReg, SrmReports.DelReg, Quota.EventLog.Delreg
+ProfileItems = Srm.StartMenu.Uninstall
+
+[DestinationDirs]
+Srm.DriverFiles = 12                         
+Srm.ServiceFiles = 11                        
+Srm.MofFiles = 11, wbem                      
+Srm.XsltFiles = 11, srm\xslt                 
+Srm.DefaultsFiles = 11, srm\defaults
+Srm.ManagedResources = 11, %LocaleSubDir%    
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+quota.sys = 1
+datascrn.sys = 1
+srmsvc.dll = 1
+srmreports.dll = 1
+srmlib.dll = 1
+srmscan.dll = 1
+srmclient.dll = 1
+srm.dll = 1
+srmhost.exe = 1
+dirquota.exe = 1
+filescrn.exe = 1
+storrept.exe = 1
+srmtrace.dll = 1
+srmsched_ps.dll = 1
+srmgui.dll = 1
+fsrm.msc = 1
+srm.mof = 1
+srm.mfl = 1
+SrmGlobalSettings.xml = 1
+ReportSettings.xml = 1
+Common_HTML.xsl = 1
+Common_TXT.xsl = 1
+Common_CSV.xsl = 1
+DuplicateFiles_CSV.xsl = 1
+DuplicateFiles_HTML.xsl = 1
+DuplicateFiles_TXT.xsl = 1
+FilesByOwner_CSV.xsl = 1
+FilesByOwner_HTML.xsl = 1
+FilesByOwner_TXT.xsl = 1
+FilesByType_CSV.xsl = 1
+FilesByType_HTML.xsl = 1
+FilesByType_TXT.xsl = 1
+FileScreenAudit_CSV.xsl = 1
+FileScreenAudit_HTML.xsl = 1
+FileScreenAudit_TXT.xsl = 1
+Functions.xsl = 1
+LargeFiles_CSV.xsl = 1
+LargeFiles_HTML.xsl = 1
+LargeFiles_TXT.xsl = 1
+LeastRecentlyAccessed_CSV.xsl = 1
+LeastRecentlyAccessed_HTML.xsl = 1
+LeastRecentlyAccessed_TXT.xsl = 1
+MostRecentlyAccessed_CSV.xsl = 1
+MostRecentlyAccessed_HTML.xsl = 1
+MostRecentlyAccessed_TXT.xsl = 1
+QuotaUsage_CSV.xsl = 1
+QuotaUsage_HTML.xsl = 1
+QuotaUsage_TXT.xsl = 1
+ShadowReport_CSV.xsl = 1
+ShadowReport_HTML.xsl = 1
+ShadowReport_TXT.xsl = 1
+Warning.jpg = 1
+sort.htc = 1
+srmreports.resources.dll = 1
+srmgui.resources.dll = 1
+
+
+
+
+
+[Quota.Service]
+DisplayName = %QuotaServiceDisplayName%
+Description = %QuotaServiceDescription%
+ServiceBinary = %12%\quota.sys          
+Dependencies = Fltmgr
+ServiceType = 2                         
+StartType = 0                           
+ErrorControl = 1                        
+LoadOrderGroup = "FSFilter Physical Quota Management"
+AddReg = Quota.AddReg
+
+[Datascrn.Service]
+DisplayName = %DatascrnServiceDisplayName%
+Description = %DatascrnServiceDescription%
+ServiceBinary = %12%\datascrn.sys       
+Dependencies = FltMgr
+ServiceType = 2                         
+StartType = 0                           
+ErrorControl = 1                        
+LoadOrderGroup = "FSFilter Content Screener"
+AddReg = Datascrn.AddReg
+
+[SrmSvc.Service]
+DisplayName = %SrmServiceDisplayName%
+Description = %SrmServiceDescription%
+Dependencies = RPCSS
+ServiceBinary = %11%\svchost.exe -k srmsvcs   
+ServiceType = 0x10                       
+StartType = 2                            
+ErrorControl = 1                         
+AddReg = SrmSvc.AddReg
+
+[SrmReportsSvc.Service]
+DisplayName = %SrmReportsServiceDisplayName%
+Description = %SrmReportsServiceDescription%
+Dependencies = RPCSS
+ServiceBinary = %11%\srmhost.exe
+ServiceType = 0x10
+StartType = 3
+ErrorControl = 1
+
+
+
+
+
+[Quota.AddReg]
+HKR,"Instances","DefaultInstance",0x00000000,"Quota"
+HKR,"Instances\Quota","Altitude",0x00000000,"125000"
+HKR,"Instances\Quota","Flags",0x00010001,0x0
+
+[Datascrn.AddReg]
+HKR,"Instances","DefaultInstance",0x00000000,"Datascrn"
+HKR,"Instances\Datascrn","Altitude",0x00000000,"261000"
+HKR,"Instances\Datascrn","Flags",0x00010001,0x0
+
+[SrmSvc.AddReg]
+HKR,"Parameters","ServiceDll",0x00020000,"%%SystemRoot%%\system32\srmsvc.dll"
+HKR,"Settings","DisableSearchDfs",0x00010001,0x0
+HKLM,"Software\Microsoft\Windows NT\CurrentVersion\SvcHost","srmsvcs",0x00010008,"SrmSvc"
+HKLM,"Software\Microsoft\Windows NT\CurrentVersion\SvcHost\srmsvcs","CoInitializeSecurityParam",0x00010001,0
+
+[SrmSvc.DelReg]
+HKLM,"Software\Microsoft\Windows NT\CurrentVersion\SvcHost","srmsvcs"
+HKLM,"Software\Microsoft\Windows NT\CurrentVersion\SvcHost\srmsvcs"
+
+[SrmUI.AddReg]
+
+
+
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","About",0x00000000,"{00000000-0000-0000-0000-000000000000}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","ApplicationBase",0x00000000,%11%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","AssemblyName",0x00000000,"SrmGui"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","FxVersion",0x00000000,"3.0.0.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","ModuleName",0x00000000,"srmgui.dll"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","NameStringIndirect",0x00000000,"@"%11%"\srm.dll,-3001"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","ProviderStringIndirect",0x00000000,"@"%11%"\srm.dll,-3007"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","VersionStringIndirect",0x00000000,"@"%11%"\srm.dll,-3008"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","RuntimeVersion",0x00000000,"v2.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","Type",0x00000000,"Microsoft.Storage.SrmMmc.SrmSnapin, SrmGui, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","HelpTopic",,"%10%\Help\fsrm.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","LinkedHelpTopics",,"%10%\Help\fsrm.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","DescriptionStringIndirect",0x00000000,"@"%11%"\srm.dll,-3009"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","IconIndirect",0x00000000,"@"%11%"\srm.dll,-100"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","FolderBitmapsColorMask",0x00010001,0xff00
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","LargeFolderBitmapIndirect",,"@%11%\srm.dll,-102"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","SmallFolderBitmapIndirect",,"@%11%\srm.dll,-101"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}","SmallSelectedFolderBitmapIndirect",,"@%11%\srm.dll,-101"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}\NodeTypes",,0x00000010
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}\Standalone",,0x00000010
+
+
+
+
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","About",0x00000000,"{00000000-0000-0000-0000-000000000000}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","ApplicationBase",0x00000000,%11%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","AssemblyName",0x00000000,"SrmGui"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","FxVersion",0x00000000,"3.0.0.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","ModuleName",0x00000000,"srmgui.dll"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","NameStringIndirect",0x00000000,"@"%11%"\srm.dll,-3005"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","ProviderStringIndirect",0x00000000,"@"%11%"\srm.dll,-3007"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","VersionStringIndirect",0x00000000,"@"%11%"\srm.dll,-3008"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","RuntimeVersion",0x00000000,"v2.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","Type",0x00000000,"Microsoft.Storage.SrmMmc.SrmSnapinEx, SrmGui, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","HelpTopic",,"%10%\Help\fsrm.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","LinkedHelpTopics",,"%10%\Help\fsrm.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","DescriptionStringIndirect",0x00000000,"@"%11%"\srm.dll,-3009"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","IconIndirect",0x00000000,"@"%11%"\srm.dll,-100"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","FolderBitmapsColorMask",0x00010001,0xff00
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","LargeFolderBitmapIndirect",,"@%11%\srm.dll,-102"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","SmallFolderBitmapIndirect",,"@%11%\srm.dll,-101"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}","SmallSelectedFolderBitmapIndirect",,"@%11%\srm.dll,-101"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}\NodeTypes",,0x00000010
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}\Extension",,0x00000000,"Namespace"
+
+
+
+
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{8FB9AEC9-E19F-4ED5-8DD0-8E31DF52313D}\Extensions\NameSpace","FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}",0x00000000,%SrmSnapinNameExt%
+
+
+
+
+
+
+
+
+
+
+
+[SrmUI.DelReg]
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46c-1297-4474-9cdf-831ebb245f49}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{8FB9AEC9-E19F-4ED5-8DD0-8E31DF52313D}\Extensions\NameSpace","FX:{f8abd46e-1297-4474-9cdf-831ebb245f49}"
+
+
+[SrmReports.AddReg]
+HKCR,"Microsoft.Storage.Reports.SrmReportManagerInproc",,0x00000000,"Microsoft.Storage.Reports.SrmReportManagerInproc"
+HKCR,"Microsoft.Storage.Reports.SrmReportManagerInproc\CLSID",,0x00000000,"{61B2D373-4258-40A2-89AC-2783D8AC0E99}"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}",,0x00000000,"Microsoft.Storage.Reports.SrmReportManagerInproc"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32",,0x00000000,"mscoree.dll"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32","ThreadingModel",0x00000000,"Both"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32","Class",0x00000000,"Microsoft.Storage.Reports.SrmReportManagerInproc"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32","Assembly",0x00000000,"srmreports, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32","RuntimeVersion",0x00000000,"v2.0"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32\1.0.0.0","Class",0x00000000,"Microsoft.Storage.Reports.SrmReportManagerInproc"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32\1.0.0.0","Assembly",0x00000000,"srmreports, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\InprocServer32\1.0.0.0","RuntimeVersion",0x00000000,"v2.0"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\ProgId",,0x00000000,"Microsoft.Storage.Reports.SrmReportManagerInproc"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}",,0x00000000,""
+
+[SrmReports.DelReg]
+HKCR,"Microsoft.Storage.Reports.SrmReportManagerInproc"
+HKCR,"CLSID\{61B2D373-4258-40A2-89AC-2783D8AC0E99}"
+
+[Quota.EventLog]
+AddReg = Quota.EventLog.Addreg
+
+[Quota.EventLog.Addreg]
+HKR,,"EventMessageFile",0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\quota.sys"
+HKR,,"TypesSupported",0x00010001,7
+HKLM,"SYSTEM\CurrentControlSet\Services\EventLog\Security\Quota","CategoryCount",0x00010001,0x9
+HKLM,"SYSTEM\CurrentControlSet\Services\EventLog\Security\Quota","CategoryMessageFile",0x00020000,"%%SystemRoot%%\System32\MsAuditE.dll"
+HKLM,"SYSTEM\CurrentControlSet\Services\EventLog\Security\Quota","EventMessageFile",0x00020000,"%%SystemRoot%%\System32\drivers\quota.sys"
+HKLM,"SYSTEM\CurrentControlSet\Services\EventLog\Security\Quota","TypesSupported",0x00010001,0x1f
+
+[Quota.EventLog.Delreg]
+HKLM,"SYSTEM\CurrentControlSet\Services\EventLog\Security\Quota"
+
+[Datascrn.EventLog]
+AddReg = Datascrn.EventLog.Addreg
+
+[Datascrn.EventLog.Addreg]
+HKR,,"EventMessageFile",0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\datascrn.sys"
+HKR,,"TypesSupported",0x00010001,7
+
+[SrmSvc.EventLog]
+AddReg = SrmSvc.EventLog.Addreg
+
+[SrmSvc.EventLog.Addreg]
+HKR,,"EventMessageFile",0x00020000,"%%SystemRoot%%\System32\srm.dll"
+HKR,,"TypesSupported",0x00010001,7
+
+
+
+
+
+
+
+[SrmReports.EventLog]
+AddReg = SrmReports.EventLog.Addreg
+
+[SrmReports.EventLog.Addreg]
+HKR,,"EventMessageFile",0x00020000,"%%SystemRoot%%\Microsoft.NET\Framework\v2.0.50727\EventLogMessages.dll"
+HKR,,"TypesSupported",0x00010001,7
+
+
+
+
+
+
+[Srm.DriverFiles]
+quota.sys
+datascrn.sys
+
+[Srm.ServiceFiles]
+srmsvc.dll
+srmlib.dll
+srmscan.dll
+srmclient.dll
+srm.dll
+srmhost.exe
+dirquota.exe
+filescrn.exe
+storrept.exe
+srmtrace.dll
+srmsched_ps.dll
+srmreports.dll
+srmgui.dll
+fsrm.msc
+
+[Srm.MofFiles]
+srm.mof
+srm.mfl
+
+[Srm.DefaultsFiles]
+SrmGlobalSettings.xml
+ReportSettings.xml
+
+[Srm.XsltFiles]
+Common_HTML.xsl
+Common_TXT.xsl
+Common_CSV.xsl
+DuplicateFiles_CSV.xsl
+DuplicateFiles_HTML.xsl
+DuplicateFiles_TXT.xsl
+FilesByOwner_CSV.xsl
+FilesByOwner_HTML.xsl
+FilesByOwner_TXT.xsl
+FilesByType_CSV.xsl
+FilesByType_HTML.xsl
+FilesByType_TXT.xsl
+FileScreenAudit_CSV.xsl
+FileScreenAudit_HTML.xsl
+FileScreenAudit_TXT.xsl
+Functions.xsl
+LargeFiles_CSV.xsl
+LargeFiles_HTML.xsl
+LargeFiles_TXT.xsl
+LeastRecentlyAccessed_CSV.xsl
+LeastRecentlyAccessed_HTML.xsl
+LeastRecentlyAccessed_TXT.xsl
+MostRecentlyAccessed_CSV.xsl
+MostRecentlyAccessed_HTML.xsl
+MostRecentlyAccessed_TXT.xsl
+QuotaUsage_CSV.xsl
+QuotaUsage_HTML.xsl
+QuotaUsage_TXT.xsl
+ShadowReport_CSV.xsl
+ShadowReport_HTML.xsl
+ShadowReport_TXT.xsl
+Warning.jpg
+sort.htc
+
+[Srm.ManagedResources]
+srmgui.resources.dll
+srmreports.resources.dll
+
+
+
+[Srm.RegSrv]
+11,,srm.dll, 1
+11,,srmsvc.dll, 1
+11,,srmsched_ps.dll, 1
+
+[Srm.InstallMofs]
+11,wbem,mofcomp.exe,,,%11%\wbem\srm.mof
+11,wbem,mofcomp.exe,,,%11%\wbem\srm.mfl
+
+
+
+
+
+[Srm.StartMenu.Install]
+Name = %SrmStartMenuName%
+CmdLine = 11,,fsrm.msc    
+SubDir = %AdministrativeTools%
+InfoTip = "@%windir%\system32\srm.dll,-3002"
+DisplayResource = "%windir%\system32\srm.dll",3001
+
+[Srm.StartMenu.Uninstall]
+Name = %SrmStartMenuName%,0x00000002
+CmdLine = 11,,fsrm.msc    
+SubDir = %AdministrativeTools%
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+SrmDescription = "File Server Resource Manager"
+SrmTip = "Installs tools and services to manage directory quotas, file screens, and storage reports."
+QuotaServiceDisplayName = "Quota"
+QuotaServiceDescription = "Quota Management Filter Driver"
+DatascrnServiceDisplayName = "Datascrn"
+DatascrnServiceDescription = "File Screening Filter Driver"
+SrmServiceDisplayName = "File Server Resource Manager"
+SrmServiceDescription = "Provides services for quota and file screen management."
+SrmReportsServiceDisplayName = "File Server Storage Reports Manager"
+SrmReportsServiceDescription = "Provides services for configuration, scheduling, and generation of storage reports."
+SrmSnapinName = "File Server Resource Manager"
+SrmSnapinDescription = "Manages directory quotas, file screens and storage reports."
+SrmSnapinNameExt = "File Server Resource Manager Extension"
+ProviderName = "Microsoft Corporation"
+SrmStartMenuName = "File Server Resource Manager"
+AdministrativeTools = "Administrative Tools"
+LocaleSubDir = "en"

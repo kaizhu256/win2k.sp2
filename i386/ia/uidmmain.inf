@@ -1,0 +1,28 @@
+
+
+
+
+
+[version]
+signature   =   "$Windows NT$"
+layoutfile  =   layout.inf
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+UnixIDManagement
+
+
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[UnixIDManagement]
+OptionDesc   		= %UnixIDManagement_Desc%
+Tip          		= %UnixIDManagement_Tip%
+IconIndex    		= 0  
+parent			= AdServOC
+
+[Strings]
+UnixIDManagement_Desc		="Identity Management for UNIX"
+UnixIDManagement_Tip 		="Installs Server for NIS and Password Synchronization components"
+R2CDNAME 			= "Windows Server 2003 R2 Disc 2"

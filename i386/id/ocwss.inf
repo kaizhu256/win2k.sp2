@@ -1,0 +1,16 @@
+[version]
+signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+sharepoint
+
+[sharepoint]
+OptionDesc = %wss_desc%
+Tip = %wss_tip%
+IconIndex = *,ocwss.dll,1001
+
+
+[Strings]
+wss_desc = "Windows SharePoint Services"
+wss_tip = "SharePoint Services 2.0 is a web-based collaboration and document management system which can help increase team productivity."

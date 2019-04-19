@@ -1,0 +1,92 @@
+
+[Version]
+Signature               = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+FSRNas                  
+
+[DestinationDirs]
+FsrNas.Files                   = 11
+FsrNas.Wallpaper.Files         = 10, "Web\Wallpaper"
+
+[SourceDisksNames]
+1 = %R2CDNAME%,,,\cmpnents\r2
+
+[SourceDisksFiles]
+Fs.msc                  = 1
+Nas.msc                 = 1
+wallpaper_wss2003r2.bmp = 1
+sisAdmin.exe            = 1
+
+[FsrNas]
+
+CopyFiles         = FsrNas.Files, FsrNas.Wallpaper.Files
+AddReg            = FsrNas.AddReg
+Uninstall               = FsrNas.Uninstall
+ProfileItems            = FsrNas.StartMenu.Install, FsrNas.Startup.Install
+Include                 = FsrCommon.inx, CfscommonUIFx.inf, NetFx20.inf
+
+Needs                   = FsrCommon, CfsCommonUIFx, NetFx20
+
+
+
+
+[FsrNas.Uninstall]
+DelFiles          = FsrNas.Files, FsrNas.Wallpaper.Files
+DelReg            = FsrNas.DelReg
+ProfileItems            = FsrNas.StartMenu.Uninstall, FsrNas.Startup.Uninstall
+
+[FsrNas.Files]
+Fs.msc
+Nas.msc
+sisAdmin.exe
+
+[FsrNas.Wallpaper.Files]
+"Windows Storage Server 2003 R2.bmp", wallpaper_wss2003r2.bmp
+
+[FsrNas.AddReg]
+HKLM,"SOFTWARE\Microsoft\Windows NT\CurrentVersion\srvWiz\extensions\FSRole","Installed",0x00010001,"1"
+HKLM,"SOFTWARE\Microsoft\Windows NT\CurrentVersion\srvWiz\extensions\FSRole","FSMConsoleFile",,"%11%\Nas.msc"
+HKLM,"SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\MYS",0x10001,"DisableShowAtLogon",1
+
+
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}\NodeTypes\{c10dee6a-cdca-4a0b-806f-887bf31f0c01}",,,"Indexing Service node"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{c10dee6a-cdca-4a0b-806f-887bf31f0c01}",,,"FSM Services and Applications node"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{c10dee6a-cdca-4a0b-806f-887bf31f0c01}\Extensions\NameSpace","{95AD72F0-44CE-11D0-AE29-00AA004B9986}",,"Indexing Service"
+
+
+
+
+[FsrNas.DelReg]
+HKLM,"SOFTWARE\Microsoft\Windows NT\CurrentVersion\srvWiz\extensions\FSRole","FSMConsoleFile"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","FSMExtensionFile"
+
+
+[FsrNas.StartMenu.Install]
+Name                   = %FsmNasStartMenuName%
+CmdLine                = 11,,nas.msc    
+SubDir                 = %AdministrativeTools%
+InfoTip                = "@%11%\fsmmsg.dll,-204"
+DisplayResource        = "%11%\fsmmsg.dll",203
+
+[FsrNas.StartMenu.Uninstall]
+Name                   = %FsmNasStartMenuName%,0x00000002
+SubDir                 = %AdministrativeTools%
+
+[FsrNas.Startup.Install]
+Name                   = %FsmNasStartMenuName%
+CmdLine                = 11,,nas.msc    
+SubDir                 = %Startup%
+InfoTip                = "@%11%\fsmmsg.dll,-204"
+DisplayResource        = "%11%\fsmmsg.dll",203
+
+[FsrNas.Startup.Uninstall]
+Name                   = %FsmNasStartMenuName%,0x00000002
+SubDir                 = %Startup%
+
+[Strings]
+R2CDNAME                 = "Windows Server 2003 R2 Disc 2"
+FsmNasStartMenuName      = "Windows Storage Server Management" 
+AdministrativeTools      = "Administrative Tools"
+Startup                  = "Startup"

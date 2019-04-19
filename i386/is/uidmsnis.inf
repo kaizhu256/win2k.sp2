@@ -1,0 +1,119 @@
+
+
+
+
+
+[version]
+signature   =   "$Windows NT$"
+layoutfile  =   layout.inf
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+SNIS       
+
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SNIS]
+OptionDesc 		= %SNIS_Desc%
+Tip        		= %SNIS_Tip%
+parent 			= UnixIDManagement
+needs			= PortMap,RpcXdr,IdmuMgmt
+IconIndex  		= 0
+AddService 		= Nissvc,0x10,Service.Nis
+CopyFiles  		= SNIS.wbemfiles,SNIS.adminfiles, SNIS.commonfiles, SNIS.nisfiles, SNIS.setupfiles
+AddReg 	   		= NIS.Registry
+RegisterDlls    	= NIS.dllreg
+Uninstall  		= SNIS.Remove
+
+[SNIS.Remove]
+DelService 		= Nissvc,0x00000200
+DelFiles   		= SNIS.wbemfiles,  SNIS.adminfiles, SNIS.commonfiles,SNIS.setupfiles,SNIS.nisfiles
+DelReg 	   		= NIS.Registry
+UnregisterDlls 		= NIS.dllreg
+
+
+[DestinationDirs]
+SNIS.wbemfiles 		= 11, \wbem
+SNIS.adminfiles 	= 10, \idmu\admin
+SNIS.commonfiles 	= 10, \idmu\common
+SNIS.nisfiles 		= 10, \idmu\nis
+SNIS.setupfiles 	= 10, \idmu\setup
+
+[SourceDisksFiles]
+nisnotfy.mof	=1,,624
+nispush.mof	=1,,754
+nisprop.dll	=1,,59904
+nissvc.exe	=1,,98816
+niscnfg.exe	=1,,71168
+
+
+[SNIS.wbemfiles]
+nisnotfy.mof,,,0x00000040
+nispush.mof,,,0x00000040
+
+[SNIS.adminfiles]
+
+[SNIS.commonfiles]
+nisprop.dll,,,0x00000040
+
+[SNIS.nisfiles]
+nissvc.exe,,,0x00010004
+
+[SNIS.setupfiles]
+niscnfg.exe,,,0x00000040
+
+[Service.Nis]
+DisplayName      = %Nis_SERVICE_NAME%
+Description      = %Nis_SERVICE_DESC%
+ServiceType      = %SERVICE_WIN32_OWN_PROCESS%
+StartType        = %SERVICE_DISABLED%
+ErrorControl     = %SERVICE_ERROR_NORMAL%
+ServiceBinary    = %10%\idmu\nis\nissvc.exe
+Dependencies     = Portmap
+FilesRequired    = nissvc.exe
+
+
+[Nis.dllreg]
+10,idmu\common,nisprop.dll,1
+
+[NIS.Registry]
+HKLM,"Software\Microsoft\Server for NIS"
+HKLM,"Software\Microsoft\Server for NIS",PushNow,%REG_DWORD%,0
+HKLM,"Software\Microsoft\Server for NIS",PushInterval,%REG_DWORD%,1440
+HKLM,"Software\Microsoft\Server for NIS",LoggingLevel,%REG_DWORD%,0
+HKLM,"Software\Microsoft\Server for NIS\ReadConfig",Defaults,%REG_DWORD%,0
+HKLM,System\CurrentControlSet\Services\EventLog\Application\nissvc
+HKLM,System\CurrentControlSet\Services\EventLog\Application\nissvc,EventMessageFile,%REG_EXPAND_SZ%,%systemroot%\idmu\nis\nissvc.exe
+HKLM,System\CurrentControlSet\Services\EventLog\Application\nissvc,TypesSupported,%REG_DWORD%,7
+HKLM,%KEY_IDM%\AppsInstalled\NIS
+HKLM,%KEY_IDM%\AppsInstalled\NIS,InstallPath,%REG_EXPAND_SZ%,"%systemroot%\idmu\nis\"
+HKLM,%KEY_IDM%\AppsInstalled\Common Files,NisDomain,%REG_SZ%,"localhost"
+
+[Strings]
+SNIS_Desc		= "Server For NIS"
+SNIS_Tip 		= "This installs Server for NIS Component. This can be installed only on a Domain Controller"
+str_NISMIG		= "NIS Server Migration"
+SERVICE_KERNEL_DRIVER 	= 1
+SERVICE_WIN32_OWN_PROCESS = 0x00000010
+SERVICE_BOOT_START 	= 0
+SERVICE_DISABLED 	= 4
+SERVICE_DEMAND_START 	= 3
+SERVICE_AUTO_START 	= 2
+SERVICE_ERROR_NORMAL 	= 1
+Nis_SERVICE_NAME	= "Server For NIS"
+Nis_SERVICE_DESC	= "Enables a Microsoft Windows based Domain Controller to administer UNIX NIS networks."
+str_NISGROUP            = "Identity Management for UNIX"
+REG_SZ_OVERWRITE        =0x00000    
+REG_SZ                  =0x00002    
+REG_BINARY_OVERWRITE    =0x00001    
+REG_BINARY              =0x00003    
+REG_SZ_EXPAND_OVERWRITE =0x20000    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD_OVERWRITE     =0x10001    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008    
+R2CDNAME 		= "Windows Server 2003 R2 Disc 2"
+KEY_IDM			="SOFTWARE\Microsoft\Identity Management for UNIX"

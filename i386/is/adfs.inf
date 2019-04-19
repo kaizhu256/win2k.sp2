@@ -1,0 +1,182 @@
+
+
+
+
+
+[version]
+signature   =   "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+
+
+[Optional Components]
+ADFS
+ADFSWEBSERVER
+ADFSTRADITIONAL
+ADFSCLAIMS
+
+
+
+
+[ADFS]
+OptionDesc          = %ADFS_Desc%
+Tip                 = %ADFS_Tip%
+
+Needs               = iis_www, iis_inetmgr, aspnet, netfx20
+
+
+
+Parent              = AdServOC
+IconIndex           = *,adfsocm.dll,1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ADFSWEBSERVER]
+Parent=ADFS
+OptionDesc          = %FSWebServer_Desc%
+Tip                 = %FSWebServer_Tip%
+
+Needs               = iis_www, iis_inetmgr, aspnet, netfx20
+
+
+
+
+
+
+[ADFSTRADITIONAL]
+Parent=ADFSWEBSERVER
+OptionDesc          = %FSTraditional_Desc%
+Tip                 = %FSTraditional_Tip%
+
+Needs               = iis_www, iis_inetmgr, aspnet, netfx20
+
+
+
+
+
+
+[ADFSCLAIMS]
+Parent=ADFSWEBSERVER
+OptionDesc          = %FSClaims_Desc%
+Tip                 = %FSClaims_Tip%
+
+Needs               = iis_www, iis_inetmgr, aspnet, netfx20
+
+
+
+
+
+
+
+
+
+
+
+[Install.ADFSTRADITIONAL]
+CopyFiles = MSIFile
+
+[Install.ADFSCLAIMS]
+CopyFiles = MSIFile
+
+
+
+
+[MSIFile]
+ADFS.MSI
+
+[DestinationDirs]
+MSIFile=10                            
+
+
+[SourceDisksFiles]
+
+
+
+ADFS.msi = 1,,11658944
+
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+
+ADFS_Desc = "Active Directory Federation Services (ADFS)"
+ADFS_Tip  = "ADFS enables single sign-on (SSO) to authenticate users to multiple, related Web applications over the life of a single online session."
+
+
+
+FSWebServer_Desc = "ADFS Web Agents"
+FSWebServer_Tip = "Configures this computer as a Web server that hosts claims-aware or Windows NT token-based applications."
+
+FSTraditional_Desc = "Windows NT token-based applications"
+FSTraditional_Tip  = "Configures this computer as a Web server that hosts Windows NT token-based applications and processes Windows NT tokens."
+
+FSClaims_Desc = "Claims-aware applications"
+FSClaims_Tip  = "Configures this computer as a Web server that hosts claims-aware applications and processes claims that are found in security tokens."
+
+
+
+
+cdname      = "Windows Server 2003, Standard Edition CD-ROM"
+productname = "Windows Server 2003, Standard"
+
+
+
+
+
+
+
+bootname1  = "Windows Server 2003, Standard Edition Setup Boot Disk"
+bootname2  = "Windows Server 2003, Standard Edition Setup Disk #2"
+bootname3  = "Windows Server 2003, Standard Edition Setup Disk #3"
+bootname4  = "Windows Server 2003, Standard Edition Setup Disk #4"
+bootname5  = "Windows Server 2003, Standard Edition Setup Disk #5"
+bootname6  = "Windows Server 2003, Standard Edition Setup Disk #6"
+bootname7  = "Windows Server 2003, Standard Edition Setup Disk #7"
+
+cdtagfile = "\win51is"
+
+
+
+cdtagfilei = "\win51is"
+
+cdtagfilem = "\win51ms"
+
+cdtagfilea = "\win51as"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile = "\win51is.sp2"
+
+
+
+spcdtagfilei = "\win51is.sp2"
+
+spcdtagfilem = "\win51ms.sp2"
+
+spcdtagfilea = "\win51as.sp2"
+
+

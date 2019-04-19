@@ -1,0 +1,25 @@
+[Version]
+Signature= "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+ADAM
+
+[ADAM]
+OptionDesc = %ADAM_Desc%
+Tip = %ADAM_Tip%
+Parent      = AdServOC
+
+IconIndex           = *,..\r2icons.dll,5
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2\packages\adam\update
+
+[SourceDisksFiles]
+
+
+
+[Strings]
+ADAM_Tip = "Active Directory Application Mode (ADAM) is a special mode of Active Directory that provides a store for application-specific data."
+ADAM_Desc = "Active Directory Application Mode (ADAM)"
+R2CDNAME = "Windows Server 2003 R2 Disc 2"

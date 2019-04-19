@@ -1,0 +1,110 @@
+
+[Version]
+Signature               = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+FSRStandard		
+
+[DestinationDirs]
+FsrStandard.Files                = 11 
+
+[SourceDisksNames]
+1 = %R2CDNAME%,,,\cmpnents\r2
+
+[SourceDisksFiles]
+Fs.msc                = 1
+
+[FsrStandard]
+Parent                  = NetOC                             
+OptionDesc              = %FsmDescription%
+Tip                     = %FsmTip%
+IconIndex               = *,..\r2icons.dll,3
+
+Uninstall               = FsrStandard.Uninstall
+ProfileItems            = FsrStandard.StartMenu.Install
+Include                 = FsrCommon.inf, CfscommonUIFx.inf, NetFx20.inf
+CopyFiles               = FsrStandard.Files
+
+Needs                   = FsrCommon, CfsCommonUIFx, NetFx20
+
+
+
+
+[FsrStandard.Uninstall]
+ProfileItems            = FsrStandard.StartMenu.Uninstall
+DelFiles                = FsrStandard.Files
+
+[FsrStandard.Files]
+Fs.msc
+
+[FsrStandard.StartMenu.Install]
+Name                    = %FsmStartMenuName%
+CmdLine                 = 11,,fs.msc    
+SubDir                  = %AdministrativeTools%
+InfoTip                 = "@%11%\fsmmsg.dll,-201"
+DisplayResource         = "%11%\fsmmsg.dll",200
+
+[FsrStandard.StartMenu.Uninstall]
+Name                    = %FsmStartMenuName%,0x00000002
+SubDir                  = %AdministrativeTools%
+
+
+[Strings]
+R2CDNAME                 = "Windows Server 2003 R2 Disc 2"
+FsmDescription           = "File Server Management"
+FsmTip                   = "Installs the File Server Management Console"
+FsmStartMenuName         = "File Server Management" 
+AdministrativeTools      = "Administrative Tools"
+Startup                  = "Startup"
+
+
+
+cdname      = "Windows Server 2003, Standard Edition CD-ROM"
+productname = "Windows Server 2003, Standard"
+
+
+
+
+
+
+
+bootname1  = "Windows Server 2003, Standard Edition Setup Boot Disk"
+bootname2  = "Windows Server 2003, Standard Edition Setup Disk #2"
+bootname3  = "Windows Server 2003, Standard Edition Setup Disk #3"
+bootname4  = "Windows Server 2003, Standard Edition Setup Disk #4"
+bootname5  = "Windows Server 2003, Standard Edition Setup Disk #5"
+bootname6  = "Windows Server 2003, Standard Edition Setup Disk #6"
+bootname7  = "Windows Server 2003, Standard Edition Setup Disk #7"
+
+cdtagfile = "\win51is"
+
+
+
+cdtagfilei = "\win51is"
+
+cdtagfilem = "\win51ms"
+
+cdtagfilea = "\win51as"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile = "\win51is.sp2"
+
+
+
+spcdtagfilei = "\win51is.sp2"
+
+spcdtagfilem = "\win51ms.sp2"
+
+spcdtagfilea = "\win51as.sp2"
+
+

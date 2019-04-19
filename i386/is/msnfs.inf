@@ -1,0 +1,23 @@
+
+
+
+
+
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+MSNFS
+
+[MSNFS]
+OptionDesc      = %str_MSNFS_desc%
+Tip 		= %str_MSNFS_tip%
+IconIndex	= *,..\r2icons.dll,9
+Parent          = FileAndPrint
+
+[strings]
+str_MSNFS_desc = "Microsoft Services for NFS"
+str_MSNFS_tip = "Enables UNIX users to both store and gain access to files on a server running Microsoft Windows."
+
+R2CDNAME       = "Windows Server 2003 R2 Disc 2"

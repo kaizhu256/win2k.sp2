@@ -1,0 +1,143 @@
+[Version]
+Signature               = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+FSRCommon		
+
+[DestinationDirs]
+FsrCommon.Files                = 11
+FsrCommon.ResFiles             = 11, %LocaleSubDir%
+
+[SourceDisksNames]
+1 = %R2CDNAME%,,,\cmpnents\r2
+
+[SourceDisksFiles]
+FsmMsg.dll            = 1    
+FsmSnap.dll           = 1
+FsmConfiguration.xml  = 1
+FsmSnap.resources.dll = 1
+
+[FsrCommon]
+CopyFiles         = FsrCommon.Files, FsrCommon.ResFiles
+AddReg            = FsrCommon.AddReg
+Uninstall               = FsrCommon.Uninstall
+
+
+
+
+
+[FsrCommon.Uninstall]
+DelFiles          = FsrCommon.Files, FsrCommon.ResFiles
+DelReg            = FsrCommon.DelReg
+
+[FsrCommon.Files]
+FsmMsg.dll
+FsmSnap.dll
+FsmConfiguration.xml
+
+[FsrCommon.ResFiles]
+FsmSnap.resources.dll
+
+
+
+[FsrCommon.AddReg]
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","About",,"{00000000-0000-0000-0000-000000000000}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","ApplicationBase",,%11%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","AssemblyName",,"FsmSnap"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","Description",,%FsmSnapinDesc%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","DescriptionStringIndirect",,"@%11%\fsmmsg.dll,-201"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","FolderBitmapsColorMask",0x00010001,0xff00ff
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","FxVersion",,"3.0.0.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","IconIndirect",,"@%11%\fsmmsg.dll,-1000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","LargeFolderBitmapIndirect",,"@%11%\fsmmsg.dll,-2001"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","ModuleName",,"FsmSnap.dll"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","NameString",,%FsmSnapinName%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","NameStringIndirect",,"@%11%\fsmmsg.dll,-200"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","Provider",,%ProviderName%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","ProviderStringIndirect",,"@%11%\fsmmsg.dll,-202"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","RuntimeVersion",,"v2.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","SmallFolderBitmapIndirect",,"@%11%\fsmmsg.dll,-2000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","SmallSelectedFolderBitmapIndirect",,"@%11%\fsmmsg.dll,-2000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","Type",,"Microsoft.Storage.FileServerRole.FsmSnapIn,FsmSnap"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","VersionStringIndirect",,"@%11%\fsmmsg.dll,-205"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","HelpTopic",,"%10%\Help\fsm.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}","LinkedHelpTopics",,"%10%\Help\fsm.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}\NodeTypes\{8fb9aec9-e19f-4ed5-8dd0-8e31df52313d}",,,"File Server Management Root Node"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}\NodeTypes\{EA0B9500-C0BE-43E4-88C2-2091D33FD3E1}",,,"Share Folder Management node"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}\NodeTypes\{115783C2-4CC7-403A-B45A-9117FAA782DD}",,,"Disk and Volume Management node"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}\Standalone",,,
+
+
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{8fb9aec9-e19f-4ed5-8dd0-8e31df52313d}",,,"FSM Root node"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{8fb9aec9-e19f-4ed5-8dd0-8e31df52313d}\Extensions",,,
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{EA0B9500-C0BE-43E4-88C2-2091D33FD3E1}",,,"FSM Share Folder Management node"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{EA0B9500-C0BE-43E4-88C2-2091D33FD3E1}\Extensions\NameSpace","{58221C69-EA27-11CF-ADCF-00AA00A80033}",,"Shared Folders"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{115783C2-4CC7-403A-B45A-9117FAA782DD}",,,"Disk and Volume Management node"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{115783C2-4CC7-403A-B45A-9117FAA782DD}\Extensions\NameSpace","{43668E21-2636-11D1-A1CE-0080C88593A5}",,"Disk Defrag"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{115783C2-4CC7-403A-B45A-9117FAA782DD}\Extensions\NameSpace","{8EAD3A12-B2C1-11d0-83AA-00A0C92C9D5D}",,"Disk Management"
+
+
+
+
+[FsrCommon.DelReg]
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f7da6f14-f244-401a-9259-f015a82057d3}"
+
+
+[Strings]
+R2CDNAME                 = "Windows Server 2003 R2 Disc 2"
+LocaleSubDir             = "en"
+ProviderName             = "Microsoft Corporation"
+FsmSnapinName = "File Server Management"
+FsmSnapinDesc = "Manages your file server components."
+
+
+
+
+
+cdname      = "Windows Server 2003, Enterprise Edition CD-ROM"
+productname = "Windows Server 2003, Enterprise"
+
+
+
+
+
+bootname1    = "Windows Server 2003, Enterprise Edition Setup Boot Disk"
+bootname2    = "Windows Server 2003, Enterprise Edition Setup Disk #2"
+bootname3    = "Windows Server 2003, Enterprise Edition Setup Disk #3"
+bootname4    = "Windows Server 2003, Enterprise Edition Setup Disk #4"
+bootname5    = "Windows Server 2003, Enterprise Edition Setup Disk #5"
+bootname6    = "Windows Server 2003, Enterprise Edition Setup Disk #6"
+bootname7    = "Windows Server 2003, Enterprise Edition Setup Disk #7"
+
+cdtagfile   = "\win51ia"
+
+
+
+cdtagfilei   = "\win51ia"
+
+cdtagfilem   = "\win51ma"
+
+cdtagfilea   = "\win51aa"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile   = "\win51ia.sp2"
+
+
+
+spcdtagfilei   = "\win51ia.sp2"
+
+spcdtagfilem   = "\win51ma.sp2"
+
+spcdtagfilea   = "\win51aa.sp2"
+
+

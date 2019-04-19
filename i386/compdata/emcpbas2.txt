@@ -1,0 +1,5 @@
+The version of PowerPath that is currently installed is not compatible with this version of Windows unless a specific PowerPath patch has been applied. Please contact your hardware provider for an updated version and install it prior to upgrading to this version of Windows.
+
+For details on how to resolve this issue, see Primus article emc82864 at http://go.microsoft.com/fwlink/?LinkId=28235.
+
+For a list of devices supported by this version of Windows, see the Microsoft Windows Compatibility List at http://go.microsoft.com/fwlink/?LinkId=9890.

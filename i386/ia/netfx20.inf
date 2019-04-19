@@ -1,0 +1,105 @@
+[Version]
+Signature= "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+LayoutFile = layout.inf
+
+[URTDetectionKey]
+Key=SOFTWARE\Microsoft\NET Framework Setup\NDP\v2.0.50727
+Name=Install
+Value=1
+
+
+[NETFxName]
+FileName=dotnetfx.exe
+ProdName=Microsoft .NET Framework 2.0
+
+
+[UIStrings]
+SourceLocation=%source_location%
+diskprompt_title=%diskprompt_title%
+cdname=%cdname%
+coreinstall=%coreinstall%
+coreuninstall=%coreuninstall%
+langpackinstall=%langpackinstall%
+langpackuninstall=%langpackuninstall%
+msgpopup_caption=%missing_text%
+msgpopup_title=%msgpopup_title%
+
+
+
+[Optional Components]
+netfx20
+
+[netfx20]
+IconIndex = *
+Modes = 0,1,2,3
+Needs = wbem,com
+OptionDesc = %netfx_desc%
+Tip = %netfx_tip%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Strings]
+
+netfx_desc="Microsoft .NET Framework 2.0"
+netfx_tip="Microsoft .NET Framework 2.0"
+source_location="cmpnents\r2"
+
+langpack_desc="Microsoft .NET Framework 2.0 Language Pack - JPN"
+langpack_tip="Microsoft .NET Framework 2.0 Language Pack - JPN"
+dialog_caption="Microsoft Windows Setup"
+diskprompt_title="Files Needed"
+cdname="Windows Server 2003 Disk 2"
+coreuninstall="Uninstalling Microsoft .NET Framework 2.0"
+coreinstall="Installing Microsoft .NET Framework 2.0"
+langpackuninstall="Uninstalling Microsoft .NET Framework 2.0 Language Pack - JPN"
+langpackinstall="Installing Microsoft .NET Framework 2.0 Language Pack - JPN"
+missing_text="Microsoft .NET Framework 2.0 Language Pack - JPN is installed, but the runtime engine is missing. If you proceed, the runtime engine will be reinstalled. If you do not want the runtime engine to reinstall, click the Details button for Microsoft .NET Framework 2.0 and unselect 'Microsoft .NET Framework 2.0. When prompted, click 'Yes' to remove the 'Microsoft .NET Framework 2.0 Language Pack - JPN' as well."
+msgpopup_title="Warning"
+

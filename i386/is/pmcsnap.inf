@@ -1,0 +1,119 @@
+[Version]
+Signature= "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+
+[Optional Components]
+PMCSnap
+
+
+[PMCSnap]
+OptionDesc = %PMCSNAP%
+Tip = %PMCSNAP_DESCRIPTION%
+IconIndex = *,..\r2icons.dll,4
+parent = NetOC
+CopyFiles = PMCFileSet
+RegisterDlls = PMCFileSet.RegSrv
+DelFiles = PMCFileSet
+Uninstall = PMCSnapUninstall
+
+
+
+[DestinationDirs]
+PMCFileSet= 10,PMCSnap
+PMCSystemSet = 11
+
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+puiobj.DLL = 1
+pmcsnap.DLL = 1
+printmanagement.msc = 1
+ppcsnap.dll = 1
+pushprinterconnections.exe = 1
+fnprinters.exe = 1
+fnprinters.com = 1
+findnetprinters.dll = 1
+
+
+[PMCFileSet]
+puiobj.DLL
+pmcsnap.DLL
+printmanagement.msc
+fnprinters.exe
+fnprinters.com
+findnetprinters.dll
+ppcsnap.dll
+pushprinterconnections.exe
+
+
+[PMCFileSet.RegSrv]
+11,,puiapi.DLL,1
+10,PMCSnap,puiobj.DLL,1
+10,PMCSnap,pmcsnap.DLL,1
+10,PMCSnap,findnetprinters.dll,1 
+10,PMCSnap,ppcsnap.dll,1
+
+[PMCSnapUninstall]
+UnregisterDlls = PMCFileSet.RegSrv
+Delfiles = PMCFileSet
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+PMCSNAP = "Print Management Component"
+PMCSNAP_DESCRIPTION = "Print Management"
+PMCSNAP_CAB_DESCRIPTION = "PMCSnap Component Cab"
+
+
+
+
+cdname      = "Windows Server 2003, Standard Edition CD-ROM"
+productname = "Windows Server 2003, Standard"
+
+
+
+
+
+
+
+bootname1  = "Windows Server 2003, Standard Edition Setup Boot Disk"
+bootname2  = "Windows Server 2003, Standard Edition Setup Disk #2"
+bootname3  = "Windows Server 2003, Standard Edition Setup Disk #3"
+bootname4  = "Windows Server 2003, Standard Edition Setup Disk #4"
+bootname5  = "Windows Server 2003, Standard Edition Setup Disk #5"
+bootname6  = "Windows Server 2003, Standard Edition Setup Disk #6"
+bootname7  = "Windows Server 2003, Standard Edition Setup Disk #7"
+
+cdtagfile = "\win51is"
+
+
+
+cdtagfilei = "\win51is"
+
+cdtagfilem = "\win51ms"
+
+cdtagfilea = "\win51as"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile = "\win51is.sp2"
+
+
+
+spcdtagfilei = "\win51is.sp2"
+
+spcdtagfilem = "\win51ms.sp2"
+
+spcdtagfilea = "\win51as.sp2"
+
+

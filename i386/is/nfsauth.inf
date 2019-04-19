@@ -1,0 +1,69 @@
+
+
+
+
+
+[Version]
+Signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+NFSserverAuth
+
+[NFSserverAuth]
+OptionDesc              = %str_NFS_serverAuth_desc%
+Tip                     = %str_NFS_serverAuth_tip%
+IconIndex               = 0
+Parent                  = MSNFS
+CopyFiles               = NFSserverAuthSysFiles
+Uninstall               = NFSserverAuth.uninstall
+
+AddReg                  = NFSserverAuth.AddRegistry
+
+
+[NFSserverAuth.uninstall]
+DelFiles                = NFSserverAuthSysFiles
+DelReg                  = NFSserverAuth.AddRegistry
+
+[DestinationDirs]
+NFSserverAuthSysFiles   = 11            
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+nfssa.dll     = 1
+
+[NFSserverAuthSysFiles]
+nfssa.dll
+
+[NFSserverAuth.AddRegistry]
+
+HKLM,"SYSTEM\CurrentControlSet\Control\Lsa\Msv1_0", "Auth170", %REG_SZ%, "nfssa"
+HKLM,"SOFTWARE\Microsoft\MSNFS\AppsInstalled\Server for NFS Authentication", "InstallPath", %REG_SZ%, %11%
+
+
+
+
+[Strings]
+str_NFS_serverAuth_desc         = "Server For NFS Authentication"
+str_NFS_serverAuth_tip          = "Allows UNIX users mapped to a local Windows account to access files."
+
+
+KEY_PORTMAP             = "SYSTEM\CurrentControlSet\Services\Portmap"
+KEY_RPCXDR              = "SYSTEM\CurrentControlSet\Services\RpcXdr"
+KEY_NFS_VER_MAPPING     = "SOFTWARE\Microsoft\Server For NFS\CurrentVersion\Mapping"
+KEY_NFS_SERVER          = "SYSTEM\CurrentControlSet\Services\NfsSvr"
+KEY_MAPSERVICE          = "System\CurrentControlSet\Services\Mapsvc"
+KEY_NFSSHARE            = "SYSTEM\CurrentControlSet\Services\Eventlog\System\NFSShare"
+KEY_NFS_CURVER          = "SOFTWARE\Microsoft\Server For NFS\CurrentVersion"
+
+
+R2CDNAME                = "Windows Server 2003 R2 Disc 2"
+
+REG_SZ                  =0x00002    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008
+

@@ -1,0 +1,70 @@
+
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97d-E325-11CE-BFC1-08002BE10318}
+Provider=%MSNAME%
+CatalogFile=hwmgmt.cat
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Manufacturer]
+%MFGNAME%=DeviceList,NTx86
+
+[DestinationDirs]
+DefaultDestDir=12 
+
+[SourceDisksFiles]
+IPMIDrv.sys=1
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , ,\
+
+[DeviceList.NTx86]
+%DESCRIPTION_ACPI%=DriverInstall,acpi\ipi0001
+%DESCRIPTION_SMBIOS%=DriverInstall,root\ipmi
+
+[DriverInstall]
+CopyFiles=DriverCopyFiles
+
+[DriverCopyFiles]
+IPMIDrv.sys
+
+[DriverInstall.Services]
+AddService=IPMIDRV,2,DriverService,EventLogInst
+
+[DriverService]
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\IPMIDrv.sys
+Security="D:P(A;;GA;;;BA)(A;;GA;;;NS)(A;;GA;;;LS)(A;;GA;;;SY)"
+
+[DriverInstall.hw]
+AddReg=DriverHwAddReg
+
+[DriverHwAddReg]
+HKR,,FriendlyName,,%FRIENDLYNAME%
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;NS)(A;;GA;;;LS)(A;;GA;;;SY)"
+
+
+[EventLogInst]
+AddReg=IpmiEventlogAddReg
+
+[IpmiEventlogAddReg]
+HKR,,EventMessageFile,0x00020000,"%%SystemRoot%%\System32\drivers\ipmidrv.sys"
+HKR,,TypesSupported,0x00010001,7
+
+
+
+
+
+
+[Strings]
+MSNAME = "Microsoft"
+MFGNAME="Microsoft"
+DESCRIPTION_ACPI="Microsoft ACPI Generic IPMI Compliant Device"
+DESCRIPTION_SMBIOS="Microsoft SMBIOS Generic IPMI Compliant Device"
+FRIENDLYNAME="Microsoft Generic IPMI Compliant Device"
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+

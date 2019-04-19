@@ -1,0 +1,210 @@
+
+
+
+
+
+
+[version]
+signature   =   "$Windows NT$"
+layoutfile  =   layout.inf
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+IdmuMgmt
+
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+
+[IdmuMgmt]
+OptionDesc        	= %Sfuadmin_Desc%
+Tip               	= %Sfuadmin_Tip%
+IconIndex         	= 0
+parent 			= UnixIDManagement
+CopyFiles       	= Sfuadmin.wbemfiles, Sfuadmin.commonfiles, Sfuadmin.Systemfiles,IdmuMgmt.ResFiles
+AddReg 			= SfuAdmin.Registry
+ProfileItems    	= Idmu.InstallGroup,Help.Install,Admin.install.MMCSnapin,AdminTools.install.MMCSnapin
+Include            	=  NetFx20.inf
+
+Needs              	=  NetFx20
+
+
+
+Uninstall      		= Sfuadmin.Remove
+
+[Sfuadmin.Remove]
+DelFiles 	= Sfuadmin.wbemfiles,  Sfuadmin.commonfiles, Sfuadmin.Systemfiles,IdmuMgmt.ResFiles
+ProfileItems    = Help.Uninstall,Admin.uninstall.MMCSnapin,AdminTools.uninstall.MMCSnapin
+DelReg 		= SfuAdmin.Registry
+
+[SourceDisksFiles]
+about.mof 	=1,,657
+namespce.mof 	=1,,119
+prodver.mof 	=1,,2738
+provreg.mof 	=1,,496
+remote.mof 	=1,,1575
+nisremot.mof 	=1,,732
+chkadmin.mof 	=1,,732
+verinfo.mof 	=1,,552
+cladmin.dll 	=1,,20992
+nisadres.dll 	=1,,42496
+nisadmin.exe 	=1,,66560
+nismap.exe 	=1,,121344
+nis2ad.exe 	=1,,120832
+psadmin.exe 	=1,,60928
+IdmuMgmt.dll	=1,,364544
+idmuwrapper.dll =1,,7680
+idmumgmt.msc	=1,,16704
+nisad.dll	=1,,126464
+ypcat.exe	=1,,31744
+ypclear.exe	=1,,26112
+ypmatch.exe	=1,,31232
+yppush.exe	=1,,36864
+IdmuMgmt.resources.dll =1,,36000
+idmures.dll =1,,36000
+
+[DestinationDirs]
+Sfuadmin.wbemfiles 	= 11, \wbem
+Sfuadmin.commonfiles 	= 10, \idmu\common
+Sfuadmin.Systemfiles	= 11
+IdmuMgmt.ResFiles             = 11, %LocaleSubDir%
+
+[IdmuMgmt.ResFiles]
+IdmuMgmt.resources.dll,,,0x00000004
+
+[Sfuadmin.wbemfiles]
+about.mof,,,0x00000004
+namespce.mof,,,0x00000004
+prodver.mof,,,0x00000004
+provreg.mof,,,0x00000004
+remote.mof,,,0x00000004
+nisremot.mof,,,0x00000004
+chkadmin.mof,,,0x00000004
+verinfo.mof,,,0x00000004
+
+
+
+[Sfuadmin.commonfiles]
+cladmin.dll,,,0x00000004
+nisadres.dll,,,0x00000004
+nisadmin.exe,,,0x00000004
+nismap.exe,,,0x00000004
+nis2ad.exe,,,0x00000004
+psadmin.exe,,,0x00000004
+idmumgmt.msc,,,0x00000004
+nisad.dll,,,0x00000004
+ypcat.exe,,,0x00000004
+ypclear.exe,,,0x00000004
+ypmatch.exe,,,0x00000004
+yppush.exe,,,0x00000004
+
+
+[Sfuadmin.Systemfiles]
+idmuwrapper.dll,,,0x00000004
+IdmuMgmt.dll,,,0x00000004
+idmures.dll,,,0x00000004
+
+
+
+[SfuAdmin.Registry]
+HKLM,%KEY_IDM%
+HKLM,%KEY_IDM%, "Current_Release", %REG_SZ%, "4.0" 
+HKLM,%KEY_IDM%, "InstallPath", %REG_EXPAND_SZ%, "%WINDIR%\idmu\"
+HKLM,"%KEY_IDM%\UpgradeStatus"
+HKLM,%KEY_IDM%,ProductVerMajor,%REG_DWORD%,9
+HKLM,%KEY_IDM%,ProductVerMinor,%REG_DWORD%,0
+HKLM,"%KEY_IDM%\AppsInstalled\Common Files", "InstallPath", %REG_EXPAND_SZ%, "%systemroot%\idmu\common\"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","About",%REG_SZ%,"{00000000-0000-0000-0000-000000000000}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","ApplicationBase",%REG_SZ%,%11%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","AssemblyName",%REG_SZ%,IdmuMgmt
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","Description",%REG_SZ%,%str_MMC_DESC%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","ModuleName",%REG_SZ%,IdmuMgmt.dll
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","NameString",%REG_SZ%,%str_MMC%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","Provider",%REG_SZ%,%ProviderName%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","RuntimeVersion",%REG_SZ%,"v2.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","Type",%REG_SZ%,"Microsoft.IdentityManagementForUnix.Management.Snapin.IdmuSnapin, IdmuMgmt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","HelpTopic",%REG_SZ%,%10%\Help\UIM_.chm
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","LinkedHelpTopics",%REG_SZ%,%10%\Help\UIM_.chm
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}"\NodeTypes
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}"\Standalone
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","NameStringIndirect",%REG_SZ%,%str_MMC_Ind%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","DescriptionIndirect",%REG_SZ%,%str_MMC_DESC_Ind%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","ProviderIndirect",%REG_SZ%,%ProviderName_Ind%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{165698a7-406d-488a-a0cd-85572142ea47}","VersionStringIndirect",%REG_SZ%,%VersionString_Ind%
+
+
+[Idmu.InstallGroup]
+Name            = %str_SFUGROUP%, 4
+DisplayResource = "%WINDIR%\system32\idmures.dll",106
+
+[Help.install]
+Name            = %str_Help%
+DisplayResource	= "%WINDIR%\system32\idmures.dll",105
+CmdLine         = 10, ,"hh.exe mk:@MSITStore:UIM_.chm"
+IconIndex       = 0
+WorkingDir      = 10, help 
+InfoTip         = "@%WINDIR%\system32\idmures.dll,-105"
+SubDir          = %str_SFUGROUP%
+
+[Help.uninstall]
+Name        	= %str_Help%, 2    
+SubDir      	= %str_SFUGROUP%
+
+[Admin.install.MMCSnapin]
+Name            = %str_MMC%
+DisplayResource	= "%WINDIR%\system32\idmures.dll",100
+CmdLine         = 10, idmu\common, idmumgmt.msc
+IconIndex       = 0
+WorkingDir      = 10, idmu\common
+InfoTip         = "@%WINDIR%\system32\idmures.dll,-100"
+SubDir          = %str_SFUGROUP%
+
+[Admin.uninstall.MMCSnapin]
+Name            = %str_MMC%, 2    
+SubDir          = %str_SFUGROUP%
+
+[AdminTools.install.MMCSnapin]
+Name            = %str_MMC%
+DisplayResource	= "%WINDIR%\system32\idmures.dll",100
+CmdLine         = 10, idmu\common, idmumgmt.msc
+IconIndex       = 0
+WorkingDir      = 10, idmu\common
+InfoTip         = "@%WINDIR%\system32\idmures.dll,-100"
+SubDir          = %AdministrativeTools%
+
+[AdminTools.uninstall.MMCSnapin]
+Name            = %str_MMC%, 2    
+SubDir          = %AdministrativeTools%
+
+
+
+[Strings]
+str_Help		="Help for Identity Management for UNIX"
+str_Help_Ind		="@%WINDIR%\system32\idmures.dll,-105"
+Sfuadmin_Desc		="Administration Components"
+Sfuadmin_Tip 		="Administrative tools for Server for NIS and Password Synchronization"
+KEY_SFU 		= SOFTWARE\Microsoft\Services For Unix
+str_MMC              	="Microsoft Identity Management for UNIX"
+str_MMC_Ind            	="@%WINDIR%\system32\idmures.dll,-100"
+str_MMC_DESC           	="This snap-in administers Identity Management for UNIX"
+str_MMC_DESC_Ind       	="@%WINDIR%\system32\idmures.dll,-101"
+str_SFUGROUP            ="Identity Management for UNIX"
+REG_SZ_OVERWRITE        =0x00000    
+REG_SZ                  =0x00002    
+AdministrativeTools 	= "Administrative Tools"
+REG_BINARY_OVERWRITE    =0x00001    
+REG_BINARY              =0x00003    
+REG_SZ_EXPAND_OVERWRITE =0x20000    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD_OVERWRITE     =0x10001    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008    
+R2CDNAME 		="Windows Server 2003 R2 Disc 2"
+KEY_IDM			="SOFTWARE\Microsoft\Identity Management for UNIX"
+ProviderName = 		"Microsoft Corporation"
+ProviderName_Ind = 	"@%WINDIR%\system32\idmures.dll,-102"
+LocaleSubDir = "en"
+VersionString_Ind = "@%WINDIR%\system32\idmures.dll,-103"

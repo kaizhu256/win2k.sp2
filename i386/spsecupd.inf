@@ -1,0 +1,51 @@
+[Unicode]
+Unicode=yes
+[Registry Values]
+
+[Privilege Rights]
+SeSystemTimePrivilege = Add:, *S-1-5-19
+
+[Registry Keys]
+"MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config",2,"D:(A;CI;GRGWSD;;;LS)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders",2,"D:(A;CI;GRGWSD;;;LS)"
+"MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation",2,"D:(A;CI;GRGWSD;;;PU)(A;CI;GRGWSD;;;LS)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Dhcp\Parameters",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GA;;;NS)(A;CI;GA;;;LS)(A;CI;GR;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\DnsCache",2,"D:P(A;CI;GR;;;BU)(A;CI;GR;;;PU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GR;;;NS)(A;CI;GR;;;LS)(A;CI;GR;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GRLCSWCCRPRC;;;NS)(A;CI;GR;;;LS)(A;CI;CCLCSWRPRC;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Performance",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GRLCSWCCRPRC;;;NS)(A;CI;GR;;;LS)(A;CI;CCLCSWRPRC;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GRLCSWCCRPRC;;;NS)(A;CI;GR;;;LS)(A;CI;CCLCSWRPRC;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GA;;;NS)(A;CI;GR;;;LS)(A;CI;GRGW;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Adapters",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Winsock",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Linkage",2,"D:P(A;CI;GR;;;BU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GA;;;NS)(A;CI;GR;;;LS)(A;CI;GRGW;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\NetBT",2,"D:P(A;CI;GR;;;BU)(A;CI;GR;;;PU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GR;;;NS)(A;CI;GR;;;LS)(A;CI;CCLCSWRPRC;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters",2,"D:P(A;CI;GR;;;BU)(A;CI;GR;;;PU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GA;;;NS)(A;CI;GA;;;LS)(A;CI;GRGW;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Control\Network",0,"D:AR"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Accounting",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\DemandDialManager",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Enum",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Interfaces",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Performance",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Policy",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\RouterManagers",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\RoutingTableManager",2,"D:P(A;CI;GA;;;BA)(A;CI;GR;;;LS)(A;CI;GR;;;NO)(A;CI;GR;;;NS)(A;CI;GR;;;PU)(A;CI;GA;;;SY)(A;CI;GR;;;BU)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Security",2,"D:P(A;CI;GA;;;BA)(A;CI;GA;;;SY)"
+"MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Telephony",0,"D:AR"
+"MACHINE\SYSTEM\CurrentControlSet\Services\PortProxy",2,"D:P(A;CI;GR;;;AU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GR;;;NS)(A;CI;GR;;;LS)(A;CI;CCSWRPRC;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\6to4\Config",2,"D:P(A;CI;GR;;;AU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GR;;;NS)(A;CI;GR;;;LS)(A;CI;CCSWRPRC;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\6to4\Interfaces",2,"D:P(A;CI;GR;;;AU)(A;CI;GA;;;BA)(A;CI;GA;;;SY)(A;CI;GR;;;NS)(A;CI;GR;;;LS)(A;CI;CCSWRPRC;;;NO)"
+"MACHINE\SYSTEM\CurrentControlSet\Services\LicenseInfo",2,"D:AR(A;CI;CCLCSWRPRC;;;NS)(A;CIIO;CCDCLCSWRPRC;;;NS)"
+
+[Service General Setting]
+Dnscache,,"D:(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPLOCRRC;;;PU)(A;;CCLCSWRPWPDTLOCRRC;;;NO)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
+Dhcp,,"D:(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;NO)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
+6to4,,"D:(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPLOCRRC;;;PU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SO)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;0x40;;;LS)(A;;0x40;;;NS)(A;;CCLCSWRPWPDTLOCRRC;;;NO)"
+Sysmonlog,,"D:(A;;CCLCSWRPLOCRRC;;;PU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCLCRPLOCR;;;LU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
+ 
+[Version]
+signature="$CHICAGO$"
+Revision=1
+DriverVer=10/01/2002,5.2.3790.3959

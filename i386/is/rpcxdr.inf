@@ -1,0 +1,84 @@
+
+
+
+
+
+[Version]
+Signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+RpcXdr
+
+[RpcXdr]
+OptionDesc          = %str_rpcxdr_desc%
+Tip                 = %str_rpcxdr_tip%
+IconIndex           = 0
+Parent              = MSNFS
+CopyFiles           = RpcXdrDrvFiles
+AddService          = %str_RPCXDR_SVC_DISPLAY%, ,RpcXdr.rpcxdrSvc
+AddReg              = RpcXdr.AddRegistry
+Uninstall           = RpcXdr.uninstall
+
+
+[RpcXdr.uninstall]
+DelFiles        = RpcXdrDrvFiles
+DelService      = %str_RPCXDR_SVC_DISPLAY%, 0x200
+DelReg          = RpcXdr.DelRegistry
+
+[DestinationDirs]
+RpcXdrDrvFiles = 12
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+
+[SourceDisksFiles]
+rpcxdr.sys     = 1
+
+[RpcXdrDrvFiles]
+rpcxdr.sys
+
+[RpcXdr.AddRegistry]
+
+HKLM, %KEY_EVENT_RPCXDR%, "EventMessageFile", %REG_EXPAND_SZ%, "%11%\IoLogMsg.dll;%12%\rpcxdr.sys"
+HKLM, %KEY_EVENT_RPCXDR%, "TypesSupported", %REG_DWORD%, 7
+HKLM, %KEY_RPCXDR%, "Version", %REG_SZ%, "04.00.00.00"
+
+HKLM, %KEY_RPCXDR%"\Parameters", "DefaultConcurrentConnections", %REG_DWORD%, 256
+HKLM, %KEY_RPCXDR%"\Parameters", "NfsV2DrcMask", %REG_DWORD%, 65028
+HKLM, %KEY_RPCXDR%"\Parameters", "NfsV3DrcMask", %REG_DWORD%, 63236
+HKLM, %KEY_RPCXDR%"\Parameters", "DefaultWorkerThreadPriority", %REG_DWORD%, 16
+HKLM, %KEY_RPCXDR%"\Parameters", "DrcTimeout", %REG_DWORD%, 10
+HKLM, %KEY_RPCXDR%"\Parameters", "DefaultNumberOfWorkerThreads", %REG_DWORD%, 16
+
+[RpcXdr.DelRegistry]
+HKLM, %KEY_EVENT_RPCXDR%
+HKLM, %KEY_RPCXDR%, "Version"
+HKLM, %KEY_RPCXDR%"\Parameters"
+
+[RpcXdr.rpcxdrSvc]
+DisplayName            = %str_RPCXDR_SVC_DISPLAY%
+ServiceType            = 1
+StartType              = 3
+ErrorControl           = 1
+ServiceBinary          = %12%\rpcxdr.sys
+Dependencies           = tcpip
+Description            = %str_RPCXDR_SVC%
+
+
+[strings]
+KEY_RPCXDR             = "SYSTEM\CurrentControlSet\Services\RpcXdr"
+KEY_EVENT_RPCXDR       = "SYSTEM\CurrentControlSet\Services\Eventlog\System\RpcXdr"
+str_RPCXDR_SVC         = ""
+str_RPCXDR_SVC_DISPLAY = "rpcxdr"
+str_rpcxdr_desc        = "RPC External Data Representation"
+str_rpcxdr_tip         = "Provides RPC data services for Client for NFS, Server for NFS, and User Name Mapping."
+
+R2CDNAME                = "Windows Server 2003 R2 Disc 2"
+
+REG_SZ                  =0x00002    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008

@@ -1,0 +1,150 @@
+
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+DFSR
+
+[DFSR]
+Parent = DFS
+OptionDesc = %DfsrOCMDescription%
+Tip = %DfsrOCMTip%
+IconIndex = *,..\r2icons.dll,2
+CopyFiles = Dfsr.ServiceFiles, Dfsr.MofFiles
+RegisterDlls = Dfsr.InstallMofs
+AddService = Dfsr,,Dfsr.Service
+Uninstall = Dfsr.Uninstall
+
+Include = dfsrhelper.inx
+Needs = DfsRHelper
+Run = Dfsr.InstallPerf
+
+[Dfsr.Uninstall]
+DelService = Dfsr, 0x204, Application
+DelFiles = Dfsr.ServiceFiles, Dfsr.MofFiles
+DelReg = Dfsr.DelReg
+
+
+[DestinationDirs]
+Dfsr.ServiceFiles = 11             
+Dfsr.MofFiles = 11, wbem           
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+dfsr.exe = 1
+dfsrres.dll = 1
+dfsrperf.dll = 1
+dfsrprov.mof = 1
+dfsrprov.mfl = 1
+dfsrperf.ini = 1
+dfsrperf.h = 1
+
+
+
+
+
+[Dfsr.Service]
+DisplayName = %DfsrServiceDisplayName%
+Description = %DfsrServiceDescription%
+Dependencies = RPCSS,EventLog,EventSystem
+ServiceBinary = %11%\Dfsr.exe            
+ServiceType = 0x10                       
+StartType = 2                            
+ErrorControl = 1                         
+AddReg = Dfsr.AddReg
+
+[Dfsr.AddReg]
+HKR,,"FailureActions",0x00030003,00,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,53,00,65,00,01,00,00,00,40,77,1B,00,01,00,00,00,40,77,1B,00,01,00,00,00,40,77,1B,00
+HKR,"Performance","Open",0x00000000,"DfsrPerfData_Open"
+HKR,"Performance","Close",0x00000000,"DfsrPerfData_Close"
+HKR,"Performance","Collect",0x00000000,"DfsrPerfData_Collect"
+HKR,"Performance","Library",0x00020002,"%SystemRoot%\system32\DfsrPerf.dll"
+
+[Dfsr.DelReg]
+HKLM,"SYSTEM\CurrentControlSet\Services\Eventlog\DFS Replication"
+
+
+
+
+
+[Dfsr.ServiceFiles]
+Dfsr.exe
+Dfsrres.dll
+Dfsrperf.dll
+Dfsrperf.ini
+Dfsrperf.h
+
+[Dfsr.MofFiles]
+dfsrprov.mof
+dfsrprov.mfl
+
+
+
+[Dfsr.InstallMofs]
+11,wbem,mofcomp.exe,,,%11%\wbem\Dfsrprov.mof
+11,wbem,mofcomp.exe,,,%11%\wbem\Dfsrprov.mfl
+
+[Dfsr.InstallPerf]
+CommandLine=""%11%\lodctr.exe" "%11%\dfsrperf.ini""
+TickCount=500
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+DfsrServiceDisplayName = "DFS Replication"
+DfsrServiceDescription = "Replicates files among multiple servers to provide high availability and local access across a wide area network (WAN). If the service is stopped, file replication does not occur, and the files on the server become out-of-date. If the service is disabled, any services that explicitly depend on it will not start."
+DfsrOCMDescription = "DFS Replication Service"
+DfsrOCMTip = "Replicates files among multiple servers to provide high availability and local access across a wide area network (WAN)."
+
+
+
+
+
+cdname      = "Windows Server 2003, Enterprise Edition CD-ROM"
+productname = "Windows Server 2003, Enterprise"
+
+
+
+
+
+bootname1    = "Windows Server 2003, Enterprise Edition Setup Boot Disk"
+bootname2    = "Windows Server 2003, Enterprise Edition Setup Disk #2"
+bootname3    = "Windows Server 2003, Enterprise Edition Setup Disk #3"
+bootname4    = "Windows Server 2003, Enterprise Edition Setup Disk #4"
+bootname5    = "Windows Server 2003, Enterprise Edition Setup Disk #5"
+bootname6    = "Windows Server 2003, Enterprise Edition Setup Disk #6"
+bootname7    = "Windows Server 2003, Enterprise Edition Setup Disk #7"
+
+cdtagfile   = "\win51ia"
+
+
+
+cdtagfilei   = "\win51ia"
+
+cdtagfilem   = "\win51ma"
+
+cdtagfilea   = "\win51aa"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile   = "\win51ia.sp2"
+
+
+
+spcdtagfilei   = "\win51ia.sp2"
+
+spcdtagfilem   = "\win51ma.sp2"
+
+spcdtagfilea   = "\win51aa.sp2"
+
+

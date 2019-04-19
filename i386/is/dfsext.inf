@@ -1,0 +1,39 @@
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+DfsExt
+
+[DfsExt]
+OptionDesc = %DfsExtDescription%
+Tip = %DfsExtTip%
+IconIndex = 0
+CopyFiles = DfsExt.Files
+Uninstall = DfsExt.Uninstall
+
+
+[DfsExt.Uninstall]
+DelFiles = DfsExt.Files
+
+[DestinationDirs]
+DfsExt.Files = 11     
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+dfsext.dll = 1
+
+
+
+
+
+[DfsExt.Files]
+dfsext.dll
+
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+DfsExtDescription = "DFS Extensions Library"
+DfsExtTip = "Provides DFS extensions common to different features"

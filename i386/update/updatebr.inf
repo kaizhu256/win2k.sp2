@@ -1,0 +1,24 @@
+
+[Version]
+Signature="$Windows NT$"
+
+[DefaultBranchesServicePacks]
+2=SP2RTM
+
+[SourceInfsBranches]
+SP2RTM="update\update.inf"
+
+[SetupFiles.Common]
+spuninst.exe
+spmsg.dll
+update\spcustom.dll
+update\SP2.CAT
+"update\update.exe"
+update\updspapi.dll
+"update\update.ver"
+"update\updatebr.inf"
+update\eula.txt
+update\branches.inf
+
+[SetupFiles.SP2RTM]
+"update\update.inf"

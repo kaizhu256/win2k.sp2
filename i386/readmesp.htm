@@ -1,0 +1,975 @@
+﻿<html DIR="LTR" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Readme for Windows Server 2003 Service Pack 2</title>
+    
+  <STYLE TYPE="text/css">
+/* RelNote */
+
+table#columnTable
+{
+    table-layout: fixed;
+    background:    #FFFFFF;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+td#EdgeBorderColumn
+{
+    width: 10px;
+    border: 0px;
+    margin: 0;    
+    height: 100%;
+    background-color:  #666666;
+}
+  
+td#ToCColumn
+{
+    background:    #FFFFFF;
+    width: 300px;
+    border: 0;
+    margin: 0;
+    vertical-align: top;
+    padding-left:    14px;
+    padding-right:   10px;
+    padding-top: 7px;
+    text-decoration: none;
+}
+
+td#contentColumn
+{
+    background:    #FFFFFF;	
+    border: 0;
+    margin: 0;
+    padding: 14px 5% 22px 10px;             		
+    vertical-align: top;
+    max-width: 590;	
+}
+
+.ToCLevel1
+{
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.ToCLevel2
+{
+    margin-left: 8px;
+}
+	
+a
+{
+    color: #000000;
+}
+
+@media print
+{
+    P.TopOfPage
+    {
+    	margin: 5 0 18 0;		
+    }
+}
+
+@media screen
+{
+    P.TopOfPage
+    {
+    	margin: 0 0 18 0;		
+    }
+}
+
+#contentColumn A.TopOfPageLink
+{
+	text-decoration: none;	
+}
+
+#contentColumn A.TopOfPageLink:hover
+{
+    text-decoration: underline;
+}
+
+#ToCColumn A
+{
+    text-decoration: none;
+}
+
+#ToCColumn A:hover
+{
+    text-decoration: underline;
+}
+
+/* WSUA CHM presentation */
+
+
+/********/
+/* BODY */
+body
+{
+    background:#FFFFFF;
+    color:#000000;
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:70%;
+    font-style:normal;
+    font-weight:normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    width:100%;
+    height: 100%;
+    border-style:none;
+    border-width:0;
+}
+
+
+/*********/
+/* LINKS */
+a
+{
+	color:#0000FF;
+}
+
+a:visited
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:link
+{
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+a:hover
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+a:active
+{
+	color:#FF0000;
+	cursor:hand;
+	text-decoration:underline;
+}
+
+
+/************/
+/* SECTIONS */
+
+/* running header*/
+.runningHeader
+{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+
+div#techCenterLink
+{
+	background-color:#5F5F5F;
+	color:#FFFFFF;
+	padding:5pt 12px 5pt 12px;
+	margin:0 0 0 0;
+	border-bottom:solid 1pt #919193;
+	width:100%;
+}
+
+div#techCenterLink a
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+div#techCenterLink a:active
+{
+	color:#FFFFFF;
+	text-decoration:underline;
+	cursor:hand;
+}
+
+/* title */
+div#header
+{
+	background-color:#666666;
+	padding:15 13 15 20;	
+	margin:0 0 0 0;
+	width:100%;
+	border-style: solid;
+	border-width: 1 0 0 0;
+	border-color: #333333;
+	vertical-align: middle;
+}
+
+div#header h1
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	color:#FFFFFF;
+	font-size:160%;
+}
+
+
+/* main section */
+div#mainSection
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-width:0;
+}
+
+div#mainBody
+{
+	padding:0 9 0 0;
+	margin:0 0 0 0;
+	width:100%;
+        height: 100%;
+	border-style:none;
+	border-width:0;
+}
+
+
+/* footer */
+div#footer
+{
+	font-size:90%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	border:0;
+}
+
+
+/************/
+/* HEADINGS */
+div.section
+{
+	width:	100%;
+}
+
+.heading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h1.heading
+{
+	font-size:155%;
+}
+
+.subHeading
+{
+	color:#000000;
+	margin:9px 0px 9px 0px;
+}
+
+h3.subHeading
+{
+	font-size:130%;
+}
+
+td#ToCColumn h4.subHeading
+{
+	font-size:120%;
+}
+
+h4.subHeading
+{
+	font-size:110%;
+}
+
+h5.subHeading
+{
+	font-size:100%;
+}
+
+h6
+{
+	font-weight:normal;
+	font-size:100%;
+}
+
+img.procedure
+{
+	border: 0;
+	margin-right:8;
+}
+
+.howToHeadingTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	width:100%;
+}
+
+.howToHeadingImgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding-bottom:0;
+	padding-top:3px;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:top;
+	width:24px;
+}
+
+.howToHeadingTextCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	padding-left:0;
+	padding-right:0;
+	vertical-align:middle;
+}
+
+
+/**********/
+/* TABLES */
+table
+{
+	border:0;
+	font-size:100%;
+	margin:3 0 9 0;
+	width:100%;
+}
+
+th
+{
+	background-color:#DDDDDD;
+	vertical-align:bottom;
+	text-align:left;
+	font-weight:bold;
+	color:#000000;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+td
+{
+	background-color:#EEEEEE;
+	vertical-align:top;
+	padding:.2em;
+	padding-left:.45em;
+	padding-right:.5em;
+}
+
+
+/**********/
+/* ALERTS */
+img.note
+{
+	border: 0;
+	margin-right:5;
+}
+
+span.alertTitle
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	vertical-align:text-bottom;
+	height:100px;
+	display:block;
+}
+
+.alertTable
+{
+	background-color:Transparent;
+	border:0;
+	font-size:100%;
+	margin:3 0 0 0;
+	width:85%;
+}
+
+.alertTable tr
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.imgCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:top;
+	width:21px;
+}
+
+.txtCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+.procHeadingCell
+{
+	background-color:Transparent;
+	font-weight:bold;
+	margin:0 0 0 0;
+	padding:1px 0 0 0;
+	vertical-align:middle;
+}
+
+.alertCell
+{
+	background-color:Transparent;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	vertical-align:middle;
+}
+
+p.alertImg
+{
+	border:0;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	height:100%;
+	width:100%;
+}
+
+div.alert
+{
+	border:0;
+	/*padding-left:21px;*/
+	margin-right:15%;
+	width:100%;
+}
+
+div.alert ul
+{
+	margin:3px 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+
+/********/
+/* CODE */
+div.code
+{
+	padding:0;
+	margin:0;
+}
+
+div.code pre
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+	padding:0;
+	margin:3 0 9 0;	
+	word-wrap: break-word;
+}
+
+code
+{
+	font-family:Courier New;
+	font-size:1.1em;
+	color:#000000;
+}
+
+
+/*********/
+/* LISTS */
+
+/* Definitions */
+dl
+{
+	margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dt
+{
+    margin:3px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+dd
+{
+	margin-bottom:9px;
+    padding:0px 0px 0px 0px;
+}
+
+/* Lists */
+ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ul ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol ul
+{
+	margin:.6em 1.5em 0em 1.5em;
+	padding-left:0em;
+	list-style-type:disc;
+}
+
+ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+ol ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:lower-alpha;
+}
+
+ul ol
+{
+	margin:.5em 2.1em 0em auto;
+	padding-left:0;
+	list-style-type:decimal;
+}
+
+li
+{
+	clear:both;
+	margin-bottom: 3;
+}
+
+
+/**************/
+/* PARAGRAPHS */
+p
+{
+    margin:3px 0px 9px 0px;
+}
+
+
+/*****************/
+/* MISCELLANEOUS */
+img.embedded
+{
+	padding:0;
+	margin:0;
+}
+
+img.selfstanding
+{
+	margin-top:3;
+	margin-bottom:9;
+}
+
+img.toggle
+{
+	border: 0;
+	margin-right: 5;
+}
+
+img#toggleAllImage
+{
+	margin-left: 4;
+	vertical-align: middle;
+}
+
+.tip
+{
+	font-style:italic;
+}
+
+.math
+{
+	font-family: Times New Roman;
+	font-size: 125%
+}
+
+.sourceCodeList
+{
+	font-family: Verdana;
+	font-size: 90%;	
+}
+
+pre.viewCode
+{
+	width: 100%;
+	overflow: auto;
+}
+
+/* * * End of file. * * */
+
+</STYLE>
+</head>
+  <body>
+    <a name="pagetop">
+    </a>
+    <div id="header">
+      <h1>Readme for Windows Server 2003 Service Pack 2</h1>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <p class="runningHeader">
+          
+        </p>
+        <table cellspacing="0" id="columnTable">
+          <tr>
+            <td id="EdgeBorderColumn" valign="top">
+            </td>
+            <td id="ToCColumn" valign="top">
+              <h4 class="subHeading">Contents</h4>
+              <P class="ToCLevel1">
+                <A href="#EDNBHA">Overview</A>
+              </P>
+              <P class="ToCLevel1">
+                <A href="#EDLBHA">Before you install</A>
+              </P>
+              <P class="ToCLevel1">
+                <A href="#EFJBHA">Installing SP2</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDFBJBHA">Starting the installation from the CD</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDDBJBHA">Deploying SP2 to multiple servers</A>
+              </P>
+              <P class="ToCLevel2">
+                <A href="#EDBBJBHA">Command-line options</A>
+              </P>
+              <P class="ToCLevel1">
+                <A href="#EDHBHA">Uninstalling SP2</A>
+              </P>
+              <P class="ToCLevel1">
+                <A href="#EDFBHA">Additional resources</A>
+              </P>
+              <P class="ToCLevel1">
+                <A href="#EDDBHA">Copyright</A>
+              </P>
+            </td>
+            <td id="contentColumn" valign="top">
+              
+  <h1 class="heading"><A name="EDNBHA"></A>Overview</h1><div id="sectionSection0" class="section">
+      <p>This document contains information that you should know before you install Microsoft&#174; Windows&#160;Server&#174;&#160;2003 Service Pack&#160;2 (SP2). There are three versions of SP2: one for 32-bit operating systems, one for Itanium-based operating systems, and one for x64-based operating systems. SP2 contains the latest collection of updates to help improve the security, reliability, and performance of the following operating systems:</p>
+      <ul><li>
+          32-bit versions of Windows&#160;Server&#160;2003<br></br>
+        </li><li>
+          Itanium-based versions of Windows&#160;Server&#160;2003<br></br>
+        </li><li>
+          x64-based versions of Windows&#160;Server&#160;2003<br></br>
+        </li><li>
+          Windows&#160;Server&#160;2003&#160;R2<br></br>
+        </li><li>
+          KN versions of Windows&#160;Server&#160;2003&#160;R2<br></br>
+        </li><li>
+          Windows&#174;&#160;XP Professional&#160;x64 Edition<br></br>
+          <table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell">
+            <p>If you are running Windows Server&#160;2003, Datacenter Edition, and subscribe to the Windows High Availability Support Program through a qualified original equipment manufacturer (OEM), do not install this service pack. Instead, you should contact your OEM for the service pack, updated adapter drivers, utilities, a custom hardware abstraction layer (HAL) if needed, and support. OEMs are required to test Windows Server&#160;2003, Datacenter Edition, with service packs. If you do not subscribe to this program, you can continue installing this service pack.</p>
+          </td></tr></table>
+        </li></ul>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BeforeYouInstallSP2"></a><h1 class="heading"><A name="EDLBHA"></A>Before you install</h1><div id="sectionSection1" class="section">
+      <p>Before you install SP2:</p>
+      <ul><li>
+          
+            <b>Review the following documentation.</b> <br></br>
+          <ul><li>
+              Article 914962 in the Microsoft Knowledge Base, for a list of the updates included in this service pack (<a href="http://go.microsoft.com/fwlink/?LinkID=74380" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=74380</a>).<br></br>
+            </li><li>
+              "Release Notes for Windows Server&#160;2003 Service Pack&#160;2" (<a href="http://go.microsoft.com/fwlink/?LinkId=74381" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=74381</a>), for a list of the known issues with this version of SP2.<br></br>
+            </li><li>
+              "Installing and Deploying Updates for Microsoft Windows Server&#160;2003" (<a href="http://go.microsoft.com/fwlink/?LinkID=64779" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=64779</a>), for information about combining this service pack with other updates.<br></br>
+            </li><li>
+              "Windows Server&#160;2003 Service Pack&#160;2 Installation and Deployment Guide" (<a href="http://go.microsoft.com/fwlink/?LinkID=64780" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=64780</a>), for more deployment options.<br></br>
+            </li></ul>
+        </li><li>
+          
+            <b>Check the disc space requirements.</b> See article 926029 in the Microsoft Knowledge Base (<a href="http://go.microsoft.com/fwlink/?LinkId=74454" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=74454</a>). <br></br>
+        </li><li>
+          
+            <b>Back up your servers</b>. Your backup should include all data and configuration information that is necessary for that server to function. It is important to perform a backup of configuration information for servers, especially those that provide network infrastructure, such as Dynamic Host Configuration Protocol (DHCP). When you perform the backup, be sure to include the boot and system partitions and the system state. Another way to back up configuration information is to create a backup set for Automated System Recovery.<br></br>
+        </li><li>
+          
+            <b>Disconnect UPS devices.</b> If you have an uninterruptible power supply (UPS) connected to your destination computer, disconnect the connecting serial cable before running Setup. Setup automatically attempts to detect devices connected to serial ports, and UPS equipment can cause problems with the detection process.<br></br>
+        </li><li>
+          
+            <b>Disable your antivirus software.</b> If you are not connected to a network or the Internet and you want to minimize the installation time, you can disable your antivirus software. The time that it takes for the antivirus software to scan each file can add significant time to the installation: as much as an hour or more on slower computers. Be sure to enable the antivirus software after you install SP2. <br></br>
+        </li><li>
+          
+            <b>Uninstall prerelease versions of SP2. </b>Unless you have a supplementary support agreement with Microsoft, you must uninstall any prerelease versions of SP2 before you proceed. Upgrading to this version from any prerelease version is not supported.<br></br>
+        </li><li>
+          
+            <b>Close all open programs. </b>
+          <br></br>
+        </li></ul>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="BKMK_options"></a><h1 class="heading"><A name="EFJBHA"></A>Installing SP2</h1><div id="sectionSection2" class="section">
+      <p>The SP2 CD contains a self-extracting executable file, as well as tools for advanced users, technical support staff, and administrators. The .exe file is named one of the following&#8212;<i>XXX</i> stands for the type of operating system (for example,&#160;x86) and <i>LLL</i> stands for the language (for example, ENU): </p>
+      <ul><li>
+          WindowsServer2003-KB914961-SP2-<i>XXX</i>-<i>LLL</i>.exe<br></br>
+        </li><li>
+          WindowsServer2003.WindowsXP-KB914961-SP2-<i>XXX</i>-<i>LLL</i>.exe<br></br>
+        </li></ul>
+    
+      <a name="InstallingSP2FromTheCD"></a><A name="EDFBJBHA"></A><h3 class="subHeading">Starting the installation from the CD</h3><div class="subSection">
+          <ol><li>
+              Ensure that you are logged on as an administrator.<br></br>
+            </li><li>
+              To complete a default installation, <a href="srsp2.cmd" target="_blank" alt="" target="_blank">click here</a> to start the installation.<br></br>
+              To customize your installation, type one of the following at the command line using the name of the .exe that is on your CD. D is the drive letter associated with your CD-ROM drive, and<i> Option</i> can be any of those listed in the <a href="#BKMK_CL">Command line options</a> table.<br></br>
+              <ul><li>
+                  D:WindowsServer2003-KB914961-SP2-<i>XXX</i>-<i>LLL</i>.exe /<i>Option</i><br></br>
+                </li><li>
+                  D:WindowsServer2003.WindowsXP-KB914961-SP2-<i>XXX</i>-<i>LLL</i>.exe /<i>Option</i><br></br>
+                </li></ul>
+            </li><li>
+              If Setup prompts you to run Srsp2.cmd or save the file to a disk, click <b>Run this program from its current location</b>, and then click <b>Open</b> to continue the installation. <br></br>
+            </li><li>
+              Follow the instructions in the Setup Wizard. <br></br>
+            </li><li>
+              After the installation is complete, restart your computer, and then enable your antivirus software if you disabled it for the installation.<br></br>
+            </li></ol>
+        </div>
+      <a name="DeployingSP2MultipleServers"></a><A name="EDDBJBHA"></A><h3 class="subHeading">Deploying SP2 to multiple servers</h3><div class="subSection">
+          <p>You can use the SP2 installation files to: </p>
+          <ul><li>
+              Deploy SP2 to multiple servers that are already running one of the supported operating systems.<br></br>
+            </li><li>
+              Integrate a Windows Server&#160;2003 operating system with SP2 and then install the operating system and SP2 together on multiple servers. This procedure is known as "slipstreaming."<br></br>
+            </li></ul>
+          <p>For more information, see:</p>
+          <ul><li>
+              Installing and Deploying Updates for Windows Server&#160;2003 (<a href="http://go.microsoft.com/fwlink/?LinkID=64779" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=64779</a>)<br></br>
+            </li><li>
+              Windows Server&#160;2003 Service Pack&#160;2 Installation and Deployment Guide (<a href="http://go.microsoft.com/fwlink/?LinkID=64780" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=64780</a>)<br></br>
+            </li></ul>
+        </div>
+      <a name="BKMK_CL"></a><A name="EDBBJBHA"></A><h3 class="subHeading">Command-line options</h3><div class="subSection">
+          <p>You can define the way SP2 is installed by typing one or more of the following command-line options when you run the installation .exe file. You can precede the options with either a forward slash (/) or a hyphen (-). The options are not case-sensitive.</p>
+          <table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Note </td></tr><tr><td class="alertCell">
+            <p>You can also use the /x, /er, and /verbose options to install SP2. For more information, about these options see <a href="http://go.microsoft.com/fwlink/?LinkID=44441" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=44441</a>. </p>
+          </td></tr></table>
+          <p><b></b></p><table><tr>
+                <th>
+                  Option
+                </th>
+                <th>
+                  Description
+                </th>
+              </tr><tr>
+              <td>
+                <p>/quiet</p>
+                <p>or</p>
+                <p>/q</p>
+              </td>
+              <td>
+                <p>Installs SP2 in quiet mode, which is the same as unattended mode except that the user interface is hidden and no prompts appear during the installation.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/passive</p>
+                <p>or</p>
+                <p>/u</p>
+              </td>
+              <td>
+                <p>Installs the service pack in unattended mode. Only critical error prompts and a progress bar will appear during the installation. By default, the program invokes the /warnrestart option.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/norestart</p>
+              </td>
+              <td>
+                <p>Does not restart the computer after the installation is complete, even if a restart is required to complete the installation.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/forcerestart</p>
+              </td>
+              <td>
+                <p>Restarts the computer after the installation is complete, even if a restart is not required to complete the installation.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/warnrestart:[<i>Seconds</i>]</p>
+              </td>
+              <td>
+                <p>If a restart is required, a dialog box notifies the user that the computer will restart in the specified <i>Seconds</i>. The user can click <b>Cancel</b> or <b>Restart Now</b>. The default is 60 seconds.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/promptrestart</p>
+              </td>
+              <td>
+                <p>If a restart is required, a dialog box notifies the user that a restart is required to complete setup. The user can choose whether to restart the computer. If you do not specify this option, the restart will automatically occur. </p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/overwriteoem</p>
+              </td>
+              <td>
+                <p>Overwrites OEM drivers with the drivers from SP2 without prompting.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/nobackup</p>
+                <p>or</p>
+                <p>/n</p>
+              </td>
+              <td>
+                <p>Does <i>not </i>create backup files during setup. We do not recommend this option because backup files allow you to remove SP2 in the future.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/forceappsclose</p>
+              </td>
+              <td>
+                <p>Forces applications to close when the computer restarts.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/integrate:<i>FullPath</i></p>
+              </td>
+              <td>
+                <p>Integrates the SP2 source files into the Windows installation source files that are located at <i>FullPath</i>.</p>
+                <p>This option is the same as the /s option that was used by previous installers.</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/d:<i>FullPath</i></p>
+              </td>
+              <td>
+                <p>Saves the backup files to <i>FullPath</i>. </p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/log:<i>FullPath\Filename</i></p>
+              </td>
+              <td>
+                <p>Creates the log file at <i>FullPath</i>. The default path is %systemdrive%\Windows. The directory that you specify should already exist. For example: </p>
+                <p>
+                  <b>/log:C:\logs\KB914961.log</b>
+                </p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>/? </p>
+                <p>or </p>
+                <p>/help</p>
+              </td>
+              <td>
+                <p>Displays help.</p>
+              </td>
+            </tr></table>
+        </div>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="UninstallingSP2"></a><h1 class="heading"><A name="EDHBHA"></A>Uninstalling SP2</h1><div id="sectionSection3" class="section">
+      <p>It is possible to uninstall SP2 only if it was installed as an update to an existing operating system. It is not possible to remove only SP2 if you installed it as part of an integrated installation. In addition, you can only uninstall the last service pack that you installed. For example, if you install SP1 and then you install SP2, you can only uninstall SP2.</p>
+      <p>By default, backup files are created during the installation so you can remove SP2. Unless you specified the /nobackup option when installing SP2, then you can remove SP2 using <b>Add or Remove Programs</b> or the command prompt.</p>
+      <table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="txtCell">Important </td></tr><tr><td class="alertCell">
+        <p>If you remove SP2, a dialog box displays a list of the applications that you installed after you installed SP2. If you continue, these applications might not work correctly. Multiple descriptions of some applications might appear instead of a single generic description. You can ignore these additional descriptions.</p>
+      </td></tr></table>
+      <table class="alertTable" cellspacing="0" cellpadding="0"><tr><td class="procHeadingCell"><b>To remove SP2 using a command prompt</b></td></tr></table><ol><li>
+            
+              <p>Open a command prompt, type the following, and then press ENTER (<i>Option</i> can be any option listed in the following table):</p>
+              <p>
+                <b>%systemroot%\$NtServicePackUninstall$\spuninst\Spuninst.exe /</b>
+                <i>Option</i>
+              </p>
+            
+          </li><li>
+            
+              <p>Follow the instructions that appear on your screen.</p>
+            
+          </li></ol>
+      <p><b></b></p><table><tr>
+            <th>
+              Option
+            </th>
+            <th>
+              Description
+            </th>
+          </tr><tr>
+          <td>
+            <p>/f</p>
+            <p>or</p>
+            <p>/forceappsclose</p>
+          </td>
+          <td>
+            <p>Forces applications to close when the computer restarts.</p>
+          </td>
+        </tr><tr>
+          <td>
+            <p>/q</p>
+            <p>or</p>
+            <p>/quiet</p>
+          </td>
+          <td>
+            <p>Removes SP2 in quiet mode, which is the same as unattended mode except that the user interface is hidden and no prompts appear.</p>
+          </td>
+        </tr><tr>
+          <td>
+            <p>/u</p>
+            <p>or</p>
+            <p>/passive</p>
+          </td>
+          <td>
+            <p>Removes the service pack in unattended mode. Only critical error prompts appear while SP2 is being uninstalled.</p>
+          </td>
+        </tr><tr>
+          <td>
+            <p>/z</p>
+            <p>or</p>
+            <p>/norestart</p>
+          </td>
+          <td>
+            <p>Does not restart the computer after the process of uninstalling SP2 is complete.</p>
+          </td>
+        </tr><tr>
+          <td>
+            <p>/? </p>
+            <p>or </p>
+            <p>/help</p>
+          </td>
+          <td>
+            <p>Displays help.</p>
+          </td>
+        </tr></table>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><a name="AdditionalResources"></a><h1 class="heading"><A name="EDFBHA"></A>Additional resources</h1><div id="sectionSection4" class="section">
+      <ul><li>
+          For more information about Windows Server&#160;2003&#160;SP2, see the Microsoft TechCenter Web site (<a href="http://go.microsoft.com/fwlink/?LinkID=64780" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=64780</a>) <br></br>
+        </li><li>
+          For the most up-to-date information about supported hardware, see the hardware compatibility information at the Windows Server Catalog Web site (<a href="http://go.microsoft.com/fwlink/?LinkID=62603" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=62603</a>)<br></br>
+        </li><li>
+          To obtain the latest product updates, see the Microsoft Update Web site (<a href="http://go.microsoft.com/fwlink/?LinkID=54836" target="_blank" alt="" target="_blank">http://go.microsoft.com/fwlink/?LinkID=54836</a>)<br></br>
+        </li></ul>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p><h1 class="heading"><A name="EDDBHA"></A>Copyright</h1><div id="sectionSection5" class="section">
+      <p>Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation. </p>
+      <p>Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.</p>
+      <p>&#169; 2006 Microsoft Corporation. All rights reserved.</p>
+      <p>Microsoft, MS-DOS, Windows, Windows&#160;NT, and Windows Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</p>
+      <p>This product contains graphics filter software; this software is based in part on the work of the Independent JPEG Group.</p>
+      <p>All other trademarks are property of their respective owners.</p>
+    </div><p class="TopOfPage"><A href="#pagetop" class="TopOfPageLink">Top of page</A></p></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+SERVICE PACK 2 FOR MICROSOFT WINDOWS SERVER 
+2003
+
+PLEASE NOTE:
+
+For supplement obtained from server 
+manufacturer or software installer. The 
+server manufacturer, or the software 
+installer, that distributes the software with 
+the server licenses this supplement to you. 
+You may use an instance of this supplement 
+with each validly licensed instance of the 
+product listed above (the 'software'). You 
+may not use the supplement if you do not have 
+a license for the software. The license terms 
+for the software apply to your use of this 
+supplement. Contact the manufacturer or 
+installer for support options. Refer to the 
+support number provided with the software.
+
+For supplement obtained from retailer. 
+Microsoft Corporation (or based on where you 
+live, one of its affiliates) licenses this 
+supplement to you. You may use an instance of 
+this supplement with each validly licensed 
+instance of the product listed above (the 
+'software'). You may not use the supplement 
+if you do not have a license for the software.
+The license terms for the software apply to 
+your use of this supplement. Microsoft 
+provides support services for the supplement 
+as described at www.support.microsoft.
+com/common/international.aspx.
+
+EULAID:WS03SP2_RM.0_SUPP_NRL_EN

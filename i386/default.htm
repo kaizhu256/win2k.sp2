@@ -1,0 +1,107 @@
+<html>
+<head>
+<script LANGUAGE = JavaScript>
+var isWindows;
+var isIE = false;
+var message = "";
+var debugMode = false;
+
+var appletTagForGenericBrowsers  =  "";
+var appletTagForWindowsIE  =  "";
+var appletTagForNS  =  "";
+var appletTagToBeUsed  =  "";
+
+var appletCode = "com.microsoft.ts.client.applet.RDPApplet";
+var appletArchive = "jrdpClient.jar";
+
+var appletParamNameEnableLogger = "logger.isEnabled";
+var appletParamNameDisconnectionMessagePage="disconnectionMessagePage";
+var appletParamNameTS_PORT="TS_PORT";
+var appletParamNameTS_SCREEN_WIDTH="TS_SCREEN_WIDTH";
+var appletParamNameTS_SCREEN_HEIGHT="TS_SCREEN_HEIGHT";
+
+
+var appletParamValueEnableLogger = "false";
+var appletParamValueDisconnectionMessagePage="RDPSessionDisconnectPage.htm";
+var appletParamValueTS_PORT="3389";
+var appletParamValueTS_SCREEN_WIDTH=screen.availWidth;
+var appletParamValueTS_SCREEN_HEIGHT=screen.availHeight;
+
+
+appletTagForGenericBrowsers  =  '"<APPLET code="' + appletCode + '" archive="'+ appletArchive +'" align="baseline" width="200" height="200">';
+appletTagForGenericBrowsers +=  '<PARAM name="'+appletParamNameEnableLogger +'" value="' + appletParamValueEnableLogger + '">';
+appletTagForGenericBrowsers +=  '<PARAM name="'+appletParamNameTS_PORT +'" value="' + appletParamValueTS_PORT + '">';
+appletTagForGenericBrowsers +=  '<PARAM name="'+ appletParamNameDisconnectionMessagePage+'" value="' + appletParamValueDisconnectionMessagePage + '"> ';
+appletTagForGenericBrowsers +=  '<PARAM name="'+ appletParamNameTS_SCREEN_WIDTH+'" value="' + appletParamValueTS_SCREEN_WIDTH + '"> ';
+appletTagForGenericBrowsers +=  '<PARAM name="'+ appletParamNameTS_SCREEN_HEIGHT+'" value="' + appletParamValueTS_SCREEN_HEIGHT + '"> ';
+appletTagForGenericBrowsers +=  'No Java 2 SDK, Standard Edition v 1.4.2 support for APPLET!!</APPLET>';
+
+appletTagForWindowsIE  =  '<OBJECT classid="clsid:CAFEEFAC-0014-0002-0000-ABCDEFFEDCBA" width="200" height="200" align="baseline" ';
+appletTagForWindowsIE +=  'codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_4_2-windows-i586.cab#Version=1,4,2,0"> ';
+appletTagForWindowsIE +=  '<PARAM name="ARCHIVE" value="'+ appletArchive +'"> ';
+appletTagForWindowsIE +=  '<PARAM name="code" value="' + appletCode + '"> ';
+appletTagForWindowsIE +=  '<PARAM name="'+appletParamNameEnableLogger +'" value="' + appletParamValueEnableLogger + '"> ';
+appletTagForWindowsIE +=  '<PARAM name="'+appletParamNameTS_PORT +'" value="' + appletParamValueTS_PORT + '"> ';
+appletTagForWindowsIE +=  '<PARAM name="'+appletParamNameTS_SCREEN_WIDTH +'" value="' + appletParamValueTS_SCREEN_WIDTH + '"> ';
+appletTagForWindowsIE +=  '<PARAM name="'+appletParamNameTS_SCREEN_HEIGHT +'" value="' + appletParamValueTS_SCREEN_HEIGHT + '"> ';
+appletTagForWindowsIE +=  '<PARAM name="'+ appletParamNameDisconnectionMessagePage+'" value="' + appletParamValueDisconnectionMessagePage + '"> ';
+appletTagForWindowsIE +=  '<PARAM name="type" value="application/x-java-applet;jpi-version=1.4.2">';
+appletTagForWindowsIE +=  '<PARAM name="scriptable" value="true">        No Java 2 SDK, Standard Edition v 1.4.2 support for APPLET!!</OBJECT> 	';
+
+appletTagForNS  =  '<EMBED type="application/x-java-applet\;version=1.4.2" width="200" height="200" align="baseline" code="' + appletCode + '" archive="'+ appletArchive +'" ';
+appletTagForNS +=  ''+appletParamNameEnableLogger +'="' + appletParamValueEnableLogger + '" ';
+appletTagForNS +=  ''+appletParamNameTS_PORT +'="' + appletParamValueTS_PORT + '" ';
+appletTagForNS +=  ''+appletParamNameTS_SCREEN_WIDTH +'="' + appletParamValueTS_SCREEN_WIDTH + '" ';
+appletTagForNS +=  ''+appletParamNameTS_SCREEN_HEIGHT +'="' + appletParamValueTS_SCREEN_HEIGHT + '" ';
+appletTagForNS  +=  ''+ appletParamNameDisconnectionMessagePage+'="' + appletParamValueDisconnectionMessagePage + '" ';
+appletTagForNS +=  'pluginspage="http://java.sun.com/j2se/1.4.2/download.html">';
+appletTagForNS +=  '<NOEMBED>   No Java 2 SDK, Standard Edition v 1.4.2 support for APPLET!!</NOEMBED> </EMBED>';
+ 
+
+
+if( navigator.appVersion.indexOf( "Windows" ) >= 0 )
+	isWindows = true;
+if( navigator.appName.indexOf( "Internet Explorer" ) >= 0 ) {
+	appletTagToBeUsed  =  appletTagForWindowsIE;
+	isIE = true;
+}
+else if( navigator.appName.indexOf( "Netscape" ) >= 0 ) {
+	appletTagToBeUsed  =  appletTagForNS;
+}
+else {
+	appletTagToBeUsed  =  appletTagForGenericBrowsers ;
+}
+
+//alert( navigator.appName );
+
+if( !debugMode ) {
+	if( isIE )
+		top.location = "RDPSessionConnectDirect.htm";
+	else if( isWindows )
+		message = "Please use Internet Explorer Browser on windows for the best experience.";
+	else 
+		message = appletTagToBeUsed;
+}
+else {
+	//alert( appletTagToBeUsed );	
+	message  =  appletTagToBeUsed;
+}
+
+/*
+TODO: [action 1]: =  you run and use the JRDP applet, and then close the screen which pops up.
+if you do [action 1]; and try to do it again, you will fail..
+You will have to restart the browser.
+This has to be fixed.
+*/
+
+</script>
+</head>
+<body>
+<script LANGUAGE = JavaScript>
+document.write( message );
+</script>
+
+</body>
+</html>
+
+

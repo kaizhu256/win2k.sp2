@@ -1,0 +1,83 @@
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+CLFS
+
+[Clfs]
+OptionDesc = %ClfsDescription%
+Tip = %ClfsTip%
+IconIndex = 0
+CopyFiles = Clfs.DriverFiles, Clfs.ServiceFiles
+AddService = Clfs,,Clfs.Service, Clfs.EventLog
+Uninstall = Clfs.Uninstall
+
+Run = NetStart_CLFS
+Parent    = FileAndPrint
+
+[Clfs.Uninstall]
+DelService = Clfs, 0x204
+DelFiles = Clfs.DriverFiles, Clfs.ServiceFiles
+
+[DestinationDirs]
+Clfs.ServiceFiles = 11              
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+clfs.sys = 1
+clfsw32.dll = 1
+
+
+
+
+
+[Clfs.Service]
+DisplayName = %ClfsServiceDisplayName%
+Description = %ClfsServiceDescription%
+ServiceBinary = %11%\clfs.sys           
+ServiceType = 2                         
+StartType = 3                           
+ErrorControl = 1                        
+LoadOrderGroup = "FSFilter Common Log File System"
+AddReg = Clfs.AddReg
+
+[Clfs.EventLog]
+AddReg = Clfs.EventLog.Addreg
+
+
+
+
+
+[Clfs.AddReg]
+HKR,"Parameters","EventLogLevel",0x00010003, 0x00000002
+HKR,"Parameters","FlushThreshold",0x00010003, 0x00004000
+HKLM, "system\currentcontrolset\services\CLFS", "Start", 0x00010001, 0x0
+
+[Clfs.EventLog.Addreg]
+HKR,,"EventMessageFile",0x00020000,"%%SystemRoot%%\System32\WS03RES.dll;%%SystemRoot%%\System32\IOLOGMSG.dll;%%SystemRoot%%\System32\CLFS.sys"
+HKR,,"TypesSupported",0x00010001,7
+
+
+
+
+
+[Clfs.DriverFiles]
+clfs.sys
+
+[Clfs.ServiceFiles]
+clfsw32.dll
+
+
+[NetStart_CLFS]
+Commandline="""%11%\sc.exe"" start CLFS"
+TickCount=30000
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+ClfsDescription = "Common Log File System"
+ClfsTip = "Provides a set of system services for durable, common logging."
+ClfsServiceDisplayName = "CLFS"
+ClfsServiceDescription = "Common Log File System Driver"

@@ -1,0 +1,221 @@
+
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+DFS
+DfsFrsUI
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[DFS]
+OptionDesc = %DfsDescription%
+Tip        = %DfsTip%
+IconIndex  = *,..\r2icons.dll,1
+
+[SourceDisksFiles]
+dfsmgmt.dll                  = 1
+dfsobjectmodel.dll           = 1
+dfsmgmt.msc                  = 1
+dfsres.dll                   = 1
+dfsmgmt.resources.dll        = 1
+dfsobjectmodel.resources.dll = 1
+DfsrAdmin.exe                = 1
+dfsrAdmin.resources.dll      = 1
+dfsrHealthMessages.xml       = 1
+dfsrHealthReport.xsl         = 1
+dfsrHealthStrings.xml        = 1
+dfsmgmt.dll.config           = 1
+
+[DestinationDirs]          
+DfsFrsUI.Files                = 11
+DfsFrsUI.ResFiles             = 11, %LocaleSubDir%
+
+[DfsFrsUI]
+Parent             = DFS
+OptionDesc         = %DfsFrsUIDescription%
+Tip                = %DfsFrsUITip%
+IconIndex          = *,..\r2icons.dll,1
+CopyFiles    = DfsFrsUI.Files, DfsFrsUI.ResFiles
+AddReg       = DfsFrsUI.AddReg
+ProfileItems       = DfsFrsUI.StartMenu.Install
+Uninstall          = DfsFrsUI.Uninstall
+
+Include            = CfscommonUIFx.inf, NetFx20.inf, DfsRHelper.inf
+
+Needs              = CfsCommonUIFx, NetFx20, DfsRHelper
+
+
+
+
+
+[DfsFrsUI.Uninstall]
+DelFiles = DfsFrsUI.Files, DfsFrsUI.ResFiles
+DelReg   = DfsFrsUI.DelReg
+ProfileItems   = DfsFrsUI.StartMenu.Uninstall
+
+[DfsFrsUI.AddReg]
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","About",,"{00000000-0000-0000-0000-000000000000}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","ApplicationBase",,%11%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","AssemblyName",,"DfsMgmt"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","ConfigurationFile",,"%11%\DfsMgmt.dll.config"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","Description",,%DfsFrsSnapinDesc%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","DescriptionStringIndirect",,"@%11%\dfsres.dll,-101"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","FolderBitmapsColorMask",0x00010001,0xff00ff
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","FxVersion",,"3.0.0.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","IconIndirect",,"@%11%\dfsres.dll,-1000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","LargeFolderBitmapIndirect",,"@%11%\dfsres.dll,-2001"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","ModuleName",,"DfsMgmt.dll"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","NameString",,%DfsFrsSnapinName%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","NameStringIndirect",,"@%11%\dfsres.dll,-100"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","Provider",,%ProviderName%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","ProviderStringIndirect",,"@%11%\dfsres.dll,-102"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","RuntimeVersion",,"v2.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","SmallFolderBitmapIndirect",,"@%11%\dfsres.dll,-2000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","SmallSelectedFolderBitmapIndirect",,"@%11%\dfsres.dll,-2000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","Type",,"Microsoft.RemoteFileSystems.Management.SnapIn.DfsFrsSnapInEntry, DfsMgmt, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","HelpTopic",,"%10%\Help\dfs2.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","LinkedHelpTopics",,"%10%\Help\dfs2.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}","VersionStringIndirect",,"@%11%\dfsres.dll,-104"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}\NodeTypes",,,
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}\Standalone",,,
+
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","About",,"{00000000-0000-0000-0000-000000000000}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","ApplicationBase",,%11%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","AssemblyName",,"DfsMgmt"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","ConfigurationFile",,"%11%\DfsMgmt.dll.config"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","Description",,%DfsFrsSnapinDesc%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","DescriptionStringIndirect",,"@%11%\dfsres.dll,-101"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","FolderBitmapsColorMask",0x00010001,0xff00ff
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","FxVersion",,"3.0.0.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","IconIndirect",,"@%11%\dfsres.dll,-1000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","LargeFolderBitmapIndirect",,"@%11%\dfsres.dll,-2001"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","ModuleName",,"DfsMgmt.dll"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","NameString",,%DfsFrsSnapinName%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","NameStringIndirect",,"@%11%\dfsres.dll,-100"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","Provider",,%ProviderName%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","ProviderStringIndirect",,"@%11%\dfsres.dll,-102"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","RuntimeVersion",,"v2.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","SmallFolderBitmapIndirect",,"@%11%\dfsres.dll,-2000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","SmallSelectedFolderBitmapIndirect",,"@%11%\dfsres.dll,-2000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","Type",,"Microsoft.RemoteFileSystems.Management.SnapIn.DfsFrsSnapEx, DfsMgmt, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","HelpTopic",,"%10%\Help\dfs2.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","LinkedHelpTopics",,"%10%\Help\dfs2.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}","VersionStringIndirect",,"@%11%\dfsres.dll,-104"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}\NodeTypes",,,
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}\Extension",,,"Namespace"
+
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{8fb9aec9-e19f-4ed5-8dd0-8e31df52313d}\Extensions\NameSpace","FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}",,%DfsFrsSnapinName%
+
+
+
+
+[DfsFrsUI.DelReg]
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{671ee405-c969-4af9-ad1b-65e96b3b9a10}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}"
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{8fb9aec9-e19f-4ed5-8dd0-8e31df52313d}\Extensions\NameSpace","FX:{f78fbadd-c21a-4e0a-b53d-c879a9c8f002}"
+
+
+[DfsFrsUI.Files]
+dfsmgmt.dll
+dfsobjectmodel.dll
+dfsmgmt.msc
+dfsres.dll
+dfsrAdmin.exe
+dfsmgmt.dll.config
+dfsrHealthReport.xsl
+
+[DfsFrsUI.ResFiles]				
+dfsmgmt.resources.dll
+dfsobjectmodel.resources.dll
+dfsradmin.resources.dll
+dfsrHealthMessages.xml
+dfsrHealthStrings.xml
+
+
+
+[DfsFrsUI.StartMenu.Install]
+Name            = %DfsFrsUIDescription%
+CmdLine         = 11,,dfsmgmt.msc              			
+SubDir          = %AdministrativeTools%
+IconIndex       = *,..\r2icons.dll,1
+InfoTip         = "@%11%\dfsres.dll,-101"
+DisplayResource = "%11%\dfsres.dll",100
+
+[DfsFrsUI.StartMenu.Uninstall]
+Name   = %DfsFrsUIDescription%,0x00000002
+SubDir = %AdministrativeTools%
+
+[Strings]
+
+
+
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+LocaleSubDir = "en"
+DfsDescription = "Distributed File System"
+DfsTip = "Provides tools and services for DFS Namespaces and DFS Replication."
+DfsFrsUIDescription = "DFS Management"
+DfsFrsUITip = "Installs tools for managing DFS Namespaces and DFS Replication on local and remote computers."
+AdministrativeTools = "Administrative Tools"
+ProviderName = "Microsoft Corporation"
+
+
+
+
+DfsFrsSnapinName = "DFS Management"
+DfsFrsSnapinDesc = "Manages DFS Namespaces and DFS Replication."
+DfsFrsSnapinExName = "DFS Management Extension"
+DfsFrsSnapinExDesc = "Extension snap-in for managing DFS Namespaces and DFS Replication."
+
+
+
+cdname      = "Windows Server 2003, Standard Edition CD-ROM"
+productname = "Windows Server 2003, Standard"
+
+
+
+
+
+
+
+bootname1  = "Windows Server 2003, Standard Edition Setup Boot Disk"
+bootname2  = "Windows Server 2003, Standard Edition Setup Disk #2"
+bootname3  = "Windows Server 2003, Standard Edition Setup Disk #3"
+bootname4  = "Windows Server 2003, Standard Edition Setup Disk #4"
+bootname5  = "Windows Server 2003, Standard Edition Setup Disk #5"
+bootname6  = "Windows Server 2003, Standard Edition Setup Disk #6"
+bootname7  = "Windows Server 2003, Standard Edition Setup Disk #7"
+
+cdtagfile = "\win51is"
+
+
+
+cdtagfilei = "\win51is"
+
+cdtagfilem = "\win51ms"
+
+cdtagfilea = "\win51as"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile = "\win51is.sp2"
+
+
+
+spcdtagfilei = "\win51is.sp2"
+
+spcdtagfilem = "\win51ms.sp2"
+
+spcdtagfilea = "\win51as.sp2"
+
+

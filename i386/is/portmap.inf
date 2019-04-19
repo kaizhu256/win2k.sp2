@@ -1,0 +1,78 @@
+
+
+
+
+
+[Version]
+Signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+Portmap
+
+[Portmap]
+OptionDesc          = %str_portmap_desc%
+Tip                 = %str_portmap_tip%
+IconIndex           = 0
+Parent              = MSNFS
+Needs               = RpcXdr
+CopyFiles           = PortmapDrvFiles
+AddService          = %str_PORTMAP_SVC_DISPLAY%, ,Portmap.portmapSvc
+AddReg              = Portmap.AddRegistry
+Uninstall           = Portmap.uninstall
+
+
+[Portmap.uninstall]
+DelFiles        = PortmapDrvFiles
+DelService      = %str_PORTMAP_SVC_DISPLAY%, 0x200
+DelReg          = Portmap.DelRegistry
+
+[DestinationDirs]
+PortmapDrvFiles = 12
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+portmap.sys     = 1
+
+[PortmapDrvFiles]
+portmap.sys
+
+[Portmap.AddRegistry]
+
+HKLM, %KEY_EVENT_PORTMAP%, "EventMessageFile", %REG_EXPAND_SZ%, "%11%\IoLogMsg.dll;%12%\portmap.sys"
+HKLM, %KEY_EVENT_PORTMAP%, "TypesSupported", %REG_DWORD%, 7
+HKLM, %KEY_PORTMAP%, "Version", %REG_SZ%, "04.00.00.00"
+HKLM, %KEY_PORTMAP%"\Parameters", "RegisterTcp", %REG_DWORD%, 1
+
+[Portmap.DelRegistry]
+HKLM, %KEY_EVENT_PORTMAP%
+HKLM, %KEY_PORTMAP%, "Version"
+HKLM, %KEY_PORTMAP%"\Parameters"
+
+[Portmap.portmapSvc]
+DisplayName            = %str_PORTMAP_SVC_DISPLAY%
+ServiceType            = 1
+StartType              = 3
+ErrorControl           = 1
+ServiceBinary          = %12%\portmap.sys
+Dependencies           = RpcXdr
+Description            = %str_PORTMAP_SVC%
+
+
+[strings]
+str_PORTMAP_SVC             = ""
+str_PORTMAP_SVC_DISPLAY     = "portmap"
+str_portmap_desc            = "RPC Port Mapper"
+str_portmap_tip             = "Provides RPC port mapping services for Server for NFS and User Name Mapping."
+KEY_PORTMAP                 = "SYSTEM\CurrentControlSet\Services\Portmap"
+KEY_EVENT_PORTMAP           = "SYSTEM\CurrentControlSet\Services\Eventlog\System\Portmap"
+
+R2CDNAME                = "Windows Server 2003 R2 Disc 2"
+
+REG_SZ                  =0x00002    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008

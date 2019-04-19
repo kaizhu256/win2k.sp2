@@ -1,0 +1,220 @@
+
+
+
+
+
+[Version]
+Signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+NFSclient
+
+[NFSclient]
+OptionDesc              = %str_NFS_client_desc%
+Tip		        = %str_NFS_client_tip%
+IconIndex               = *,..\r2icons.dll,6
+Parent                  = MSNFS
+Needs                   = RpcXdr, NfsAdminUI
+CopyFiles               = NFSclientDrvFiles, \
+                           NFSclientSysFiles, \
+                           NFSclientOtherFiles
+
+Uninstall               = NFSclient.uninstall
+
+
+AddService              = %str_NFSRDR_DISPLAY%, ,NFSclient.nfsrdr
+AddService              = %str_NFSCLNT%, , NFSclient.nfsclnt
+AddReg                  = NFSclient.AddRegistry, NFSclient.AddOnlyRegistry
+
+[NFSclient.uninstall]
+DelFiles                = NFSclientDrvFiles, \
+                           NFSclientSysFiles, \
+                           NFSclientOtherFiles
+DelReg                  = NFSclient.AddRegistry, NFSclient.DelRegistry
+DelService              = %str_NFSRDR_DISPLAY%, 0x200
+DelService              = %str_NFSCLNT%, 0x200
+
+
+[DestinationDirs]
+NFSclientDrvFiles      	= 12            
+NFSclientSysFiles      	= 11            
+NFSclientOtherFiles    	= 10, %MSNFSDIR% 
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+mount.exe         = 1
+nfsclnt.exe	  = 1
+nfscprop.dll      = 1
+nfsnp.dll         = 1
+nfsrdr.sys        = 1
+umount.exe        = 1
+
+[NFSclientDrvFiles]
+nfsrdr.sys
+
+[NFSclientSysFiles]
+nfsclnt.exe
+nfscprop.dll
+nfsnp.dll
+
+[NFSclientOtherFiles]
+mount.exe
+umount.exe
+
+
+[NFSclient.AddRegistry]
+
+
+HKLM,%KEY_SVC_EVENTLOG%"\Nfsrdr", "EventMessageFile", %REG_SZ%, %12%"\nfsrdr.sys"
+HKLM,%KEY_SVC_EVENTLOG%"\Nfsrdr", "TypesSupported", %REG_DWORD%, 7
+
+
+HKLM,"SOFTWARE\Microsoft\Client for NFS\CurrentVersion", "PathName", %REG_SZ%, %11%
+HKLM,"SOFTWARE\Microsoft\MSNFS\AppsInstalled\Client for NFS", "InstallPath", %REG_SZ%, %11%
+HKLM,"SYSTEM\CurrentControlSet\Services\Eventlog\Application\Client for NFS", "EventMessageFile", %REG_SZ%, %11%"\nfsclnt.exe"
+HKLM,"SYSTEM\CurrentControlSet\Services\Eventlog\Application\Client for NFS", "TypesSupported", %REG_DWORD%, 7
+
+
+HKLM,"SOFTWARE\CLASSES\NFS_NETWORK\shellex\PropertySheetHandlers\nfscprop"
+HKLM,"SOFTWARE\CLASSES\NFS_NETWORK\shellex\PropertySheetHandlers\nfscprop", , %REG_SZ%, "{22FE0840-CB32-11CE-82B9-02608C8E4747}"
+HKCR,"CLSID\{22FE0840-CB32-11CE-82B9-02608C8E4747}", ,%REG_SZ%, %str_LOCREGVAL_NFSCPROPNAME%
+HKCR,"CLSID\{22FE0840-CB32-11CE-82B9-02608C8E4747}\InprocServer32", "ThreadingModel", %REG_SZ%, "Apartment"
+HKCR,"*\shellex\PropertySheetHandlers\nfscprop", , %REG_SZ%, "{22FE0840-CB32-11CE-82B9-02608C8E4747}"
+HKCR,"Folder\shellex\PropertySheetHandlers\nfscprop", ,%REG_SZ%, "{22FE0840-CB32-11CE-82B9-02608C8E4747}"
+HKCR,"NFS_NETWORK\shellex\ContextMenuHandlers\nfscprop", , %REG_SZ, "{22FE0840-CB32-11CE-82B9-02608C8E4747}"
+HKCR,"NFS_NETWORK\shellex\PropertySheetHandlers\nfscprop", , %REG_SZ%, "{22FE0840-CB32-11CE-82B9-02608C8E4747}"
+HKCR,"CLSID\{22FE0840-CB32-11CE-82B9-02608C8E4747}\InprocServer32", , %REG_EXPAND_SZ%, "nfscprop.dll"
+
+
+
+HKLM,"SYSTEM\CurrentControlSet\Services\Nfsnp\NetworkProvider", "Name", %REG_SZ%, %str_LOCREGVAL_NFSNPNAME%
+HKLM,"SYSTEM\CurrentControlSet\Services\Nfsnp\NetworkProvider", "ProviderPath", %REG_SZ%, %11%"\nfsnp.dll"
+HKLM,"SYSTEM\CurrentControlSet\Services\Nfsnp", "Group", %REG_SZ%, "NetworkProvider"
+HKLM,"SYSTEM\CurrentControlSet\Services\Eventlog\Application\nfsnp", "EventMessageFile", %REG_EXPAND_SZ%, %11%"\nfsnp.dll"
+HKLM,"SYSTEM\CurrentControlSet\Services\Eventlog\Application\nfsnp", "TypesSupported", %REG_DWORD%, 7
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\ShortName", "nfs", %REG_SZ%, %str_LOCREGVAL_NFSNPNAME%
+
+
+HKLM,%KEY_NFS_CLNT_CTRL%"\Favorite LAN", "Configure Mode", %REG_DWORD%, 1
+HKLM,%KEY_NFS_CLNT_CTRL%"\Default LAN", "SPBroadcastAddr", %REG_SZ%, "255.255.255.255"
+HKLM,%KEY_NFS_CLNT_CTRL%"\Default LAN", "SPBrowseMethod", %REG_DWORD%, 0
+HKLM,%KEY_NFS_CLNT_CTRL%"\Default LAN", "Configure Mode", %REG_DWORD%, 0
+HKLM,%KEY_NFS_CLNT_CTRL%"\Default LAN", "SPGetHostByAddr", %REG_DWORD%, 1
+HKLM,%KEY_NFS_CLNT_CTRL%"\Default LAN", "SPMaxNodes", %REG_DWORD%, 1024
+HKLM,%KEY_NFS_CLNT_CTRL%"\Default LAN", "SPBroadcastRetry", %REG_DWORD%, 2
+HKLM,%KEY_NFS_CLNT_CTRL%"\Default LAN", "SPTimeoutSeconds", %REG_DWORD%, 5
+
+HKLM,"SYSTEM\CurrentControlSet\Services\Client for NFS\NFS LANs", "SPUpdateMinutes", %REG_DWORD%, 0
+HKLM,"SYSTEM\CurrentControlSet\Services\Client for NFS\NFS LANs", "Favorite LAN Name", %REG_SZ%, "Favorite LAN"
+
+
+
+HKLM,%KEY_NFS_CLNT_CURVER%"\RegNotify", "Default", %REG_DWORD%, 0
+
+HKLM,%KEY_NFS_CLNT_CURVER%, "CacheBlocks",     %REG_DWORD%,    64
+HKLM,%KEY_NFS_CLNT_CURVER%, "DeleteSymLinks",  %REG_DWORD%,     1
+HKLM,%KEY_NFS_CLNT_CURVER%, "FirstContact",    %REG_DWORD%,     3
+HKLM,%KEY_NFS_CLNT_CURVER%, "MountType",       %REG_DWORD%,     1
+HKLM,%KEY_NFS_CLNT_CURVER%, "MaxNfsUser",      %REG_DWORD%,    32
+HKLM,%KEY_NFS_CLNT_CURVER%, "Retransmissions", %REG_DWORD%,     1
+HKLM,%KEY_NFS_CLNT_CURVER%, "Timeout",         %REG_DWORD%,     8
+HKLM,%KEY_NFS_CLNT_CURVER%, "Protocols",       %REG_DWORD%, 0xCFF
+
+HKLM,"SYSTEM\CurrentControlSet\Services\Nfsnp\NetworkProvider", "Class", %REG_DWORD%, 3
+
+HKLM,%KEY_NFS_CLNT_DFLT%, "EnableUdpFailover", %REG_DWORD%, 0
+HKLM,%KEY_NFS_CLNT_DFLT%, "LoggingLevel",      %REG_DWORD%, 0
+
+HKLM,%KEY_NFS_CLNT_DFLT%"\Auth",     "AuthType",        %REG_DWORD%,     5
+
+HKLM,%KEY_NFS_CLNT_DFLT%"\Defaults", "Access",          %REG_DWORD%,   493
+HKLM,%KEY_NFS_CLNT_DFLT%"\Defaults", "AuthType",        %REG_DWORD%,     0
+HKLM,%KEY_NFS_CLNT_DFLT%"\Defaults", "AutoTuning",      %REG_DWORD%,     0
+HKLM,%KEY_NFS_CLNT_DFLT%"\Defaults", "Defaults",        %REG_DWORD%,     0
+HKLM,%KEY_NFS_CLNT_DFLT%"\Defaults", "NFSLookup",       %REG_DWORD%,     1
+HKLM,%KEY_NFS_CLNT_DFLT%"\Defaults", "NFSReaddir",      %REG_DWORD%,     1
+HKLM,%KEY_NFS_CLNT_DFLT%"\Defaults", "Security",        %REG_DWORD%,     1
+
+HKLM,%KEY_NFS_CLNT_DFLT%"\Mount",    "AutoTuning",      %REG_DWORD%,     0
+HKLM,%KEY_NFS_CLNT_DFLT%"\Mount",    "Defaults",        %REG_DWORD%,     0
+HKLM,%KEY_NFS_CLNT_DFLT%"\Mount",    "MountType",       %REG_DWORD%,     1
+HKLM,%KEY_NFS_CLNT_DFLT%"\Mount",    "ReadBuffer",      %REG_DWORD%, 32768
+HKLM,%KEY_NFS_CLNT_DFLT%"\Mount",    "Retransmissions", %REG_DWORD%,     1
+HKLM,%KEY_NFS_CLNT_DFLT%"\Mount",    "Timeout",         %REG_DWORD%,     8
+HKLM,%KEY_NFS_CLNT_DFLT%"\Mount",    "WriteBuffer",     %REG_DWORD%, 32768
+
+HKLM,%KEY_NFS_CLNT_DFLT%"\Security", "Security",        %REG_DWORD%,     2
+
+HKLM,"SYSTEM\CurrentControlSet\Services\NfsRdr", "DependOnGroup", %REG_SZ%
+
+[NFSclient.AddOnlyRegistry]
+HKLM,%KEY_SVC_EVENTLOG%, "Sources", %REG_MULTI_SZ_APPEND%, "nfsrdr"
+
+[NFSclient.DelRegistry]
+HKLM,"SYSTEM\CurrentControlSet\Services\NfsRdr"
+HKLM,"SYSTEM\CurrentControlSet\Services\Client for NFS"
+HKLM,"SOFTWARE\Microsoft\Client for NFS"
+HKLM,"SOFTWARE\Microsoft\MSNFS\AppsInstalled\Client for NFS"
+HKCR,"CLSID\{22FE0840-CB32-11CE-82B9-02608C8E4747}"
+HKCR,"*\shellex\PropertySheetHandlers\nfscprop"
+HKCR,"Folder\shellex\PropertySheetHandlers\nfscprop"
+HKCR,"NFS_NETWORK\shellex\ContextMenuHandlers\nfscprop"
+HKCR,"NFS_NETWORK\shellex\PropertySheetHandlers\nfscprop"
+HKLM,%KEY_SVC_EVENTLOG%, "Sources", %REG_MULTI_SZ_DEL%, "nfsrdr"
+
+
+
+[NFSclient.nfsrdr]
+DisplayName            = %str_NFSRDR_DISPLAY%
+ServiceType            = 2
+StartType              = 3
+ErrorControl           = 1
+ServiceBinary          = %12%\nfsrdr.sys
+LoadOrderGroup         = Network
+Dependencies           = RpcXdr
+Description            = %str_NFSRDR%
+
+[NFSclient.nfsclnt]
+DisplayName            = %str_NFSCLNT_DISPLAY%
+ServiceType            = 0x10
+StartType              = 2
+ErrorControl           = 1
+ServiceBinary          = %11%\nfsclnt.exe
+Dependencies           = tcpip, RpcXdr
+Description            = %str_NFSCLNT_DESC%
+
+
+[Strings]
+str_NFS_client_desc     ="Client for NFS"
+str_NFS_client_tip      ="Allows this computer to store and gain access to files on UNIX NFS servers."
+str_NFSRDR_DISPLAY      ="NfsRdr"
+str_NFSRDR              ="NfsRdr"
+str_NFSRDR_DESC	        =""
+str_NFSCLNT_DISPLAY     ="Client for NFS"
+str_NFSCLNT             ="Client for NFS"
+str_NFSCLNT_DESC        ="Enables a Windows based computer to access files from an NFS server."
+
+str_LOCREGVAL_NFSCPROPNAME  ="Client for NFS Property Sheet"
+str_LOCREGVAL_NFSNPNAME     ="NFS Network"
+
+
+MSNFSDIR                = "\msnfs"
+
+KEY_SVC_EVENTLOG        ="System\CurrentControlSet\Services\EventLog\System"
+KEY_NFS_CLNT_DFLT       ="SOFTWARE\Microsoft\Client for NFS\CurrentVersion\Users\Default"
+KEY_NFS_CLNT_CTRL       ="SYSTEM\CurrentControlSet\Services\Client For NFS\NFS LANs"
+KEY_NFS_CLNT_CURVER     ="SOFTWARE\Microsoft\Client for NFS\CurrentVersion\Default"
+
+R2CDNAME                = "Windows Server 2003 R2 Disc 2"
+
+
+REG_SZ                  =0x00002    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008
+REG_MULTI_SZ_DEL        =0x18002
+

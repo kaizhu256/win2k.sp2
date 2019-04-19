@@ -1,0 +1,446 @@
+[version]
+signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+HWMGMT
+
+
+
+
+
+[HWMGMT]
+OptionDesc              = %HWMGMT_DESC%
+Tip                     = %HWMGMT_TIP%
+IconIndex               = 15
+
+CopyFiles    = WSMAN.Files  ,  WECSVC.Files  ,  ELSEXT.CopyBinFiles  ,  IPMI.CopyFiles.Provider, IPMI.CopyFiles.Driver, IPMI.CopyFiles.Setup,IPMI.CopyFiles.SEL
+Uninstall    = WSMAN.Uninstall  
+AddService   = WINRM, 0, WSMAN.AddService
+AddService = WECSVC, 0, WECSVC.AddService
+RegisterDlls = WECSVC.RegisterDlls  ,  IPMI.RegSvr
+AddReg = WSMAN.WSMAN.AddReg, WSMAN.Service.AddReg, WSMAN.Listener.AddReg, WSMAN.Client.AddReg, WSMAN.COMDlls.AddReg, WSMAN.EventLog.AddReg  ,  WECSVC.AddRegRoot, WECSVC.AddReg  ,  IPMI.AddReg
+
+Needs          = WBEM
+Run            =Netstart_WSMan,Netstart_Wec
+Parent         = NetOC
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+
+[DestinationDirs]
+
+WSMAN.Files=11
+
+WECSVC.Files=11
+
+ELSEXT.CopyBinFiles=11
+
+IPMI.CopyFiles.Provider         = 11,WBEM
+IPMI.CopyFiles.Driver           = 11,ipmi
+IPMI.CopyFiles.SEL              = 11
+IPMI.CopyFiles.Setup            = 11
+ 
+
+[SourceDisksFiles]
+
+winrm.cmd=1
+winrm.vbs=1
+WsmPty.xsl=1
+WsmTxt.xsl=1
+WsmAuto.dll=1
+WsmCl.dll=1
+WsmProv.dll=1
+WsmRes.dll=1
+WsmSvc.dll=1
+WsmWmiPl.dll=1
+
+
+wecsvc.dll=1
+wecapi.dll=1
+wecutil.exe=1
+
+ELSEXT.dll=1
+
+ipmidrv.inf=1
+ipmidrv.sys=1
+ipmiprv.dll=1
+ipmiprv.mof=1
+ipmiprv.mfl=1
+ipmisetp.dll=1
+hwmgmt.cat=1
+WsmSelRg.xml=1
+WsmSelPl.dll=1
+WsmSelrr.dll=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[WSMAN.WSMAN.AddReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN,,0x00000010
+[WSMAN.WSMAN.AddReg.Security]
+"D:P(A;CI;GA;;;BA)(A;CI;GR;;;WD)S:P(AU;CISAFA;GW;;;WD)"
+[WSMAN.WSMAN.DelReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN
+
+[WSMAN.Listener.AddReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN\Listener,,0x00000010
+[WSMAN.Listener.AddReg.Security]
+"D:P(A;CI;GA;;;BA)(A;CI;GR;;;NS)S:P(AU;CISAFA;GW;;;WD)"
+[WSMAN.Listener.DelReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN\Listener
+
+[WSMAN.Service.AddReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN\Service,,0x00000010
+[WSMAN.Service.AddReg.Security]
+"D:P(A;CI;GA;;;BA)(A;CI;GR;;;NS)S:P(AU;CISAFA;GW;;;WD)"
+[WSMAN.Service.DelReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN\Service
+
+[WSMAN.Client.AddReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN\Client,,0x00000010
+[WSMAN.Client.AddReg.Security]
+"D:P(A;CI;GA;;;BA)(A;CI;GR;;;WD)S:P(AU;CISAFA;GW;;;WD)"
+[WSMAN.Client.DelReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\WSMAN\Client
+
+[WSMAN.AddService]
+DisplayName     = %WSMAN_ServiceDisplay%
+Description     = %WSMAN_ServiceDescription%
+ServiceType     = 0x20 
+StartType       = 2    
+ErrorControl    = 1    
+StartName       = "NT AUTHORITY\NetworkService"
+ServiceBinary   = "%%SystemRoot%%\system32\svchost.exe -k WINRM"
+Dependencies    = RPCSS,HTTP,HTTPFilter
+AddReg          = WSMAN.AddService.AddReg
+
+[WSMAN.AddService.AddReg]
+HKR, Parameters, ServiceDll, 0x00020000, "%%SystemRoot%%\system32\WsmSvc.dll"
+HKR, Parameters, ServiceMain, 0, "ServiceMain"
+HKLM, "Software\Microsoft\Windows NT\CurrentVersion\Svchost", WINRM, 0x00010000, "WINRM"
+
+[WSMAN.DelService.DelReg]
+HKLM, "Software\Microsoft\Windows NT\CurrentVersion\Svchost", WINRM
+
+[WSMAN.EventLog.AddReg]
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\Application\WinRM, EventMessageFile, 0x00020000, "%%systemroot%%\system32\WsmRes.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\Application\WinRM, ParameterMessageFile, 0x00020000, "kernel32.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\Application\WinRM, TypesSupported, 0x00010001, 7
+
+[WSMAN.Files]
+winrm.cmd
+winrm.vbs
+WsmPty.xsl
+WsmTxt.xsl
+WsmAuto.dll
+WsmCl.dll
+WsmProv.dll
+WsmRes.dll
+WsmSvc.dll
+WsmWmiPl.dll
+
+
+[WSMAN.COMDlls.AddReg]
+
+HKCR, WSMan.Automation, , , "WSMan Automation Class"
+HKCR, WSMan.Automation\CLSID, , , "{BCED617B-EC03-420b-8508-977DC7A686BD}"
+HKCR, WSMan.Automation\CurVer, , , "WSMan.Automation.1"
+HKCR, WSMan.Automation.1, , , "WSMan Automation Class"
+HKCR, WSMan.Automation.1\CLSID, , , "{BCED617B-EC03-420b-8508-977DC7A686BD}"
+HKCR, CLSID\{BCED617B-EC03-420b-8508-977DC7A686BD}, , , "WSMan Automation Class"
+HKCR, CLSID\{BCED617B-EC03-420b-8508-977DC7A686BD}\ProgID, , , "WSMan.Automation.1"
+HKCR, CLSID\{BCED617B-EC03-420b-8508-977DC7A686BD}\VersionIndependentProgID, , , "WSMan.Automation"
+HKCR, CLSID\{BCED617B-EC03-420b-8508-977DC7A686BD}\Programmable
+HKCR, CLSID\{BCED617B-EC03-420b-8508-977DC7A686BD}\InprocServer32, , , "WsmAuto.dll"
+HKCR, CLSID\{BCED617B-EC03-420b-8508-977DC7A686BD}\InprocServer32, ThreadingModel, , "Apartment"
+
+[WSMAN.COMDlls.DelReg]
+HKCR, WSMan.Automation
+HKCR, WSMan.Automation.1
+HKCR, CLSID\{BCED617B-EC03-420b-8508-977DC7A686BD}
+
+
+
+
+[WSMAN.Uninstall]
+DelService = WECSVC, 0x00000200
+UnregisterDlls = WECSVC.RegisterDlls
+DelReg = WECSVC.DelRegRoot, WECSVC.AddService.DelReg 
+DelFiles = WECSVC.Files 
+
+DelService     = WINRM, 0x00000200
+DelReg   = WSMAN.DelService.DelReg, WSMAN.WSMAN.DelReg, WSMAN.Service.DelReg, WSMAN.Listener.DelReg, WSMAN.Client.DelReg, WSMAN.COMDlls.DelReg
+DelFiles = WSMAN.Files
+
+DelFiles       = IPMI.CopyFiles.Provider, IPMI.CopyFiles.Driver, IPMI.CopyFiles.Setup,IPMI.CopyFiles.SEL, IPMI.DelFiles
+DelReg         = IPMI.DelReg
+UnregisterDlls = IPMI.UnRegSvr
+
+DelFiles = ELSEXT.CopyBinFiles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[WECSVC.AddService]
+DisplayName     = %WECSVC_ServiceDisplay%
+Description     = %WECSVC_Description%
+ServiceType     = 0x20
+StartType       = 2
+ErrorControl    = 1
+ServiceBinary   = "%%SystemRoot%%\system32\svchost.exe -k wecsvc"
+Dependencies    = RPCSS,Eventlog
+AddReg          = WECSVC.AddService.AddReg
+
+[WECSVC.AddService.AddReg]
+HKR, Parameters, ServiceDll, 0x00020000, "%%SystemRoot%%\system32\wecsvc.dll"
+HKR, Parameters, ServiceMain, 0, "ServiceMain"
+HKR, , ObjectName, 0, "NT AUTHORITY\NetworkService"
+HKR,,FailureActions,0x00030003,80,51,01,00,00,00,00,00,00,00,00,00,02,00,00,00,65,00,6E,00,01,00,00,00,60,EA,00,00,01,00,00,00,60,EA,00,00
+HKLM, Software\Microsoft\Windows NT\CurrentVersion\Svchost, wecsvc, 0x00010000, "wecsvc"
+
+[WECSVC.AddService.DelReg]
+HKLM, Software\Microsoft\Windows NT\CurrentVersion\Svchost, wecsvc
+
+[WECSVC.AddRegRoot]
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector,,0x00000010
+
+[WECSVC.AddRegRoot.Security]
+"D:P(A;CI;GA;;;BA)(A;CI;GA;;;NS)"
+
+[WECSVC.DelRegRoot]
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector
+
+[WECSVC.AddReg]
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector,,0x00000010
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions,,0x00000010
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\ForwardedEvents, File, 0x00020000, "%%systemroot%%\system32\config\FwdEvents.Evt"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\ForwardedEvents, DisplayNameFile, 0x00020000, "%%systemroot%%\system32\wecsvc.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\ForwardedEvents, DisplayNameID, 0x00010001, 200
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\ForwardedEvents, MaxSize, 0x00010001,20971520
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\ForwardedEvents, Retention, 0x00010001,0
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\System\wecsvc, EventMessageFile, 0x00020000, "%%systemroot%%\system32\wecsvc.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\System\wecsvc, TypesSupported, 0x00010001, 7
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, , 0x00000010
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, HeartBeatInterval, 0x00010001, 900000
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, DeliveryMode, 0, "Pull"
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, MaxBookmarkSize, 0x00010001, 1500
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, MaxBufferSize, 0x00010001, 16384
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, MaxItems, 0x00010001, 15
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, MaxLatencyTime, 0x00010001, 15000
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, ContentFormat, 0, ""
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, Locale, 0, ""
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, RetryInterval, 0x00010001, 3000000
+HKLM, Software\Microsoft\Windows\CurrentVersion\EventCollector\Globals, RetryCount, 0x00010001, 3
+
+[WECSVC.Files]
+wecsvc.dll
+wecapi.dll
+wecutil.exe
+
+
+[WECSVC.RegisterDlls]
+11,,wecsvc.dll,1
+
+
+
+
+
+
+
+
+
+
+
+[ELSEXT.CopyBinFiles]
+ELSEXT.dll
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[IPMI.CopyFiles.Provider]
+ipmiprv.dll
+ipmiprv.mof
+ipmiprv.mfl
+
+[IPMI.DelFiles]
+ipmisdr.dat
+
+[IPMI.CopyFiles.Driver]
+ipmidrv.sys
+ipmidrv.inf
+hwmgmt.cat
+
+[IPMI.CopyFiles.Setup]
+ipmisetp.dll
+
+[IPMI.CopyFiles.SEL]
+WsmSelRg.xml
+WsmSelPl.dll
+WsmSelrr.dll
+
+
+[IPMI.RegSvr]
+11,,ipmisetp.dll,1
+11,wbem,ipmiprv.dll,1
+
+[IPMI.UnRegSvr]
+11,,ipmisetp.dll,1
+11,wbem,ipmiprv.dll,1
+
+[IPMI.AddReg]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg",,0x00000010 ,""
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","DeliveryMode",0x00000000,"pull"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","Description",0x00000000,"WinRM SEL event provider"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","URI",0x00000000,"wsman:microsoft/logrecord/sel"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","LogFile",0x00000000,"HardwareEvents"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","MaxBufferSize",0x00010001,16000
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","MaxItems",0x00010001,15
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","MaxLatencyTime",0x00010001,1000
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg","HeartBeatInterval",0x00010001,15000
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg\EventSources",,0x00000010 ,""
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg\EventSources\localhost",,0x00000010 ,""
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\EventCollector\Subscriptions\WSManSelRg\EventSources\localhost","Enabled",0x00010001,1
+
+HKLM,"SOFTWARE\Microsoft\WBEM\CIMOM\Providers\IPMI",,0x00000010 ,"KeyValue"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents, File, 0x00020000, "%%systemroot%%\system32\config\HwrEvents.Evt"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents, DisplayNameFile, 0x00020000, "%%systemroot%%\system32\wsmselrr.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents, DisplayNameID, 0x00010001, 200
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents, MaxSize, 0x00010001,20971520
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents, Retention, 0x00010001,0
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents\Microsoft-Windows-WSMAN-SEL_LogRecord,,0x00000010 ,""
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents\Microsoft-Windows-WSMAN-SEL_LogRecord,"TypesSupported",0x00010001 , 7
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\HardwareEvents\Microsoft-Windows-WSMAN-SEL_LogRecord,"EventMessageFile",0x00020000 ,"%windir%\system32\WsmSelrr.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\Application\ipmiprv,,0x00000010 ,""
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\Application\ipmiprv,"TypesSupported",0x00010001 , 7
+HKLM, SYSTEM\CurrentControlSet\Services\Eventlog\Application\ipmiprv,"EventMessageFile",0x00020000 ,"%windir%\system32\WsmSelrr.dll"
+
+
+[IPMI.DelReg]
+HKLM,"SOFTWARE\Microsoft\WBEM\CIMOM\Providers\IPMI"
+
+[Netstart_Wec]
+Commandline="%11%\net.exe start wecsvc"
+TickCount=30000
+
+[Netstart_WSMan]
+Commandline="%11%\net.exe start winrm"
+TickCount=30000
+
+
+
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+
+HWMGMT_DESC              = "Hardware Management"
+HWMGMT_TIP               = "Includes tools for Hardware Management"
+HWMGMT_CAB_DESC          = "Hardware Management Component Cab"
+
+WSMAN_Component          = "Windows Remote Management (WS-Management)"
+WSMAN_Description        = "Windows Remote Management (WS-Management)" 
+WSMAN_ServiceDisplay     = "Windows Remote Management (WS-Management)"
+WSMAN_ServiceDescription = "Allows access to management information from local and remote machines."
+
+WECSVC_Component         = "Event Collector"
+WECSVC_Description       = "Collects software and hardware events from local and remote machines."
+WECSVC_ServiceDisplay    = "Event Collector"
+
+IPMI_DESC                = "IPMI Management"
+IPMI_TIP                 = "Allows client applications to access IPMI management information."
+
+ELSEXT_DESC              = "ELSEXT"
+ELSEXT_TIP               = "ELSEXT"
+
+
+
+
+
+
+
+
+cdname        = "Windows Server 2003, Datacenter Edition CD-ROM"
+productname   = "Windows Server 2003, Datacenter"
+
+
+
+
+bootname1      = "Windows Server 2003, Datacenter Edition Setup Boot Disk"
+bootname2      = "Windows Server 2003, Datacenter Edition Setup Disk #2"
+bootname3      = "Windows Server 2003, Datacenter Edition Setup Disk #3"
+bootname4      = "Windows Server 2003, Datacenter Edition Setup Disk #4"
+bootname5      = "Windows Server 2003, Datacenter Edition Setup Disk #5"
+bootname6      = "Windows Server 2003, Datacenter Edition Setup Disk #6"
+bootname7      = "Windows Server 2003, Datacenter Edition Setup Disk #7"
+
+cdtagfile     = "\win51id"
+
+
+
+cdtagfilei     = "\win51id"
+
+cdtagfilem     = "\win51md"
+
+cdtagfilea     = "\win51ad"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile     = "\win51id.sp2"
+
+
+
+spcdtagfilei     = "\win51id.sp2"
+
+spcdtagfilem     = "\win51md.sp2"
+
+spcdtagfilea     = "\win51ad.sp2"
+
+

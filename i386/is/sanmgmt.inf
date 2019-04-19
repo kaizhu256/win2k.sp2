@@ -1,0 +1,172 @@
+
+[Version]
+Signature = "$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+SanMgmt
+
+[SanMgmt]
+OptionDesc = %SanMgmtDescription%
+Tip = %SanMgmtTip%
+Parent	= NetOC
+IconIndex = *,..\r2icons.dll,101
+CopyFiles = SanMgmt.Files, SanMgmt.ResFiles, SanMgmt.QfeFiles, SanMgmt.QfeFiles.Update
+AddReg = SanMgmt.AddReg
+Run = SanMgmt.InstallVdsQfe
+Uninstall = SanMgmt.Uninstall
+
+Include=cfscommonuifx.inf, NetFx20.inf
+
+Needs=CfsCommonUIFx, NetFx20
+
+
+
+ProfileItems = SanMgmt.StartMenu.Install
+
+[SanMgmt.Uninstall]
+DelReg = SanMgmt.DelReg
+DelFiles = SanMgmt.Files, SanMgmt.ResFiles, SanMgmt.QfeFiles, SanMgmt.QfeFiles.Update
+ProfileItems = SanMgmt.StartMenu.UnInstall
+
+[SanMgmt.AddReg]
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},About,,"{00000000-0000-0000-0000-000000000000}"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},ApplicationBase,,"%11%"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},AssemblyName,,"Microsoft.Storage.SanMmc"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},Description,,"Manage SAN Storage."
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},DescriptionStringIndirect,,"@"%11%"\SanMgmtRes.dll,-1001"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},FxVersion,,"3.0.0.0"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},HelpTopic,,"%10%\Help\SanMgr.chm"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},IconIndirect,0x00000000,"@"%11%"\SanMgmtRes.dll,-100"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},LinkedHelpTopics,,"%10%\Help\SanMgr.chm"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},ModuleName,,"Microsoft.Storage.SanMmc.dll"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},NameString,,%SanMgmtDescription%
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},NameStringIndirect,0x00000000,"@"%11%"\SanMgmtRes.dll,-1000"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},Provider,0x00000000,"Microsoft Corporation"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},ProviderStringIndirect,0x00000000,"@"%11%"\SanMgmtRes.dll,-1002"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},RuntimeVersion,,"v2.0"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},Type,,"Microsoft.Storage.SanMmc.SanSnapIn, Microsoft.Storage.SanMmc"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d},Version,0x00000000,"1.0.0.0"
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d}\NodeTypes,,,
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d}\Standalone,,,
+
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","About",0x00000000,"{00000000-0000-0000-0000-000000000000}"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","ApplicationBase",,"%11%"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","AssemblyName",,"Microsoft.Storage.SanMmc"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","Description",,"Manage SAN Storage."
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","DescriptionStringIndirect",,"@"%11%"\SanMgmtRes.dll,-1001"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","FxVersion",,"3.0.0.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}",HelpTopic,,"%10%\Help\SanMgr.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","IconIndirect",0x00000000,"@"%11%"\SanMgmtRes.dll,-100"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}",LinkedHelpTopics,,"%10%\Help\SanMgr.chm"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","ModuleName",,"Microsoft.Storage.SanMmc.dll"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","NameString",,%SanMgmtDescription%
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","NameStringIndirect",0x00000000,"@"%11%"\SanMgmtRes.dll,-1000"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","Provider",,"Microsoft Corporation"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","ProviderStringIndirect",0x00000000,"@"%11%"\SanMgmtRes.dll,-1002"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","RuntimeVersion",,"v2.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","Type",,"Microsoft.Storage.SanMmc.SanSnapInEx, Microsoft.Storage.SanMmc"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}","Version",0x00000000,"1.0.0.0"
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}\NodeTypes",,,
+HKLM,"SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}\Extension",,,"Namespace"
+
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{115783C2-4CC7-403A-B45A-9117FAA782DD}\Extensions\NameSpace","FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}",,"Storage Manager for SANs Extension"
+
+
+
+
+
+[SanMgmt.DelReg]
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc35-c09e-486f-ab09-90dd2e3fdd7d}
+HKLM,SOFTWARE\Microsoft\MMC\SnapIns\FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}
+HKLM,"SOFTWARE\Microsoft\MMC\NodeTypes\{115783C2-4CC7-403A-B45A-9117FAA782DD}\Extensions\NameSpace","FX:{317cdc37-c09e-486f-ab09-90dd2e3fdd7d}"
+
+
+
+[DestinationDirs]
+SanMgmt.Files = 11                                              
+SanMgmt.ResFiles = 11, %LocaleSubDir%                           
+SanMgmt.QfeFiles = 10, Temp                                     
+SanMgmt.QfeFiles.Update = 10, Temp\update                       
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+2 = %R2CDNAME%, , , \cmpnents\r2\packages\vds11
+3 = %R2CDNAME%, , , \cmpnents\r2\packages\vds11\update
+
+[SourceDisksFiles]
+Microsoft.Storage.SanMmc.dll = 1
+Microsoft.Storage.SanMmc.resources.dll = 1
+SanMgmtRes.dll = 1
+Microsoft.Storage.Vds.dll = 1
+SanMmc.msc = 1
+diskraid.exe = 2
+vds.exe = 2
+vdsbas.dll = 2
+vdsdyndr.dll = 2
+vdsldr.exe = 2
+vdsutil.dll = 2
+vds_ps.dll = 2
+update.inf = 3
+update.ver = 3
+vds11r2.cat = 3
+spuninst.exe = 2
+spupdsvc.exe = 2
+spcustom.dll = 3
+spmsg.dll = 3
+update.exe = 3
+updspapi.dll = 3
+
+[SanMgmt.Files]
+Microsoft.Storage.SanMmc.dll
+Microsoft.Storage.Vds.dll
+SanMgmtRes.dll
+SanMmc.msc
+
+
+[SanMgmt.QfeFiles]
+diskraid.exe
+vds.exe
+vdsbas.dll
+vdsdyndr.dll
+vdsldr.exe
+vdsutil.dll
+vds_ps.dll
+spuninst.exe
+spupdsvc.exe
+
+[SanMgmt.QfeFiles.Update]
+update.inf
+update.ver
+vds11r2.cat
+spcustom.dll
+spmsg.dll
+update.exe
+updspapi.dll
+
+[SanMgmt.ResFiles]
+Microsoft.Storage.SanMmc.resources.dll
+
+
+[SanMgmt.InstallVdsQfe]
+CommandLine=""%10%\Temp\update\update.exe" /quiet /passive /norestart /o"
+TickCount=500
+
+[SanMgmt.StartMenu.Install]
+Name = %SanMgmtDescription%
+CmdLine = 11,,SanMmc.msc    
+SubDir = %AdministrativeTools%
+InfoTip    = "@%systemroot%\system32\sanmgmtres.dll,-1001"
+DisplayResource="%systemroot%\system32\sanmgmtres.dll",1000
+
+[SanMgmt.StartMenu.UnInstall]
+Name = %SanMgmtDescription%,0x00000002 
+CmdLine = 11,,SanMmc.msc    
+SubDir = %AdministrativeTools%
+
+[Strings]
+R2CDNAME = "Windows Server 2003 R2 Disc 2"
+SanMgmtDescription = "Storage Manager for SANs"
+SanMgmtTip = "Storage Manager for SANs Snap-in"
+AdministrativeTools = "Administrative Tools"
+LocaleSubDir = "en"

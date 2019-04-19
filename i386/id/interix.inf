@@ -1,0 +1,271 @@
+[version]
+signature   =   "$Windows NT$"
+layoutfile  =   layout.inf
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+SUA
+
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+psxss.exe	=1,,537600
+posix.exe	=1,,53248
+psxdll.dll	=1,,248832
+posixsscom.dll    =1,,5120
+psxdllsvr.dll	=1,,298496
+psxrun.exe	=1,,24576
+psxdrv.sys	=1,,6912
+BaseU.prm	=1,,2412
+README		=1,,74
+BaseU.dnl	=1,,166
+disablesetuid.ini  =1,,106
+enablesetuid.ini   =1,,106
+download.url	   =1,,70
+makedev.exe	   =1,,89600
+loginenv.exe   =1,,70656
+psxoffset.exe  =1,,11776
+suares.dll     =1,,3072
+
+
+
+
+
+[SUA]
+OptionDesc              = %Interix_Desc%
+Tip                     = %Interix_Tip%
+IconIndex               = 0
+CopyFiles           	= Interix.Jewels, Interix.Drivers,PsxDll.ThunkedDll, Interix.setupfiles, Interix.etcfiles,Interix.etcinitfiles, Interix.Devfiles , Interix.Procfiles , Interix.Netfiles , Interix.Tmpfiles , Interix.rc2files, Interix.varadmlogfiles, Interix.varrun,Interix.SystemFiles,SUA.binfiles,SUA.sbinfiles
+AddReg			= Interix.AddReg,Interix.TurboAdd
+ProfileItems    	= SUA.InstallGroup, InterixDownLoad.LinkInstall,Help.install
+Uninstall  		= Interix.Remove
+AddService 		= PsxDrv,0x10,Service.Psxdrv
+AddService		= zzSUA,0x10,SUA.zzSUAsvc
+Run        		= Makedev.Run
+
+
+[Makedev.Run]
+Commandline="""%10%\posix.exe"" /u /c /usr/sbin/makedev"
+TickCount=500
+
+
+
+
+
+[Interix.Remove]
+DelReg			= Interix.AddReg,Interix.RegRootDel
+DelService 		= PsxDrv
+DelService      = zzSUA, 0x200
+DelFiles           	= Interix.Jewels, Interix.Drivers,PsxDll.ThunkedDll,  Interix.setupfiles, Interix.etcfiles,Interix.etcinitfiles, Interix.Devfiles , Interix.Procfiles , Interix.Netfiles , Interix.Tmpfiles , Interix.rc2files, Interix.varadmlogfiles, Interix.varrun,Interix.SystemFiles,SUA.binfiles,SUA.sbinfiles
+ProfileItems		= InterixDownLoad.LinkUninstall,Help.uninstall
+
+
+
+[DestinationDirs]
+Interix.Jewels		= 11
+Interix.SystemFiles	= 10
+Interix.Drivers 	= 11, \drivers
+Interix.setupfiles 	= 10, \SUA\common\setup
+Interix.localefiles 	= 10, \SUA\usr\share\locale
+Interix.varrun 		= 10, \SUA\var\run
+PsxDll.ThunkedDll	= 10, \SysWow64
+SUA.binfiles	= 10, \SUA\bin
+SUA.sbinfiles	= 10, \SUA\usr\sbin
+
+	
+
+[Interix.Jewels]
+psxss.exe,,,0x00010004
+psxdll.dll,,,0x00010004
+posixsscom.dll,,,0x00010004
+psxdllsvr.dll,,,0x00010004
+suares.dll,,,0x00000004
+
+[Interix.SystemFiles]
+posix.exe,,,0x00010004
+psxrun.exe,,,0x00010004
+
+[PsxDll.ThunkedDll]
+
+
+[Interix.Drivers]
+psxdrv.sys,,,0x00010004
+
+[Interix.setupfiles]
+BaseU.prm,,,0x00000004
+BaseU.dnl,,,0x00000004
+disablesetuid.ini,,,0x00000004
+enablesetuid.ini,,,0x00000004
+download.url,,,0x00000004
+
+[Interix.varadmlogfiles]
+README,,,0x00000004
+
+
+[Interix.varrun]
+README,,,0x00000004
+
+
+[SUA.binfiles]
+loginenv,loginenv.exe,,0x00000004
+psxoffset,psxoffset.exe,,0x00000004
+
+
+[SUA.sbinfiles]
+makedev,makedev.exe,,0x00000004
+
+
+[Interix.AddReg]
+HKLM, System\CurrentControlSet\Services\EventLog\Application\SUA
+HKLM, System\CurrentControlSet\Services\EventLog\Application\SUA,EventMessageFile,%REG_EXPAND_SZ%,"%systemroot%\system32\psxss.exe"
+HKLM, System\CurrentControlSet\Services\EventLog\Application\SUA,TypesSupported,%REG_DWORD%,7
+HKLM, System\CurrentControlSet\Services\EventLog\Application\SUA_PsxRun
+HKLM, System\CurrentControlSet\Services\EventLog\Application\SUA_PsxRun,EventMessageFile,%REG_EXPAND_SZ%,"%systemroot%\psxrun.exe"
+HKLM, System\CurrentControlSet\Services\EventLog\Application\SUA_PsxRun,TypesSupported,%REG_DWORD%,7
+HKLM, System\CurrentControlSet\Control\Session Manager,PosixSingleInstance,%REG_DWORD%,1
+HKLM,SOFTWARE\Microsoft\SUA
+HKLM,SOFTWARE\Microsoft\SUA,Current_Release, %REG_SZ%, "4.0"
+HKLM,SOFTWARE\Microsoft\SUA,ProductVerMajor,%REG_DWORD%,9
+HKLM,SOFTWARE\Microsoft\SUA,ProductVerMinor,%REG_DWORD%,0
+HKLM,SOFTWARE\Microsoft\SUA,InstallRoot_Win,%REG_EXPAND_SZ%,"%systemroot%\SUA\"
+HKLM,SOFTWARE\Microsoft\SUA,EnableSetuidBinaries,%REG_DWORD%,0
+HKLM,SOFTWARE\Microsoft\SUA,_CS_PATH,%REG_SZ%,"/bin"
+HKLM,SOFTWARE\Microsoft\SUA\AppsInstalled\Interix Subsystem
+HKLM,SOFTWARE\Microsoft\SUA\AppsInstalled\Interix Subsystem,InstallPath,%REG_EXPAND_SZ%,"%systemroot%\system32\"
+HKLM,SOFTWARE\Microsoft\SUA,OSCSFlag, %REG_DWORD%,0 
+HKLM,SYSTEM\CurrentControlSet\Services\zzSUA\OpenNT, Argv, %REG_MULTI_SZ%, "/bin/loginenv"," -noop"
+
+[Interix.TurboAdd]
+
+
+[Interix.RegRootDel]
+HKLM,SOFTWARE\Microsoft\SUA,InstallRoot,%REG_SZ%
+
+[Service.PsxDrv]
+DisplayName      = %PsxDrv_SERVICE_NAME%
+Description      = %PsxDrv_SERVICE_DESC%
+ServiceType      = %SERVICE_FILE_SYSTEM_DRIVER%
+StartType        = %SERVICE_DEMAND_START%
+ErrorControl     = %SERVICE_ERROR_NORMAL%
+ServiceBinary    = %10%\system32\drivers\psxdrv.sys
+FilesRequired    = psxdrv.sys
+
+[SUA.zzSUAsvc]
+DisplayName            = %str_zzSUANAME%
+ServiceType            = 16
+StartType              = 2
+ErrorControl           = 1
+ServiceBinary          = %10%\PSXRUN.EXE
+Dependencies           = NTLMssp
+Description            = %str_zzSUADESC%
+
+[SUA.InstallGroup]
+Name            = %str_KDIR%, 4
+DisplayResource = "%systemroot%\system32\suares.dll", 102
+
+[InterixDownLoad.LinkInstall]
+Name            = %str_Download%
+DisplayResource = "%systemroot%\system32\suares.dll",100
+CmdLine         = 10,SUA\common\setup,download.url
+IconIndex       = 0
+WorkingDir      = 10 
+InfoTip         = "@%WINDIR%\system32\suares.dll,-100"
+SubDir          = %str_KDIR%
+
+[InterixDownLoad.LinkUninstall]
+Name        	= %str_Download%, 2    
+SubDir      	= %str_KDIR%
+
+[Help.install]
+Name            = %str_Help%
+DisplayResource = "%systemroot%\system32\suares.dll",101
+CmdLine         = 10, ,"hh.exe mk:@MSITStore:SUA.chm"
+IconIndex       = 0
+WorkingDir      = 10, help 
+InfoTip         = "@%WINDIR%\system32\suares.dll,-101"
+SubDir          = %str_KDIR%
+
+[Help.uninstall]
+Name        	= %str_Help%, 2    
+SubDir      	= %str_KDIR%
+
+[Strings]
+str_Download			= "Download Utilities for Subsystem for UNIX-based Applications"
+str_KDIR            		= "Subsystem for UNIX-based Applications"
+Interix_Desc			= "Subsystem for UNIX-based Applications"
+Interix_Tip 			= "Installs Subsystem for UNIX-based Applications"
+PsxDrv_SERVICE_NAME 		= PsxDrv
+PsxDrv_SERVICE_DESC 		= PsxDrv
+SERVICE_FILE_SYSTEM_DRIVER 	= 0x02
+SERVICE_DEMAND_START		= 0x03 
+SERVICE_ERROR_NORMAL 		= 1
+REG_SZ_OVERWRITE        	=0x00000    
+REG_SZ                  	=0x00002    
+REG_BINARY_OVERWRITE    	=0x00001    
+REG_BINARY              	=0x00003    
+REG_SZ_EXPAND_OVERWRITE		=0x20000    
+REG_EXPAND_SZ          		=0x20002    
+REG_DWORD_OVERWRITE     	=0x10001    
+REG_DWORD               	=0x10003    
+REG_MULTI_SZ            	=0x10002    
+REG_MULTI_SZ_APPEND     	=0x10008    
+R2CDNAME 			="Windows Server 2003 R2 Disc 2"
+REG_SZ_WOW                  	=0x00004002    
+REG_DWORD_WOW               	=0x00014001
+REG_EXPAND_SZ_WOW		=0x00024002
+str_Help			="What's New in Subsystem for UNIX-based Applications"
+str_zzSUANAME       ="SUA Subsystem Startup"
+str_zzSUADESC       ="Triggers SUA Subsystem Startup"
+
+
+
+
+
+
+cdname        = "Windows Server 2003, Datacenter Edition CD-ROM"
+productname   = "Windows Server 2003, Datacenter"
+
+
+
+
+bootname1      = "Windows Server 2003, Datacenter Edition Setup Boot Disk"
+bootname2      = "Windows Server 2003, Datacenter Edition Setup Disk #2"
+bootname3      = "Windows Server 2003, Datacenter Edition Setup Disk #3"
+bootname4      = "Windows Server 2003, Datacenter Edition Setup Disk #4"
+bootname5      = "Windows Server 2003, Datacenter Edition Setup Disk #5"
+bootname6      = "Windows Server 2003, Datacenter Edition Setup Disk #6"
+bootname7      = "Windows Server 2003, Datacenter Edition Setup Disk #7"
+
+cdtagfile     = "\win51id"
+
+
+
+cdtagfilei     = "\win51id"
+
+cdtagfilem     = "\win51md"
+
+cdtagfilea     = "\win51ad"
+
+boottagfile1      = "\disk101"
+boottagfile2      = "\disk102"
+boottagfile3      = "\disk103"
+boottagfile4      = "\disk104"
+boottagfile5      = "\disk105"
+boottagfile6      = "\disk106"
+boottagfile7      = "\disk107"
+
+spcdname	  = "Service Pack 2 CD-ROM"
+
+spcdtagfile     = "\win51id.sp2"
+
+
+
+spcdtagfilei     = "\win51id.sp2"
+
+spcdtagfilem     = "\win51md.sp2"
+
+spcdtagfilea     = "\win51ad.sp2"
+
+

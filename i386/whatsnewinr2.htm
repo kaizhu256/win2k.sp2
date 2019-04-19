@@ -1,0 +1,929 @@
+﻿<html DIR="LTR" xmlns:tool="http://www.microsoft.com/tooltip" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>What's New in Windows Server 2003 R2</title>
+    
+    
+      
+    
+    
+    
+      
+    
+  <STYLE TYPE="text/css">
+    body
+    {
+        background:    #FFFFFF;
+        color: #000000;
+        font-family:    Verdana;
+        font-size: medium;
+        font-style: normal;
+        font-weight: normal;
+        margin-top:    0;
+        margin-bottom:    0;
+        margin-left:    0;
+        margin-right:    0;
+        width:    100%;
+    }
+    
+    a
+    {
+        color:    #0000FF;
+    }
+    
+    a:visited
+    {
+        color:    #0000FF;
+    }
+    
+    a:link
+    {
+        color:    #0000FF;
+    }
+    
+    a:hover
+    {
+        color:    #FF0000;
+        cursor: hand;
+    }
+    
+    a:active
+    {
+        color:    #FF0000;
+        cursor: hand;
+    }
+    
+    div#mainSection
+    {
+        font-size: 70%;
+        width: 100%;
+    }
+    
+    div#mainBody
+    {
+        font-size: 90%;
+        margin-left:    5;
+        margin-top: 10;
+        padding-bottom: 20;
+    }
+    
+    div#header
+    {
+        background-color: #D4DFFF;
+        padding-top:    0;
+        padding-bottom:    0;
+        padding-left:    0;
+        padding-right:    0;
+        width:    100%;
+    }
+    
+    div#header table
+    {
+        border-bottom-color: #C8CDDE;
+        border-bottom-style: solid;
+        border-bottom-width: 1;
+        width:    100%;
+    }
+    
+    span#runningHeaderText
+    {
+        color: #003399;
+        font-size: 90%;
+    }
+    
+    span#nsrTitle
+    {
+        color: #003399;
+        font-size: 125%;
+        font-weight: 600;
+    }
+    
+    div#header table td
+    {
+        color: #0000FF;
+        font-size: 70%;
+        margin-top:    0;
+        margin-bottom:    0;
+        padding-right: 20;
+    }
+    
+    div#header table tr#headerTableRow3 td
+    {
+        padding-bottom: 2;
+        padding-top: 5;
+    }
+    
+    div#header table#bottomTable
+    {
+        border-top-color: #FFFFFF;
+        border-top-style: solid;
+        border-top-width: 1;
+        text-align: left;
+    }
+    
+    div#footer
+    {
+        font-size: 90%;
+        margin-top:    0;
+        margin-bottom:    0;
+        margin-left:    0;
+        margin-right:    0;
+        padding-top:    2;
+        padding-bottom:    2;
+        padding-left:    2;
+        padding-right:    2;
+        width:    100%;
+    }
+    
+    hr#footerHR
+    {
+        border-bottom-color: #EEEEFF;
+        border-bottom-style: solid;
+        border-bottom-width: 1;
+        border-top-color: C8CDDE;
+        border-top-style: solid;
+        border-top-width: 1;
+        height: 3;
+        color: #D4DFFF;
+    }
+    
+    div.section
+    {
+        padding-top:    2;
+        padding-bottom:    2;
+        padding-left:    16;
+        padding-right:    15;
+        width:    100%;
+    }
+    
+    .heading
+    {
+        font-weight:    bold;
+        margin-top:        18;
+        margin-bottom:    8;
+    }
+    
+    h1.heading
+    {
+        color: #003399;
+        font-size:    125%;
+    }
+    
+    .subHeading
+    {
+        font-weight:    bold;
+        margin-bottom:    4;
+    }
+    
+    h3.subHeading
+    {
+        color:  #003399;
+        font-size: 115%;
+        font-weight: bold;
+    }
+    
+    h4.subHeading
+    {
+        color: #003399;
+        font-size: 105%;
+    }
+    
+    h5.subHeading
+    {
+        color: #003399;
+        font-size: 100%;
+    }
+    
+    img.toggle
+    {
+    	border: 0;
+	margin-right: 5;
+    }
+
+    img.copyCodeImage
+    {
+	border: 0;
+	margin-right: 3;
+    }
+
+    img.downloadCodeImage
+    {
+	border: 0;
+	margin-right: 3;
+    }
+
+    img.viewCodeImage
+    {
+	border: 0;
+	margin-right: 3;
+    }
+
+    img.note
+    {
+	border: 0;
+	margin-right: 3;
+    }
+
+    img#languageFilterImage
+    {
+	border: 0;
+	margin-left: 10;
+	vertical-align: middle;
+    }
+
+    img#membersOptionsFilterImage
+    {
+	border: 0;
+	margin-left: 10;
+	vertical-align: middle;
+    }
+
+    img#toggleAllImage
+    {
+	margin-left: 4;
+	vertical-align: middle;
+    }
+    
+    div#mainSection table
+    {
+        border: 0;
+        font-size: 100%;
+        width:    100%;
+    }
+    
+    div#mainSection table th
+    {
+        background:    #EFEFF7;
+        border-bottom-color: #C8CDDE;
+        border-bottom-style: solid;
+        border-bottom-width: 1;
+        color: #000066;
+        padding-left: 5;
+        padding-right: 5;
+    }
+    
+    div#mainSection table td
+    {
+        background:    #F7F7FF;
+        border-top-color: #FFFFFF;
+        border-top-style: solid;
+        border-top-width: 1;
+        padding-left: 5;
+        padding-right: 5;
+    }
+    
+    div#mainSection table td.imageCell
+    {
+        white-space: nowrap;
+    }
+    
+    div.code table
+    {
+        border: 0;
+        font-size: 95%;
+        margin-bottom: 5;
+        width: 100%
+    }
+    
+    div.code table th
+    {    
+        background:    #EFEFF7;
+        border-bottom-color: #C8CDDE;
+        border-bottom-style: solid;
+        border-bottom-width: 1;
+        color: #000066;
+        font-weight: bold;
+        padding-left: 5;
+        padding-right: 5;
+    }
+    
+    div.code table td
+    {
+        background:    #F7F7FF;
+        border-top-color: #FFFFFF;
+        border-top-style: solid;
+        border-top-width: 1;
+        padding-left: 5;
+        padding-right: 5;
+        padding-top: 5;
+    }
+    
+    div.alert table
+    {
+        border: 0;
+        font-size: 100%;
+        width:    100%;
+    }
+    
+    div.alert table th
+    {
+        background:    #EFEFF7;
+        border-bottom-width: 0;
+        color: #000066;
+        padding-left: 5;
+        padding-right: 5;
+    }
+    
+    div.alert table td
+    {
+        background:    #F7F7FF;
+        border-top-color: #FFFFFF;
+        border-top-style: solid;
+        border-top-width: 1;
+        padding-left: 5;
+        padding-right: 5;
+    }
+    
+    .copyCode
+    {
+        color: #0000ff;
+        font-size: 90%;
+        font-weight: normal;
+    }
+    
+    .downloadCode
+    {
+        color: #0000ff;
+        font-size: 90%;
+        font-weight: normal;
+    }
+    
+    .viewCode
+    {
+        color: #0000ff;
+        font-size: 90%;
+        font-weight: normal;
+    }
+    
+    div.code pre
+    {
+        font-family:    Monospace, Courier New, Courier;
+        font-size: 105%;
+        color:    #000066;
+        word-wrap:    break-word;
+    }
+    
+    code
+    {
+        font-family:    Monospace, Courier New, Courier;
+        font-size: 105%;
+        color:    #000066;
+    }
+    
+    dl
+    {
+        margin-top:    0;
+        padding-left:    1;
+    }
+    
+    dt
+    {
+        font-style:    italic;
+    }
+    
+    dd
+    {
+        margin-bottom:    0;
+        margin-left:    0;
+    }
+    
+    ul
+    {
+        margin-left: 17;
+        list-style-type: disc;
+    }
+    
+    ul ul
+    {
+        margin-bottom: 4;
+        margin-left: 17;
+        margin-top: 3;
+        list-style-type: disc;
+    }
+    
+    ol
+    {
+        margin-left: 24;
+        list-style-type: decimal;
+    }
+    
+    ol ol
+    {
+        margin-bottom: 4;
+        margin-left: 24;
+        margin-top: 3;
+        list-style-type: lower-alpha;
+    }
+    
+    li
+    {
+        margin-bottom: 3;
+    }
+    
+    p
+    {
+        margin-top: 0;
+        margin-bottom: 15;
+    }
+    
+    .tip
+    {
+        color:    #0000FF;
+        font-style: italic;
+        cursor:hand;
+        text-decoration:underline;
+    }
+    
+    .languageFilter
+    {
+        color:    #0000FF;
+        cursor:hand;
+        text-decoration:underline;
+        padding-bottom:4;
+    }
+    
+    .math
+    {
+        font-family: Times New Roman;
+        font-size: 125%
+    }
+    
+    .sourceCodeList
+    {
+        font-family: Verdana;
+        font-size: 90%;    
+    }
+    
+    pre.viewCode
+    {
+        width: 100%;
+        overflow: auto;
+    }
+    
+    MSHelp\:link
+    {
+        text-decoration: underline;
+        color: #0000ff; 
+        hoverColor: #3366ff;
+        filterString: ;
+    }
+</STYLE>
+</head>
+
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle">
+    </input>
+    <input type="hidden" id="hiddenScrollOffset">
+    </input>
+    
+    
+    
+    
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">
+              
+            </span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">What's New in Windows Server 2003 R2</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory">
+        </div>
+        
+    <p>Microsoft&#174; Windows&#160;Server&#8482;&#160;2003&#160;R2, a software update to the Windows Server&#160;2003 operating system, makes it easier and more cost effective to extend connectivity and control to identities, locations, data, and applications throughout and beyond your organization.</p>
+    <p>Built on Windows Server&#160;2003, Windows Server&#160;2003&#160;R2 takes advantage of the stability and security of the code base while extending connectivity and control into new areas. With Windows Server&#160;2003&#160;R2, you get the following improvements:</p>
+    <ul><li>
+        Identity and access management<br></br>
+      </li><li>
+        Branch office server management<br></br>
+      </li><li>
+        Storage setup and management<br></br>
+      </li><li>
+        Application development inside and outside your organization's traditional boundaries<br></br>
+      </li></ul>
+    <p>For more information about Windows Server&#160;2003&#160;R2, see the <a href="http://go.microsoft.com/fwlink/?LinkID=45560" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=45560).</p>
+    <p>This topic describes the following new components that you can install with Windows Server&#160;2003&#160;R2:</p>
+  <a name="BKMK_BackToTop"></a><div id="sectionSection0" class="section"><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <p xmlns="">
+        <b>Server Manageability</b>
+      </p>
+      <ul xmlns=""><li>
+          
+            <a href="#BKMK_Admin">Administration Tools Packs</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_HardwareMgmt">Hardware Management</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_MMC">MMC 3.0</a>
+          <br></br>
+        </li></ul>
+      <p xmlns="">
+        <b>Features for Active Directory</b>
+      </p>
+      <ul xmlns=""><li>
+          
+            <a href="#BKMK_ADAM">Active Directory Application Mode (ADAM)</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_ADFS">Active Directory Federation Services</a>
+          <br></br>
+        </li></ul>
+      <p xmlns="">
+        <b>Disk and File Management Features</b>
+      </p>
+      <ul xmlns=""><li>
+          
+            <a href="#BKMK_Branch">Branch Office</a>
+          <br></br>
+          <ul><li>
+              
+                <a href="#BKMK_DFS">Distributed File System (DFS)</a>
+              <br></br>
+            </li></ul>
+        </li><li>
+          
+            <a href="#BKMK_CLFS">Common Log File System (CLFS)</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_FileServerMgmtSnap-in">File Server Management</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_MSNFS">Microsoft Services for Network File System</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_SAN">Storage Management for SANs</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_StorageResource">File Server Resource Manager</a>
+          <br></br>
+        </li></ul>
+      <p xmlns="">
+        <b>Printer and Protocol Support</b>
+      </p>
+      <ul xmlns=""><li>
+          
+            <a href="#BKMK_PrintMgmtConsole">Print Management</a>
+          <br></br>
+        </li></ul>
+      <p xmlns="">
+        <b>Microsoft .NET Framework</b>
+      </p>
+      <ul xmlns=""><li>
+          
+            <a href="#BKMK_NETFramework">Microsoft .NET Framework 2.0</a>
+          <br></br>
+        </li></ul>
+      <p xmlns="">
+        <b>Internet and E-Mail Services and Features</b>
+      </p>
+      <ul xmlns=""><li>
+          
+            <a href="#BKMK_Sharepoint">Windows Sharepoint Services</a>
+          <br></br>
+        </li></ul>
+      <p xmlns="">
+        <b>UNIX Interoperability</b>
+      </p>
+      <ul xmlns=""><li>
+          
+            <a href="#BKMK_UNIXIdentity">Identity Management for UNIX</a>
+          <br></br>
+        </li><li>
+          
+            <a href="#BKMK_Subsystem">Subsystem for UNIX-based Applications</a>
+          <br></br>
+        </li></ul>
+    </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+      <h3 class="subHeading" xmlns="">Server Manageability</h3><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">To help you manage your server, Windows Server&#160;2003&#160;R2 provides Administration Tools Packs and the following improvements to hardware management and Microsoft Management Console (MMC)&#160;3.0.</p>
+        </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <a name="BKMK_Admin" xmlns=""></a><h4 class="subHeading" xmlns="">Administration Tools Packs</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">To make the remote management of your servers easier, you can install the Administration Tools Packs for Windows Server&#160;2003&#160;R2 located on Disc&#160;2 in the \mgmttls directory. Each of the following components has an Administration Tools Pack:</p>
+              <ul xmlns=""><li>
+                  Microsoft Management Console (MMC)&#160;3.0 <br></br>
+                </li><li>
+                  Print Management<br></br>
+                </li><li>
+                  File Server Resource Manager <br></br>
+                </li><li>
+                  DFS Replication<br></br>
+                </li><li>
+                  Identity Management for UNIX <br></br>
+                </li><li>
+                  File Server Management <br></br>
+                </li></ul>
+              <p xmlns="">In order to administer components, you must first install the MMC&#160;3.0 Administration Tools Pack. The Administration Tools Packs can be installed on computers running Windows&#174;&#160;XP Professional with Service Pack&#160;2 (SP2). For specific installation instructions, see the <a href="http://go.microsoft.com/fwlink/?LinkId=54293" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=54293). </p>
+            </content></div>
+          <a name="BKMK_HardwareMgmt" xmlns=""></a><h4 class="subHeading" xmlns="">Hardware Management</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">You can use Windows Remote Management (WinRM) to manage server hardware remotely across firewalls and monitor conditions on servers that are offline.</p>
+              <p xmlns="">This new feature in Windows Server&#160;2003&#160;R2 is implemented using WS-Management, an industry-standard, Web services-based remoting protocol. WS-Management uses HTTPS as the secure transport that enables firewall traversal.</p>
+              <p xmlns="">WinRM provides a command-line interface for common management tasks and a scripting application programming interface (API) for writing Windows Script Host-based system administration scripts.</p>
+              <p xmlns="">Using WinRM, you can write scripts to monitor and control the state of server hardware by communicating with a Baseboard Management Controller (BMC). A BMC is a separate micro-controller with its own network adapter that is connected to the processor board of a server and can monitor conditions even when the server is off or malfunctioning. A new Windows Management Interface (WMI) provider for Intelligent Platform Management Interface (IPMI) exposes six new WMI classes for accessing BMC information with scripts.</p>
+              <p xmlns="">WinRM is not installed by default with Windows Server&#160;2003&#160;R2. To install it, open Add or Remove Programs from Control Panel, and click <b>Add/Remove Windows Components</b>.</p>
+              <p xmlns="">For more information about hardware management, see "Hardware Management in Microsoft Windows Server&#160;2003&#160;R2" on the <a href="http://go.microsoft.com/fwlink/?LinkId=45204" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=45204).</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+          <a name="BKMK_MMC" xmlns=""></a><h4 class="subHeading" xmlns="">MMC&#160;3.0</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Microsoft Management Console (MMC)&#160;3.0 supports richer functionality in snap-ins designed for the MMC&#160;3.0 infrastructure. In addition, the following improvements apply to all MMC&#160;3.0 consoles: </p>
+              <ul xmlns=""><li>
+                  
+                    <b>Action pane.</b> The Action pane appears on the right side of the snap-in console. It lists the actions that are currently available to you, based on the currently selected items in the tree or the results pane. <br></br>
+                  To show or hide the action pane, click the <b>Show/Hide Action Pane</b> button on the toolbar, which is similar to the <b>Show/Hide Console Tree</b> button.<br></br>
+                </li><li>
+                  
+                    <b>New Add or Remove Snap-in dialog box.</b> The new <b>Add or Remove Snap-in</b> dialog box makes it easy to add, organize, and remove snap-ins. You can control which extensions are available, and whether to automatically enable snap-ins that may be installed later. You can nest snap-ins and rearrange the snap-ins in the tree.<br></br>
+                </li><li>
+                  
+                    <b>Improved error handling.</b> MMC&#160;3.0 notifies you of errors in snap-ins that could cause MMC to fail and provides several options for responding to those errors.<br></br>
+                </li></ul>
+              <p xmlns="">MMC&#160;3.0 is automatically installed when you install Windows Server&#160;2003&#160;R2.</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+        </sections></div>
+      <h3 class="subHeading" xmlns="">Features for Active Directory</h3><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">The following Active Directory components are included in Windows Server&#160;2003&#160;R2.</p>
+        </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <a name="BKMK_ADAM" xmlns=""></a><h4 class="subHeading" xmlns="">Active Directory Application Mode (ADAM)</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Active Directory Application Mode (ADAM) is an independent mode of the Active&#160;Directory&#174; directory service, without infrastructure features, that provides directory services for applications. It provides a data store and services for accessing the data store. It uses standard application programming interfaces (APIs) for accessing the application data. ADAM operates either as a standalone data store, or it operates with replication. Its independence enables local control and autonomy of directory services for specific applications. It also facilitates independent, flexible schemas and naming contexts.</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+          <a name="BKMK_ADFS" xmlns=""></a><h4 class="subHeading" xmlns="">Active Directory Federation Services</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">The fundamental purpose of Active Directory Federation Services (ADFS) is to leverage single user sign-on to authenticate the user to multiple related Web applications over the life of a single online session. ADFS does this by securely sharing digital identity and entitlement rights across security and enterprise boundaries.</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+        </sections></div>
+      <h3 class="subHeading" xmlns="">Disk and File Management Features</h3><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">Windows Server&#160;2003&#160;R2 includes the following disk and file management features.</p>
+        </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <a name="BKMK_Branch" xmlns=""></a><h4 class="subHeading" xmlns="">Branch Office</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Branch offices are the remote locations of an organization that connect to a headquarters or hub over a wide-area network (WAN). The technologies included in Windows Server&#160;2003&#160;R2 can simplify how you manage a variety of activities and tasks in branch offices. These activities and tasks include:  </p>
+              <ul xmlns=""><li>
+                  Publishing files from centralized hubs to branch offices.<br></br>
+                </li><li>
+                  Replicating files from branch locations for backup, fault-tolerance, or cross-publishing.<br></br>
+                </li><li>
+                  Collaborating on documents that are shared among branches or between hubs and branches.<br></br>
+                </li><li>
+                  Efficiently managing printers, printer drivers, and print queues in branch offices. <br></br>
+                </li></ul>
+              <p xmlns="">These improvements are supported by the enhanced print-management tools in Windows Server&#160;2003&#160;R2. They are also supported by Distributed File System (DFS) in Windows Server&#160;2003&#160;R2. </p>
+              <p xmlns="">For more information about these technologies in Windows Server&#160;2003&#160;R2, see the <a href="http://go.microsoft.com/fwlink/?LinkId=51679" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=51679).</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <a name="BKMK_DFS" xmlns=""></a><h5 class="subHeading" xmlns="">Distributed File System (DFS)</h5><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+                  <p xmlns="">The Distributed File System (DFS) solution in Windows Server&#160;2003&#160;R2 provides simplified, fault-tolerant access to files and WAN-friendly replication. Distributed File System consists of two technologies:</p>
+                  <ul xmlns=""><li>
+                      
+                        <b>DFS Namespaces.</b> Formerly known as Distributed File System, DFS Namespaces allows administrators to group shared folders located on different servers and present them to users as a virtual tree of folders known as a namespace. A namespace provides numerous benefits, including increased availability of data, load sharing, and simplified data migration. <br></br>
+                    </li><li>
+                      
+                        <b>DFS Replication.</b> The successor to File Replication service (FRS), DFS Replication is a new state-based, multimaster replication engine that supports scheduling and bandwidth throttling. DFS Replication uses a new compression algorithm known as Remote Differential Compression (RDC). RDC is a "diff over the wire" protocol that can be used to efficiently update files over a limited-bandwidth network. RDC detects insertions, removals, re-arrangements of data in files, enabling DFS Replication to replicate only the deltas (changes) when files are updated. <br></br>
+                    </li></ul>
+                  <p xmlns="">For more information about Distributed File System in Windows Server&#160;2003&#160;R2, see the <a href="http://go.microsoft.com/fwlink/?LinkId=51679" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=51679).</p>
+                  <p xmlns="">
+                    <a href="#BKMK_BackToTop">Back to Top</a>
+                  </p>
+                </content></div>
+            </sections></div>
+          <a name="BKMK_CLFS" xmlns=""></a><h4 class="subHeading" xmlns="">Common Log File System (CLFS)</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Common Log File System (CLFS) is a loadable driver that provides kernel- or user-mode applications with a robust logging subsystem. CLFS is a unique Windows technology that can be used to develop applications and middleware that depend on durably writing and reading sequential data. Examples include replication agents, auditing agents, databases, and other transactional resource managers.</p>
+              <p xmlns="">Features include the ability to create log files with a single stream of data or with multiple streams of data for shared use by one or more clients; both circular and linear logging; guaranteed ability to flush buffered data by pre-reserving space in the log; policy-based log size and space management; sharing of a single log by both kernel and user clients; a notification mechanism to allow different users within the same log to coordinate their log use; flexible buffering of log data; archiving APIs do not interfere with normal operations; atomic multi-sector writes; and torn-write detection.</p>
+              <p xmlns="">CLFS is optimized for performance. All writes to the log file are buffered until an explicit flush, an opportunity to share a write with another client, or the buffer is filled. Log data is written directly to the hard disk from the log buffers without copying. Multiple streams of data can be written during the same I/O operation, resulting in only one disk seek for what normally takes multiple seeks and writes. Reads are cached to save disk accesses during normal operation or bursts of read activity.</p>
+              <p xmlns="">For more information, see the "Platform SDK" on the <a href="http://go.microsoft.com/fwlink/?LinkId=44489" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=44489).</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+          <a name="BKMK_FileServerMgmtSnap-in" xmlns=""></a><h4 class="subHeading" xmlns="">File Server Management</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">You can use File Server Management to perform many tasks, such as formatting volumes, creating shares, defragmenting volumes, creating and managing shares, setting quota limits, creating storage utilization reports, replicating data to and from the file server, managing Storage Area Networks (SANs), and sharing files with UNIX and Macintosh systems.</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+          <a name="BKMK_StorageResource" xmlns=""></a><h4 class="subHeading" xmlns="">File Server Resource Manager</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">With the increasing demand on storage resources, as organizations rely more heavily on data than ever before, IT administrators face the challenge of overseeing a larger and more complex storage infrastructure, while at the same time, tracking the kind of information available in it.</p>
+              <p xmlns="">File Server Resource Manager is a new Microsoft Management Console (MMC) snap-in that provides a suite of tools for administrators to understand, control, and manage the quantity and type of data stored on their servers. By using File Server Resource Manager, administrators can place quotas on folders and volumes, actively screen files, and generate comprehensive storage reports.</p>
+            </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <h5 class="subHeading" xmlns="">File Server Resource Manager quotas vs. NTFS disk quotas</h5><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+                  <p xmlns="">The Windows&#160;2000 and Windows Server&#160;2003 operating systems support disk quotas, which are used to track and control disk usage per user on NTFS volumes. The following table outlines the advantages of using the quota management tools in File Server Resource Manager.</p>
+                  <h3 class="subHeading" xmlns=""></h3><table xmlns=""><tr>
+                        <th>
+                          
+                            <b>Quota features </b>
+                          
+                        </th>
+                        <th>
+                          
+                            <b>File Server Resource Manager</b>
+                          
+                        </th>
+                        <th>
+                          
+                            <b>NTFS disk quotas </b>
+                          
+                        </th>
+                      </tr><tr>
+                      <td>
+                        <p>Quota tracking </p>
+                      </td>
+                      <td>
+                        <p>By folder or by volume </p>
+                      </td>
+                      <td>
+                        <p>Per user on a volume </p>
+                      </td>
+                    </tr><tr>
+                      <td>
+                        <p>Disk usage calculation </p>
+                      </td>
+                      <td>
+                        <p>Actual disk space </p>
+                      </td>
+                      <td>
+                        <p>Logical file size </p>
+                      </td>
+                    </tr><tr>
+                      <td>
+                        <p>Notification mechanisms </p>
+                      </td>
+                      <td>
+                        <p>E-mail, custom reports, command execution, event logs </p>
+                      </td>
+                      <td>
+                        <p>Event logs only </p>
+                      </td>
+                    </tr></table>
+                  <p xmlns="">
+                    <a href="#BKMK_BackToTop">Back to Top</a>
+                  </p>
+                </content></div>
+            </sections></div>
+          <a name="BKMK_MSNFS" xmlns=""></a><h4 class="subHeading" xmlns="">Microsoft Services for Network File System</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Microsoft Services for Network File System (NFS) is a component of Windows Server&#160;2003&#160;R2 that provides a file-sharing solution for enterprises that have a mixed Windows and UNIX environment. Microsoft Services for NFS allows users to transfer files between Windows Server&#160;2003&#160;R2 and UNIX computers using the Network File System (NFS) protocol.</p>
+              <p xmlns="">Microsoft Services for NFS is an update to the NFS components that were previously available in Services for UNIX 3.5. Microsoft Services for NFS includes the following new features:</p>
+              <ul xmlns=""><li>
+                  Support for 64-bit <br></br>
+                  Microsoft Services for NFS components can be installed on all editions of Windows Server&#160;2003&#160;R2, including 64-bit versions.<br></br>
+                </li><li>
+                  Updated Microsoft Management Console (MMC) Microsoft Services for NFS Administration snap-in<br></br>
+                </li><li>
+                  Enhanced reliability<br></br>
+                </li><li>
+                  Support for UNIX special devices (mknod)<br></br>
+                </li></ul>
+              <p xmlns="">Microsoft Services for NFS allows you to support a mixed environment of Windows- and UNIX-based operating systems. It also allows you to update your organization's computers while supporting older technology during the transition phase. The following scenarios are examples of how enterprises can benefit from deploying Microsoft Services for NFS.</p>
+              <ul xmlns=""><li>
+                  Allows UNIX clients to access resources on computers running Windows Server&#160;2003&#160;R2. Your company may have UNIX clients accessing resources, such as files, on UNIX file servers. To take advantage of new Windows Server&#160;2003 features, such as Shadow Copies for Shared Folders, you can move resources from your UNIX servers to computers running Windows Server&#160;2003&#160;R2, and then set up Microsoft Services for NFS to enable access by UNIX clients that are running NFS software. All of your UNIX clients will be able to access the resources using the NFS protocol with no changes required. <br></br>
+                </li><li>
+                  Allows computers running Windows Server&#160;2003&#160;R2 to access resources on UNIX file servers. Your company may have a mixed Windows and UNIX environment with resources, such as files, stored on UNIX file servers. You can use Microsoft Services for NFS to enable computers running Windows Server&#160;2003&#160;R2 to access these resources when the file servers are running NFS software. <br></br>
+                </li></ul>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+          <a name="BKMK_SAN" xmlns=""></a><h4 class="subHeading" xmlns="">Storage Management for SANs</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Storage Manager for SANs is a new Microsoft Management Console (MMC) snap-in that helps you create and manage logical unit numbers (LUNs) on fibre channel and iSCSI disk drive subsystems in your storage area network (SAN). Storage Manager for SANs can be used on storage subsystems that support Virtual Disk Server (VDS).</p>
+              <p xmlns="">Use Storage Manager for SANs to create and assign LUNs, manage connections between LUNs and the servers in your SAN, and set the security properties for iSCSI storage subsystems.</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+        </sections></div>
+      <h3 class="subHeading" xmlns="">Printer and Protocol Support</h3><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">Windows Server&#160;2003&#160;R2 provides an updated MMC snap-in for Print Management.</p>
+        </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <a name="BKMK_PrintMgmtConsole" xmlns=""></a><h4 class="subHeading" xmlns="">Print Management</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Print Management is an updated Microsoft Management Console (MMC) snap-in that you can use to view and manage printers and print servers in your organization. You can use Print Management from any computer running Windows Server&#160;2003&#160;R2, and you can manage all network printers on print servers running Windows&#160;2000&#160;Server, Windows Server&#160;2003, or Windows Server&#160;2003&#160;R2. </p>
+              <p xmlns="">Print Management provides up-to-the-minute details such as the queue status, printer name, driver name, and server name. You can also set custom views by using the Print Management filtering capability. For example, you can create a view that only displays printers in a particular error state. You can also configure Print Management to send e-mail notifications or run scripts when a printer or print server needs attention. The filtering capability also allows you to bulk edit print jobs, such as canceling all print jobs at once. You can also delete multiple printers at the same time.</p>
+              <p xmlns="">Administrators can install printers remotely by using the automatic detect feature, which finds and installs printers on the local subnet to the local print server. Administrators can log on to a local server at a branch location by using Remote Desktop and then easily install printers remotely.</p>
+              <p xmlns="">When a printer model has a Web page feature, Print Management can display troubleshooting details, such as the location of the paper jam or printer toner level. Some printer models have Web pages that provide options for remote control functions that can help resolve problems at branch locations. </p>
+              <p xmlns="">For more information, see the "Print Management Step-by-Step Guide" on the <a href="http://go.microsoft.com/fwlink/?LinkId=50141" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=50141).</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+        </sections></div>
+      <h3 class="subHeading" xmlns="">Microsoft .NET Framework</h3><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">New features for .NET Framework&#160;2.0 are available in Windows Server&#160;2003&#160;R2.</p>
+        </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <a name="BKMK_NETFramework" xmlns=""></a><h4 class="subHeading" xmlns="">Microsoft .NET Framework&#160;2.0</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">The .NET Framework version&#160;2.0 is the latest version of the .NET Framework, a Windows component for building, deploying and running applications. The .NET Framework&#160;2.0 is focused on delivering developer productivity, operational excellence, and the ability to preserve and enhance existing software investments. Core enhancements include support for 64-bit processors for increased performance and scalability, transactional enhancements and optimizations, productivity improvements in ASP.NET, and support for WS-I BP&#160;1.1 and SOAP&#160;1.2 with Web Services.</p>
+              <p xmlns="">For a comprehensive list of the new .NET Framework&#160;2.0 features, see the <a href="http://go.microsoft.com/fwlink/?LinkId=50322" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=50322).</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+        </sections></div>
+      <h3 class="subHeading" xmlns="">Internet and E-Mail Services and Features</h3><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">Windows SharePoint&#174; Services is included in Windows Server&#160;2003&#160;R2.</p>
+        </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <a name="BKMK_Sharepoint" xmlns=""></a><h4 class="subHeading" xmlns="">Windows SharePoint Services</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Microsoft Windows SharePoint Services is an integrated portfolio of collaboration and communication services designed to connect people, information, processes, and systems both within and beyond the organizational firewall. Windows SharePoint Services Service Pack&#160;2 is included in this release of Windows Server&#160;2003. Now you can install Windows SharePoint Services directly from the Configure Your Server wizard or Manage Your Server. When you install Windows SharePoint Services, you get the following features:</p>
+            </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <h5 class="subHeading" xmlns="">SharePoint sites &#8211; file storage plus collaboration</h5><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+                  <p xmlns="">Web sites based on Microsoft Windows SharePoint Services&#160;2.0 provide a place where teams can communicate, share documents, and work together on a project. SharePoint sites include:</p>
+                  <ul xmlns=""><li>
+                      Team collaboration features, such as event calendars, contacts, Web links, discussions, issues lists, announcements, and much more. <br></br>
+                    </li><li>
+                      Document libraries, which are places where users can store and retrieve documents while taking advantage of rich features such as check-in and check-out, version history, custom metadata, and flexible, customizable views. <br></br>
+                    </li><li>
+                      Web Parts, which can provide data access, Web services, and many other applications and content to SharePoint sites. <br></br>
+                    </li></ul>
+                  <p xmlns="">Site users can contribute to the site by using nothing more than a Web browser. However, if users have Windows SharePoint Services-compatible client programs, such as Microsoft Office&#160;2003, installed on their computers they can work seamlessly with the site, saving files to libraries, editing documents in the client program, and moving or linking that information to the site.</p>
+                </content></div>
+              <h5 class="subHeading" xmlns="">SharePoint Central Administration &#8211; Web browser interface for managing your server</h5><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+                  <p xmlns="">You can manage a single server or an entire server farm running Windows SharePoint Services from a Web browser interface called SharePoint Central Administration. Use SharePoint Central Administration to extend a virtual server, create sites or turn on Self-Service Site Creation so users can create their own sites, manage security settings, manage the list of servers in your server farm, and so on. If you prefer, you can also use the Stsadm.exe command-line utility to manage your servers running Windows SharePoint Services.</p>
+                </content></div>
+              <h5 class="subHeading" xmlns="">Applications for Windows SharePoint Services &#8211; download and install ready-to-use applications to get working quickly</h5><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+                  <p xmlns="">Boost worker productivity by downloading and installing an application for Windows SharePoint Services. These applications are tailored to address specific processes or tasks. There are many to choose from, including recruiting, project management, help desk issue tracking, timesheet and scheduling, event planning, and more. Use the applications as soon as you install them or customize them further to meet your organization’s specific needs and requirements. </p>
+                  <p xmlns="">For more information, see “Applications for Windows SharePoint Services” on the <a href="http://go.microsoft.com/fwlink/?LinkId=47987" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=47987).</p>
+                </content></div>
+              <h5 class="subHeading" xmlns="">Support for advanced extranet configurations</h5><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+                  <p xmlns="">A URL zone mapping feature (new in Windows SharePoint Services, Service Pack&#160;2) allows for easier interactions with a proxy server or firewall. Windows SharePoint Services uses absolute URLs to generate some hyperlinks in its Web pages and e-mail messages. This prevented Windows SharePoint Services from supporting certain advanced extranet configurations (such as SSL termination, host header modification, and port translation) where a reverse proxy server is deployed in front of the Windows SharePoint Services server. Now you can set up URL zones, such as Internet, intranet, and extranet, and map incoming and outgoing URLs to those zones, so that these configurations can work correctly. </p>
+                  <p xmlns="">For more information about Windows SharePoint Services in Windows Server&#160;2003&#160;R2, see the <a href="http://go.microsoft.com/fwlink/?LinkId=45560" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkID=45560).</p>
+                  <p xmlns="">
+                    <a href="#BKMK_BackToTop">Back to Top</a>
+                  </p>
+                </content></div>
+            </sections></div>
+        </sections></div>
+      <h3 class="subHeading" xmlns="">UNIX Interoperability</h3><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <p xmlns="">For improved interoperability with UNIX, the following features are available in Windows Server&#160;2003&#160;R2.</p>
+        </content><sections xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+          <a name="BKMK_UNIXIdentity" xmlns=""></a><h4 class="subHeading" xmlns="">Identity Management for UNIX</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Windows Services for UNIX delivers Windows and UNIX integration with updated identity management solutions. The following solutions help provide uninterrupted user access and efficient management of network resources across operating systems:</p>
+              <ul xmlns=""><li>
+                  
+                    <b>Server for NIS.</b> Helps integrate Windows and UNIX-based Network Information Service (NIS) servers by enabling an Active Directory domain controller to act as a master NIS server for one or more NIS domains. <br></br>
+                </li><li>
+                  
+                    <b>Password Synchronization.</b> Helps integrate Windows and UNIX servers by simplifying the process of maintaining secure passwords. With Password Synchronization, users do not need to maintain separate passwords for their Windows and UNIX accounts or remember to change the password in multiple locations. <br></br>
+                </li></ul>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+          <a name="BKMK_Subsystem" xmlns=""></a><h4 class="subHeading" xmlns="">Subsystem for UNIX-based Applications</h4><div class="subSection" xmlns=""><content xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+              <p xmlns="">Subsystem for UNIX-based Applications (SUA) is a source-compatibility subsystem for compiling and running custom UNIX-based applications on a computer running a Windows server-class operating system. You can make your UNIX applications fully interoperable with Windows in SUA with little or no change to your original source code.</p>
+              <p xmlns="">Subsystem for UNIX-based Applications provides an operating system for Portable Operating System Interface (POSIX) processes. SUA, along with its package of support utilities (such as shells and a telnet client), provides a complete UNIX environment. The package of support utilities includes a comprehensive set of scripting utilities and a software development kit (SDK) designed to fully support the development capabilities of SUA. </p>
+              <p xmlns="">SUA also supports case-sensitive file names, job control, compilation tools, and the use of over 300 UNIX commands, utilities, and shell scripts. Because the subsystem installs separately from the Windows kernel, it offers true UNIX functionality without any emulation.</p>
+              <p xmlns="">New features in this release include the following:</p>
+              <ul xmlns=""><li>
+                  
+                    <b>Database (OCI/ODBC) library connectivity.</b> SUA supports connectivity to Oracle and SQL Server from database applications by using the Oracle Call Interface (OCI) and the Open Database Connectivity (ODBC) standard. <br></br>
+                </li><li>
+                  
+                    <b>Microsoft&#174; Visual Studio&#174; Debugger Extension for debugging POSIX applications.</b> SUA includes support for debugging your POSIX processes using Visual Studio IDE. <br></br>
+                </li><li>
+                  
+                    <b>Utilities based on SVR-5 and BSD UNIX environments.</b> The SUA download package supports two different UNIX environments: SVR-5 and BSD. <br></br>
+                </li><li>
+                  
+                    <b>Support for 64-bit applications.</b> Using a process called thunking, SUA provides support not only for 64-bit applications running on a 64-bit operating system, but also default support for 32-bit binaries running on a 64-bit operating system. <br></br>
+                </li></ul>
+              <p xmlns="">To download the support utilities, see "Installing and Using Utilities and SDK for UNIX-based Applications" on the <a href="http://go.microsoft.com/fwlink/?LinkId=38959" target="_blank" alt=""><linkText xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Microsoft Web site</linkText></a> (http://go.microsoft.com/fwlink/?LinkId=38959).</p>
+              <p xmlns="">
+                <a href="#BKMK_BackToTop">Back to Top</a>
+              </p>
+            </content></div>
+        </sections></div>
+    </sections></div><!--[if gte IE 5]>
+			<tool:tip element="languageFilterToolTip" avoidmouse="false"/>
+		<![endif]--></div>
+      <div id="footer">
+        <hr /><p />
+      </div>
+    </div>
+  </body>
+</html>

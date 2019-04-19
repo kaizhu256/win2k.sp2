@@ -1,0 +1,19 @@
+[Version]
+Signature = $Chicago$
+ClassGUID = {00000000-0000-0000-0000-000000000000}
+DriverVer=10/01/2002,5.2.3790.3959
+
+
+[Miscellaneous]
+ProductType = 3
+
+
+R2SPLevel = 2
+
+
+
+
+
+[Strings]
+Locale = 0x00000409
+

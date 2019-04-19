@@ -1,0 +1,121 @@
+
+
+
+
+
+[Version]
+Signature="$Windows NT$"
+DriverVer=10/01/2002,5.2.3790.3959
+
+[Optional Components]
+MapServer
+
+[MapServer]
+OptionDesc              = %str_MapServer_desc%
+Tip	              	= %str_MapServer_tip%
+IconIndex               = *,..\r2icons.dll,8
+Parent                  = MSNFS
+Needs                   = Portmap, NfsAdminUI
+
+CopyFiles               = MapServerSysFiles, \
+                           MapServerOtherFiles
+
+Uninstall               = MapServer.uninstall
+
+AddService              = %str_MAPSVC%, ,MapServer.MapSvc
+AddReg                  = MapServer.AddRegistry
+
+[MapServer.uninstall]
+DelFiles                = MapServerSysFiles, \
+                           MapServerOtherFiles
+
+DelReg                  = MapServer.AddRegistry, MapServer.DelRegistry
+DelService              = %str_MAPSVC%, 0x200
+
+[DestinationDirs]
+MapServerSysFiles      	= 11            
+MapServerOtherFiles    	= 10, %MSNFSDIR% 
+
+[SourceDisksNames]
+1 = %R2CDNAME%, , , \cmpnents\r2
+
+[SourceDisksFiles]
+.maphosts       = 1
+mapsvc.exe      = 1
+
+[MapServerOtherFiles]
+.maphosts
+
+[MapServerSysFiles]
+mapsvc.exe
+
+[MapServer.AddRegistry]
+HKLM,%KEY_MAP_CURVER%, "AuthType", %REG_DWORD%, 2
+HKLM,%KEY_MAP_CURVER%, "ServerType", %REG_DWORD%, 1
+HKLM,%KEY_MAP_CURVER%, "AdditionalMapDefinitions", %REG_MULTI_SZ%
+HKLM,%KEY_MAP_CURVER%, "AdvancedGroupMaps", %REG_MULTI_SZ%
+HKLM,%KEY_MAP_CURVER%, "AdvancedUserMaps", %REG_MULTI_SZ%
+HKLM,%KEY_MAP_CURVER%, "AnonymousGid", %REG_DWORD%, -2
+HKLM,%KEY_MAP_CURVER%, "AnonymousUid", %REG_DWORD%, -2
+HKLM,%KEY_MAP_CURVER%, "BackupFileName", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "GroupFileName", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "LoggingLevel", %REG_DWORD%, 0
+HKLM,%KEY_MAP_CURVER%, "MapFileName", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "NisDomain", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "NisServer", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "NTDomain", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "NTDomain2", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "PasswdFileName", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "PortTcpV1", %REG_DWORD%, 0
+HKLM,%KEY_MAP_CURVER%, "PortTcpV2", %REG_DWORD%, 0
+HKLM,%KEY_MAP_CURVER%, "PortUdpV1", %REG_DWORD%, 0
+HKLM,%KEY_MAP_CURVER%, "PortUdpV2", %REG_DWORD%, 0
+HKLM,%KEY_MAP_CURVER%, "Protocols", %REG_DWORD%, 3072
+HKLM,%KEY_MAP_CURVER%, "RefreshInterval", %REG_DWORD%, 1440
+HKLM,%KEY_MAP_CURVER%, "RestoreFileName", %REG_SZ%
+HKLM,%KEY_MAP_CURVER%, "Security", %REG_DWORD%, 0
+HKLM,%KEY_MAP_CURVER%, "WriteBlock", %REG_DWORD%, 200
+
+HKLM,"System\CurrentControlSet\Services\Mapsvc\ReadConfig",       "Defaults", %REG_DWORD%, 0
+HKLM,"System\CurrentControlSet\Services\Mapsvc\ReadConfigAdvMap", "Defaults", %REG_DWORD%, 0
+HKLM,"System\CurrentControlSet\Services\Mapsvc\ReadConfigSimMap", "Defaults", %REG_DWORD%, 0
+HKLM,"System\CurrentControlSet\Services\Mapsvc\ReadConfigCfg",    "Defaults", %REG_DWORD%, 0
+
+
+HKLM,"SYSTEM\CurrentControlSet\Services\Eventlog\Application\Mapsvc", "EventMessageFile", %REG_SZ%, %11%"\mapsvc.exe"
+HKLM,"SYSTEM\CurrentControlSet\Services\Eventlog\Application\Mapsvc", "TypesSupported", %REG_DWORD%, 7
+HKLM,"SOFTWARE\Microsoft\MSNFS\AppsInstalled\User Name Mapping", "InstallPath", %REG_SZ%, %10%"\"%MSNFSDIR%
+
+[MapServer.DelRegistry]
+HKLM,"SYSTEM\CurrentControlSet\Services\MapSvc"
+HKLM,"SOFTWARE\Microsoft\MSNFS\AppsInstalled\User Name Mapping"
+
+
+[MapServer.MapSvc]
+DisplayName            = %str_MAPSVC_DISPLAY%
+ServiceType            = 16
+StartType              = 2
+ErrorControl           = 1
+ServiceBinary          = %11%\mapsvc.exe
+Dependencies           = Portmap
+Description            = %str_MAPSVC_DESC%
+
+
+[Strings]
+str_MapServer_desc      = "User Name Mapping"
+str_MapServer_tip       = "Maps UNIX user names to Windows user names (for domains which do not store UNIX identities in Active Directory)."
+str_MAPSVC              = "mapsvc"
+str_MAPSVC_DISPLAY      = "User Name Mapping"
+str_MAPSVC_DESC         = "Enables mapping of names between UNIX (NIS/PCNFS) name space and Windows name spaces."
+
+MSNFSDIR                = "\msnfs"
+
+KEY_MAP_CURVER          = "System\CurrentControlSet\Services\Mapsvc\CurrentVersion"
+
+R2CDNAME                = "Windows Server 2003 R2 Disc 2"
+
+REG_SZ                  =0x00002    
+REG_EXPAND_SZ           =0x20002    
+REG_DWORD               =0x10003    
+REG_MULTI_SZ            =0x10002    
+REG_MULTI_SZ_APPEND     =0x10008
